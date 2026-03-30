@@ -124,9 +124,9 @@ img {
 }
 
 .tape-img--top {
-  top: -1.8rem;
-  left: 1.4rem;
-  width: 7.2rem;
+  top: -2.6rem;
+  left: 1.2rem;
+  width: 10.8rem;
   transform: rotate(-4deg);
 }
 
@@ -476,19 +476,19 @@ a {
  
 .header__eyebrow {
   font-family: var(--font-stamp);
-  font-size: 1.3rem;
-  letter-spacing: 0.2em;
+  font-size: 1.9rem;
+  letter-spacing: 0.26em;
   color: var(--kraft-dark);
-  margin-bottom: 1.8rem;
+  margin-bottom: 2.3rem;
   margin-top: 0;
 }
  
 .header__sub {
   font-family: 'Hunter Script', var(--font-body);
-  font-size: var(--font-size-medium);
+  font-size: 4rem;
   font-style: normal;
   color: var(--ink-muted);
-  margin: 2rem 0 3.5rem;
+  margin: 2.6rem 0 4rem;
   line-height: 1.5;
 }
  
@@ -535,7 +535,7 @@ a {
 .deco-card {
   background: url('./images/ticket.png') center/100% 100% no-repeat;
   border: none;
-  padding: 1.8rem 2.4rem;
+  padding: 2.3rem 3rem;
   box-shadow: none;
 }
  
@@ -549,18 +549,18 @@ a {
  
 .deco-label {
   font-family: 'Hunter Script', var(--font-stamp);
-  font-size: 1.4rem;
+  font-size: 2.2rem;
   color: var(--sage);
   letter-spacing: 0.05em;
 }
  
 .stamp {
   font-family: var(--font-stamp);
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   letter-spacing: 0.18em;
   color: var(--rust);
   border: 2px solid var(--rust);
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.4rem;
   display: inline-block;
   transform: rotate(-4deg);
   opacity: 0.85;
