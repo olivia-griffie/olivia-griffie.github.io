@@ -172,7 +172,7 @@
 .library-value.blurb {
   font-family: var(--font-body);
   font-size: 1.45rem;
-  font-style: italic;
+  font-style: normal;
   line-height: 1.7;
 }
 
@@ -308,7 +308,7 @@
 .ticket-degree {
   font-family: 'Oliver', cursive;
   font-size: 1.8rem;
-  font-style: italic;
+  font-style: normal;
   color: var(--ink);
   font-weight: 700;
 }
@@ -337,7 +337,7 @@
 
 .ref-name {
   font-family: 'Oliver', cursive;
-  font-style: italic;
+  font-style: normal;
   font-size: 1.7rem;
   color: var(--ink);
   margin: 0 0 0.2rem;
@@ -480,9 +480,9 @@
 }
 
 .job__title {
-  font-family: 'Oliver', cursive;
+  font-family: var(--font-stamp);
   font-size: 2rem;
-  font-style: italic;
+  font-style: normal;
   font-weight: 700;
   color: var(--ink);
   margin: 0.5rem 0 0.2rem;

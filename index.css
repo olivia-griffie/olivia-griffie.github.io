@@ -18,7 +18,7 @@
   --cream-dark:  #ede5d0;
   --kraft:       #c8a97a;
   --kraft-dark:  #a07850;
-  --ink:         #1c1a17;
+  --ink:         #383838;
   --ink-muted:   #4a4540;
   --rust:        #b84c2b;
   --sage:        #6b8c6a;
@@ -385,7 +385,7 @@ a {
 }
  
 .nav__logo {
-  height: 5rem;
+  height: 10rem;
   width: auto;
   opacity: 0.85;
   mix-blend-mode: multiply;
@@ -399,7 +399,7 @@ a {
  
 .nav__link {
   font-family: var(--font-stamp);
-  font-size: 2.5rem;
+  font-size: 2rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-muted);
@@ -469,7 +469,7 @@ a {
 .header__sub {
   font-family: var(--font-body);
   font-size: var(--font-size-medium);
-  font-style: italic;
+  font-style: normal;
   color: var(--ink-muted);
   margin: 2rem 0 3.5rem;
   line-height: 1.5;
