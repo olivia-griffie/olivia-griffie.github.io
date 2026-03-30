@@ -242,12 +242,15 @@ p {
 .about__text {
   background-size: 140% 140%;
   background-position: center;
+  background-image:
+    linear-gradient(rgba(255, 250, 242, 0.34), rgba(255, 250, 242, 0.34)),
+    url('./images/tanpaper.png');
 }
 
 .about__text p {
-  font-size: 1.55rem;
-  line-height: 1.5;
-  margin: 0 0 1.8rem;
+  font-size: 1.42rem;
+  line-height: 1.45;
+  margin: 0 0 1.6rem;
 }
  
 /* --------------------------------------- */
@@ -840,6 +843,19 @@ a {
   margin: 0 auto;
   text-align: left;
 }
+
+.contact .section-label {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.contact .section-tag {
+  display: none;
+}
+
+.contact h2 {
+  margin-bottom: 0.4rem;
+}
  
 .contact-note {
   position: relative;
@@ -861,7 +877,7 @@ a {
 
 .contact-note__content {
   position: absolute;
-  inset: 6.2% 9% 10.2% 9%;
+  inset: 20.2% 12% 10.2% 20%;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
@@ -884,7 +900,8 @@ a {
 
 .contact-note__field input,
 .contact-note__field textarea {
-  width: 100%;
+  width: 90%;
+  height: 70%;
   border: 1px solid rgba(74, 69, 64, 0.16);
   border-radius: 1.4rem;
   background: rgba(255, 252, 247, 0.72);
@@ -914,7 +931,7 @@ a {
 
 .contact-note__field--message textarea {
   min-height: 14rem;
-  height: 100%;
+  height: 70%;
 }
 
 .contact-note__actions {
