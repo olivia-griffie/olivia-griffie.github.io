@@ -306,7 +306,7 @@
 }
 
 .ticket-degree {
-  font-family: var(--font-serif);
+  font-family: 'Oliver', cursive;
   font-size: 1.8rem;
   font-style: italic;
   color: var(--ink);
@@ -336,7 +336,7 @@
 }
 
 .ref-name {
-  font-family: var(--font-serif);
+  font-family: 'Oliver', cursive;
   font-style: italic;
   font-size: 1.7rem;
   color: var(--ink);
@@ -434,7 +434,7 @@
 .scrap-label.light { color: rgba(255,255,255,0.75); }
 
 .scrap-h2 {
-  font-family: var(--font-serif);
+  font-family: 'Oliver', cursive;
   font-size: 2.8rem;
   font-weight: 700;
   color: var(--ink);
@@ -480,7 +480,7 @@
 }
 
 .job__title {
-  font-family: var(--font-serif);
+  font-family: 'Oliver', cursive;
   font-size: 2rem;
   font-style: italic;
   font-weight: 700;
