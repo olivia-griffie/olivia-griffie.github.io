@@ -382,11 +382,10 @@ a {
 }
  
 .nav__logo {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-style: italic;
-  color: var(--ink);
-  letter-spacing: -0.01em;
+  height: 5rem;
+  width: auto;
+  opacity: 0.85;
+  mix-blend-mode: multiply;
 }
  
 .nav__items {
