@@ -43,6 +43,38 @@ window.addEventListener("scroll", () => {
 });
 
 const contactForm = document.querySelector("#contact-form");
+const navLinks = document.querySelectorAll(".nav__link");
+
+navLinks.forEach((link) => {
+  const starVideo = link.querySelector(".nav__star");
+
+  if (!starVideo) {
+    return;
+  }
+
+  starVideo.loop = true;
+
+  const playStar = () => {
+    link.classList.add("nav__link--active");
+    starVideo.currentTime = 0;
+    const playAttempt = starVideo.play();
+
+    if (playAttempt && typeof playAttempt.catch === "function") {
+      playAttempt.catch(() => {});
+    }
+  };
+
+  const stopStar = () => {
+    link.classList.remove("nav__link--active");
+    starVideo.pause();
+    starVideo.currentTime = 0;
+  };
+
+  link.addEventListener("mouseenter", playStar);
+  link.addEventListener("mouseleave", stopStar);
+  link.addEventListener("focus", playStar);
+  link.addEventListener("blur", stopStar);
+});
 
 if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
