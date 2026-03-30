@@ -14,7 +14,6 @@
   font-style: normal;
 }
 :root {
-  /* Colors — warm kraft/cream palette */
   --cream:       #f5f0e8;
   --cream-dark:  #ede5d0;
   --kraft:       #c8a97a;
@@ -198,16 +197,16 @@ img {
 /* --------------------------------------- */
  
 h1, h2, h3 {
-  font-family: 'Oliver', cursive;
+  font-family: 'Oliver', normal;
   font-weight: 700;
   line-height: 1.15;
   color: var(--ink);
 }
  
 .heading-primary {
-  font-family: 'Oliver', cursive;
+  font-family: 'Oliver', normal;
   font-size: var(--font-size-huge);
-  font-weight: normal; /* important */
+  font-weight: normal; 
   letter-spacing: 0.02em;
   line-height: 1.1;
 }
@@ -341,7 +340,6 @@ a {
  
 .link:hover {
   color: var(--rust);
-  text-decoration: underline;
 }
  
 /* --------------------------------------- */
@@ -401,7 +399,7 @@ a {
  
 .nav__link {
   font-family: var(--font-stamp);
-  font-size: 1.4rem;
+  font-size: 2.5rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-muted);
@@ -529,7 +527,7 @@ a {
 /* --------------------------------------- */
  
 .marquee-wrap {
-  background: var(--ink);
+  background: var(--denim);
   overflow: hidden;
   padding: 1.2rem 0;
   white-space: nowrap;
@@ -539,13 +537,9 @@ a {
   display: inline-block;
   animation: marquee 28s linear infinite;
 }
- 
+ /* ------hide marquee text for now------- */
 .marquee span {
-  font-family: var(--font-stamp);
-  font-size: 1.4rem;
-  letter-spacing: 0.12em;
-  color: var(--cream);
-  padding-right: 4rem;
+  display:none;
 }
  
 @keyframes marquee {
@@ -697,7 +691,7 @@ a {
 /* Polaroid-style photo */
 .photo-polaroid {
   position: relative;
-  background-image: url('./images/polariod_frame.jpg');
+  background-image: url('./images/polariodframe.png');
   background-size: 100% 100%;
   padding: 8% 8% 22% 8%;
   max-width: 34rem;
@@ -763,7 +757,7 @@ a {
 }
  
 .footer__social-image {
-  height: 3.2rem;
+  height: 4.5rem;
   opacity: 0.5;
   transition: opacity 0.2s;
   filter: sepia(0.3);
