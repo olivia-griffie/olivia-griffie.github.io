@@ -124,10 +124,10 @@ img {
 }
 
 .tape-img--top {
-  top: -2.6rem;
-  left: 1.2rem;
-  width: 10.8rem;
-  transform: rotate(-4deg);
+  top: -1.2rem;
+  left: -0.8rem;
+  width: 16rem;
+  transform: rotate(-3deg);
 }
 
 .tape-img--top-center {
@@ -138,16 +138,16 @@ img {
 }
 
 .tape-img--corner {
-  top: -1.6rem;
-  left: 2.2rem;
-  width: 6.4rem;
-  transform: rotate(-6deg);
+  top: -2.2rem;
+  left: 1.6rem;
+  width: 9.8rem;
+  transform: rotate(-5deg);
 }
 
 .tape-img--corner.tape-img--right {
   left: auto;
-  right: 2.2rem;
-  transform: rotate(5deg);
+  right: 1.6rem;
+  transform: rotate(4deg);
 }
 
 .tape-img--photo {
@@ -228,7 +228,10 @@ h2::after {
   display: block;
   height: 2.6rem;
   width: 13rem;
-  background: url('./images/line.png') left center/contain no-repeat;
+  background-image: url('./images/line.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 180% 100%;
   margin: 1.6rem 0 0;
 }
  
@@ -319,7 +322,7 @@ a {
  
 .link__text {
   font-family: var(--font-stamp);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   letter-spacing: 0.04em;
   padding-bottom: 2px;
   border-bottom: 1.5px solid var(--rust);
@@ -413,14 +416,47 @@ a {
   text-transform: uppercase;
   color: var(--ink-muted);
   text-decoration: none;
-  padding-bottom: 2px;
-  border-bottom: 1px solid transparent;
-  transition: all 0.2s;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 8.6rem;
+  min-height: 4.8rem;
+  transition: color 0.2s, font-weight 0.2s;
 }
- 
-.nav__link:hover {
-  color: var(--rust);
-  border-bottom-color: var(--rust);
+
+.nav__link-text {
+  position: relative;
+  z-index: 2;
+}
+
+.nav__star {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5.2rem;
+  height: 5.2rem;
+  transform: translate(-50%, -50%) scale(0.9);
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: screen;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.nav__link:hover,
+.nav__link:focus-visible,
+.nav__link.nav__link--active {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.nav__link:hover .nav__star,
+.nav__link:focus-visible .nav__star,
+.nav__link.nav__link--active .nav__star {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
  
 @media (max-width: 500px) {
@@ -479,8 +515,12 @@ a {
   font-size: 1.9rem;
   letter-spacing: 0.26em;
   color: var(--kraft-dark);
-  margin-bottom: 2.3rem;
+  margin-bottom: 2.6rem;
   margin-top: 0;
+  position: relative;
+  z-index: 3;
+  padding: 1.6rem 0 0 1.1rem;
+  display: inline-block;
 }
  
 .header__sub {
@@ -549,9 +589,15 @@ a {
  
 .deco-label {
   font-family: 'Hunter Script', var(--font-stamp);
-  font-size: 2.2rem;
-  color: var(--sage);
+  font-size: 3.6rem;
+  color: var(--ink);
   letter-spacing: 0.05em;
+  display: inline-block;
+  line-height: 1.05;
+}
+
+.deco-label:hover {
+  color: var(--rust);
 }
  
 .stamp {
@@ -613,17 +659,20 @@ a {
 }
 
 .work__text {
-  max-width: 42rem;
+  max-width: 40rem;
   justify-self: start;
 }
 
 .work__text h3 {
-  margin-bottom: 1.2rem;
+  font-size: 2.1rem;
+  margin-bottom: 0.9rem;
+  line-height: 1.15;
 }
 
 .work__text p {
-  margin: 0 0 1.8rem;
-  line-height: 1.55;
+  font-size: 1.45rem;
+  margin: 0 0 1.4rem;
+  line-height: 1.4;
 }
  
 .work__box--reverse {
@@ -657,11 +706,11 @@ a {
  
 .work__list li {
   font-family: var(--font-stamp);
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   letter-spacing: 0.1em;
   background: var(--cream-dark);
   border: 1px solid var(--kraft);
-  padding: 0.3rem 1rem;
+  padding: 0.28rem 0.8rem;
   color: var(--ink-muted);
 }
  
@@ -791,32 +840,32 @@ a {
 /* --------------------------------------- */
  
 .contact__card {
-  max-width: var(--container-medium);
+  max-width: 104rem;
   margin: 0 auto;
   text-align: left;
 }
  
 .contact-note {
   position: relative;
-  max-width: 82rem;
+  max-width: 98rem;
   margin: 0 auto;
-  min-height: 82rem;
+  min-height: 88rem;
 }
 
 .contact-note__bg {
-  width: 112%;
+  width: 118%;
   height: 100%;
-  min-height: 82rem;
+  min-height: 88rem;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
   display: block;
   max-width: none;
-  margin-left: -6%;
+  margin-left: -9%;
 }
 
 .contact-note__content {
   position: absolute;
-  inset: 4.5% 5.5% 8.5%;
+  inset: 5.5% 8% 9% 8%;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
