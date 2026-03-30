@@ -198,7 +198,7 @@ img {
 /* --------------------------------------- */
  
 h1, h2, h3 {
-  font-family: var(--font-serif);
+  font-family: 'Oliver', cursive;
   font-weight: 700;
   line-height: 1.15;
   color: var(--ink);
