@@ -28,7 +28,7 @@
   --ink-muted:   #4a4540;
   --rust:        #b84c2b;
   --sage:        #6b8c6a;
-  --denim:       #4a6580;
+  --denim:       #7f9dbb;
   --tape-yellow: rgba(255, 235, 150, 0.75);
   --tape-blue:   rgba(180, 210, 230, 0.75);
   --paper-white: #faf7f2;
@@ -124,17 +124,18 @@ img {
 }
 
 .tape-img--top {
-  top: -1.2rem;
-  left: -0.8rem;
-  width: 16rem;
+  top: -.2rem;
+  left: -8rem;
+  width: 40rem;
   transform: rotate(-3deg);
 }
 
 .tape-img--top-center {
   top: -1.9rem;
   left: 50%;
-  width: 8.6rem;
-  transform: translateX(-50%) rotate(2deg);
+  width: 26rem;
+  padding-top: 40px;
+  transform: translateX(-140%) rotate(-20deg);
 }
 
 .tape-img--corner {
@@ -153,7 +154,7 @@ img {
 .tape-img--photo {
   top: -2.2rem;
   left: 50%;
-  width: 12rem;
+  width: 20rem;
   transform: translateX(-50%) rotate(-2deg);
 }
  
@@ -204,10 +205,14 @@ h1, h2, h3 {
   font-weight: normal; 
   letter-spacing: 0.02em;
   line-height: 1.1;
+  position: relative;
+  z-index: 4;
 }
  
 .heading-primary span {
   font-style: normal;
+  position: relative;
+  z-index: 4;
 }
  
 @media (max-width: 900px) {
@@ -221,18 +226,6 @@ h2 {
   font-size: var(--font-size-large);
   margin-bottom: 1.5rem;
   position: relative;
-}
- 
-h2::after {
-  content: '';
-  display: block;
-  height: 2.6rem;
-  width: 13rem;
-  background-image: url('./images/line.png');
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 180% 100%;
-  margin: 1.6rem 0 0;
 }
  
 h3 {
@@ -441,7 +434,8 @@ a {
   opacity: 0;
   pointer-events: none;
   z-index: 1;
-  mix-blend-mode: screen;
+  mix-blend-mode: multiply;
+  filter: brightness(1.08) contrast(1.35);
   transition: opacity 0.18s ease, transform 0.18s ease;
 }
 
@@ -500,8 +494,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 4rem;
-  padding-bottom: 8rem;
+  padding-top: 2rem;
+  padding-bottom: 4.5rem;
   gap: var(--gutter-normal);
 }
  
@@ -625,6 +619,7 @@ a {
   overflow: hidden;
   padding: 1.2rem 0;
   white-space: nowrap;
+  margin-top: -2.2rem;
 }
  
 .marquee {
@@ -804,11 +799,11 @@ a {
   position: relative;
   background-image: url('./images/polaroidframe.png');
   background-size: 100% 100%;
-  padding: 8% 8% 22% 8%;
+  padding: 7.2% 7.2% 20.5% 7.2%;
   max-width: 34rem;
   transform: rotate(1.8deg);
   transition: transform 0.3s ease;
-  box-shadow: 4px 6px 0 rgba(180,150,100,0.2), 8px 14px 28px rgba(80,60,30,0.12);
+  box-shadow: none;
 }
 
 .photo-polaroid:hover {
@@ -822,8 +817,9 @@ a {
 .about__photo {
   display: block;
   width: 100%;
-  aspect-ratio: 4/5;
+  aspect-ratio: 0.98 / 1;
   object-fit: cover;
+  object-position: center top;
 }
  
 .polaroid-caption {
@@ -865,7 +861,7 @@ a {
 
 .contact-note__content {
   position: absolute;
-  inset: 5.5% 8% 9% 8%;
+  inset: 6.2% 9% 10.2% 9%;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
