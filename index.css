@@ -7,7 +7,12 @@
   padding: 0;
   box-sizing: inherit;
 }
- 
+ @font-face {
+  font-family: 'Oliver';
+  src: url('./fonts/Oliver-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   /* Colors — warm kraft/cream palette */
   --cream:       #f5f0e8;
@@ -200,16 +205,15 @@ h1, h2, h3 {
 }
  
 .heading-primary {
+  font-family: 'Oliver', cursive;
   font-size: var(--font-size-huge);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  color: var(--ink);
+  font-weight: normal; /* important */
+  letter-spacing: 0.02em;
+  line-height: 1.1;
 }
  
 .heading-primary span {
-  display: block;
-  font-style: italic;
+  font-style: normal;
 }
  
 @media (max-width: 900px) {
