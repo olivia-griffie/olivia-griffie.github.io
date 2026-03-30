@@ -35,6 +35,27 @@
   grid-auto-rows: auto;
   gap: 2.4rem;
   align-items: start;
+  position: relative;
+}
+
+.resume-flower {
+  position: absolute;
+  width: 10rem;
+  pointer-events: none;
+  opacity: 0.82;
+  z-index: 1;
+}
+
+.resume-flower--left {
+  top: 8rem;
+  left: -1rem;
+  transform: rotate(-14deg);
+}
+
+.resume-flower--right {
+  right: 0;
+  bottom: 14rem;
+  transform: rotate(11deg);
 }
 
 /* ----- Board items — shared ----- */
@@ -105,12 +126,10 @@
    LIBRARY CARD
    ============================================ */
 .library-card {
-  background: #faf8f3;
-  border: 1px solid rgba(160, 130, 80, 0.3);
+  background: url('./images/tanpaper.png') center/100% 100% no-repeat;
+  border: none;
   padding: 2.8rem 3rem 3rem;
-  box-shadow:
-    3px 4px 0 rgba(160,130,80,0.2),
-    6px 10px 28px rgba(80,60,30,0.12);
+  box-shadow: none;
   font-family: var(--font-stamp);
 }
 
@@ -147,7 +166,7 @@
 }
 
 .library-name {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Hunter Script', cursive;
   font-size: 4.8rem;
   font-weight: 600;
   color: var(--ink);
@@ -252,24 +271,20 @@
    EXPERIENCE — paper card with grid bg
    ============================================ */
 .experience-card {
-  background: #faf8f2;
-  background-image:
-    linear-gradient(rgba(80,120,100,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(80,120,100,0.08) 1px, transparent 1px);
-  background-size: 22px 22px;
-  border: 1px solid rgba(160,130,80,0.25);
+  background: url('./images/gridpaper.jpg') center/100% 100% no-repeat;
+  border: none;
   padding: 3.5rem 3rem 3rem;
-  box-shadow: 3px 5px 0 rgba(160,130,80,0.18), 6px 10px 24px rgba(80,60,30,0.1);
+  box-shadow: none;
 }
 
 /* ============================================
    EDU + AWARDS card
    ============================================ */
 .edu-awards-card {
-  background: #faf8f2;
-  border: 1px solid rgba(160,130,80,0.25);
+  background: url('./images/tanpaper.png') center/100% 100% no-repeat;
+  border: none;
   padding: 3.5rem 3rem 3rem;
-  box-shadow: 3px 4px 0 rgba(160,130,80,0.18), 4px 8px 20px rgba(80,60,30,0.1);
+  box-shadow: none;
 }
 
 /* Ticket */
@@ -357,7 +372,7 @@
   position: relative;
   border-radius: 2px;
   overflow: hidden;
-  box-shadow: 3px 4px 14px rgba(80,60,30,0.15);
+  box-shadow: none;
 }
 
 .flannel-img {
@@ -384,7 +399,7 @@
    NOTEBOOK deco
    ============================================ */
 .notebook-deco {
-  box-shadow: 3px 4px 14px rgba(80,60,30,0.15);
+  box-shadow: none;
 }
 
 .notebook-img {
@@ -396,15 +411,15 @@
    CTA card
    ============================================ */
 .cta-card {
-  background: #faf8f2;
-  border: 1px solid rgba(160,130,80,0.25);
+  background: url('./images/bluepaper.png') center/100% 100% no-repeat;
+  border: none;
   padding: 4rem 3rem 3.5rem;
   text-align: center;
-  box-shadow: 3px 4px 0 rgba(160,130,80,0.18), 4px 8px 20px rgba(80,60,30,0.1);
+  box-shadow: none;
 }
 
 .cta-heading {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Hunter Script', cursive;
   font-size: 3.2rem;
   color: var(--ink);
   margin: 0 0 2.5rem;

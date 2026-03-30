@@ -18,12 +18,17 @@
   <!-- ***** Header ***** -->
   <header class="header" role="banner" id="top">
     <div class="grid-bg"></div>
+    <img src="./images/driedflower.png" class="page-flower page-flower--header" alt="" aria-hidden="true" />
     <div class="row">
       <nav class="nav" role="navigation">
-      <img src="./images/oliviagriffielogo.png" class="nav__logo" alt="Olivia Griffie" />
-        <ul class="nav__items">
+        <ul class="nav__items nav__items--left">
           <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
           <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
+        </ul>
+        <a href="#top" class="nav__logo-link" aria-label="Olivia Griffie home">
+          <img src="./images/oliviagriffielogo.png" class="nav__logo" alt="Olivia Griffie" />
+        </a>
+        <ul class="nav__items nav__items--right">
           <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
           <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
@@ -32,7 +37,7 @@
 
     <div class="header__text-box row">
       <div class="header__text">
-        <div class="tape tape--top"></div>
+        <img src="./images/tape2.png" class="tape-img tape-img--top" alt="" aria-hidden="true" />
         <p class="header__eyebrow">designer</p>
         <h1 class="heading-primary">
 
@@ -75,7 +80,7 @@
 
           <div class="work__box">
             <div class="work__text paper-card">
-              <div class="tape tape--corner"></div>
+              <img src="./images/tape.png" class="tape-img tape-img--corner" alt="" aria-hidden="true" />
               <h3>Burgermeister Site</h3>
               <p>a Demo eCommerce Site</p>
               <ul class="work__list">
@@ -101,7 +106,7 @@
 
           <div class="work__box work__box--reverse">
             <div class="work__text paper-card">
-              <div class="tape tape--corner tape--right"></div>
+              <img src="./images/tape2.png" class="tape-img tape-img--corner tape-img--right" alt="" aria-hidden="true" />
               <h3>Calculator</h3>
               <p>A clean, elegant calculator app built with modern React.</p>
               <ul class="work__list">
@@ -126,7 +131,7 @@
 
           <div class="work__box">
             <div class="work__text paper-card">
-              <div class="tape tape--corner"></div>
+              <img src="./images/tape.png" class="tape-img tape-img--corner" alt="" aria-hidden="true" />
               <h3>Notificator</h3>
               <p>Real-time notification system powering modern web apps.</p>
               <ul class="work__list">
@@ -172,6 +177,7 @@
 
     <!-- ***** About ***** -->
     <section class="about" id="about">
+      <img src="./images/flower2.png" class="page-flower page-flower--about" alt="" aria-hidden="true" />
       <div class="row">
         <div class="section-label">
           <span class="section-tag">04 — About</span>
@@ -179,7 +185,7 @@
         </div>
         <div class="about__content">
           <div class="about__text paper-card">
-            <div class="tape tape--top-center"></div>
+            <img src="./images/tape2.png" class="tape-img tape-img--top-center" alt="" aria-hidden="true" />
             <!-- Replace with info about yourself -->
             <p>
              I am a Designer with a background in print and UX/UI design with a passion for layout, illustration, and clean function. I have an excellent understanding of marketing, production, website design, corporate identity, product packaging, advertisements, and multimedia design. I am looking for a remote position at a company that could use a highly experienced and versatile designer. I am willing to learn absolutely any new skill, coding language or program. 
@@ -189,7 +195,7 @@
           </div>
           <div class="about__photo-container">
             <div class="photo-polaroid">
-              <div class="tape tape--photo"></div>
+              <img src="./images/tape.png" class="tape-img tape-img--photo" alt="" aria-hidden="true" />
               <!-- Replace with your photo -->
               <img class="about__photo" src="./images/photoofme.jpeg" alt="Photo of me" />
               <span class="polaroid-caption">that's me</span>
@@ -202,19 +208,33 @@
 
   <!-- ***** Contact ***** -->
   <section class="contact" id="contact">
+    <img src="./images/driedflower.png" class="page-flower page-flower--contact" alt="" aria-hidden="true" />
     <div class="row">
       <div class="section-label">
         <span class="section-tag">05 — Contact</span>
         <h2>Get in Touch</h2>
       </div>
-      <div class="contact__info paper-card contact__card">
-        <div class="tape tape--top-center"></div>
-        <p>
-          Looking for a fast-performing and user-friendly website? Have a project idea, a question, or just want to say hi? 
-          I'd love to hear from you — the quickest way is by email.
-        </p>
-        <!-- Replace with your email -->
-        <a href="mailto:oewheless@gmail.com" class="btn btn--dark">oewheless@gmail.com &rarr;</a>
+      <div class="contact__info contact__card">
+        <form class="contact-note" id="contact-form">
+          <img src="./images/note.png" class="contact-note__bg" alt="" aria-hidden="true" />
+          <div class="contact-note__content">
+            <div class="contact-note__field">
+              <label for="contact-name">Contact Name</label>
+              <input id="contact-name" name="contact-name" type="text" required />
+            </div>
+            <div class="contact-note__field">
+              <label for="contact-subject">Subject Line</label>
+              <input id="contact-subject" name="contact-subject" type="text" required />
+            </div>
+            <div class="contact-note__field contact-note__field--message">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="contact-message" rows="6" required></textarea>
+            </div>
+            <div class="contact-note__actions">
+              <button type="submit" class="btn btn--dark">Send Message &rarr;</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -244,7 +264,7 @@
   </footer>
 
   <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+    <img src="./images/arrow.png" alt="Back to Top" class="back-to-top__image"/>
   </a>
 
   <script src="./index.js"></script>

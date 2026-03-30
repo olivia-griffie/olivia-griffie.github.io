@@ -41,3 +41,18 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = document.querySelector("#contact-name")?.value.trim() || "";
+    const subject = document.querySelector("#contact-subject")?.value.trim() || "";
+    const message = document.querySelector("#contact-message")?.value.trim() || "";
+    const emailBody = `Contact Name: ${name}\n\n${message}`;
+
+    window.location.href = `mailto:oewheless@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+  });
+}

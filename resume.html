@@ -15,18 +15,22 @@
 <body class="resume-page">
 
   <nav class="nav resume-nav" role="navigation">
-    <a href="./index.html">
-      <img src="./images/oliviagriffielogo.png" class="nav__logo" alt="Olivia Griffie" />
-    </a>
-    <ul class="nav__items">
+    <ul class="nav__items nav__items--left">
       <li class="nav__item"><a href="./index.html#work" class="nav__link">Work</a></li>
       <li class="nav__item"><a href="./index.html#clients" class="nav__link">Clients</a></li>
+    </ul>
+    <a href="./index.html" class="nav__logo-link" aria-label="Olivia Griffie home">
+      <img src="./images/oliviagriffielogo.png" class="nav__logo" alt="Olivia Griffie" />
+    </a>
+    <ul class="nav__items nav__items--right">
       <li class="nav__item"><a href="./index.html#about" class="nav__link">About</a></li>
       <li class="nav__item"><a href="./index.html#contact" class="nav__link">Contact</a></li>
     </ul>
   </nav>
 
-  <main class="resume-board">
+  <main class="resume-board" id="top">
+    <img src="./images/driedflower.png" class="resume-flower resume-flower--left" alt="" aria-hidden="true" />
+    <img src="./images/driedflower.png" class="resume-flower resume-flower--right" alt="" aria-hidden="true" />
 
     <!-- LIBRARY CARD — hero -->
     <div class="board-item hero-card">
@@ -243,7 +247,7 @@
       <img src="./images/tape2.png" class="tape-img tape-img--topcenter" alt="" />
       <p class="cta-heading">Want to work together?</p>
       <div class="cta-buttons">
-        <a href="./images/olivia-griffie-resume.pdf" download class="btn btn--dark">Download PDF &darr;</a>
+        <a href="./images/Olivia%20Griffie%20-%20Resume%202026.docx" download="Olivia Griffie - Resume 2026.docx" class="btn btn--dark">Download Resume &darr;</a>
         <a href="./index.html#contact" class="btn">Get in Touch &rarr;</a>
         <a href="./index.html" class="btn">&larr; Portfolio</a>
       </div>
@@ -270,7 +274,7 @@
   </footer>
 
   <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+    <img src="./images/arrow.png" alt="Back to Top" class="back-to-top__image"/>
   </a>
   <script src="./index.js"></script>
 </body>
