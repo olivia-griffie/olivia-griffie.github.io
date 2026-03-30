@@ -240,7 +240,6 @@
 .quote-full-img {
   width: 100%;
   display: block;
-  filter: drop-shadow(4px 6px 12px rgba(80,60,30,0.18));
   mix-blend-mode: multiply;
 }
 
@@ -285,20 +284,23 @@
   border: none;
   padding: 3.5rem 3rem 3rem;
   box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 /* Ticket */
 .ticket-wrap {
   position: relative;
-  margin: 2rem 0;
+  margin: 0.8rem auto 1.8rem;
   max-width: 32rem;
+  width: 100%;
 }
 
 .ticket-bg-img {
   width: 100%;
   display: block;
   mix-blend-mode: multiply;
-  filter: drop-shadow(2px 3px 8px rgba(80,60,30,0.14));
 }
 
 .ticket-text {
@@ -308,8 +310,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.3rem;
-  padding: 1rem;
+  gap: 0.5rem;
+  padding: 1.6rem 2rem;
+  text-align: center;
 }
 
 .ticket-year {
@@ -337,10 +340,11 @@
 
 /* References */
 .ref-entry {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1.4rem 1fr;
+  align-items: start;
   gap: 1rem;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.8rem;
 }
 
 .ref-star {
@@ -355,7 +359,7 @@
   font-style: normal;
   font-size: 1.7rem;
   color: var(--ink);
-  margin: 0 0 0.2rem;
+  margin: 0 0 0.5rem;
 }
 
 .ref-email {
@@ -363,6 +367,7 @@
   font-size: 1.3rem;
   color: var(--rust);
   text-decoration: underline;
+  display: inline-block;
 }
 
 /* ============================================
@@ -442,7 +447,7 @@
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--kraft-dark);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   display: block;
 }
 
@@ -453,21 +458,21 @@
   font-size: 2.8rem;
   font-weight: 700;
   color: var(--ink);
-  margin-bottom: 2.4rem;
+  margin-bottom: 0.4rem;
   line-height: 1.1;
 }
 
 .scrap-h2::after {
   content: '';
   display: block;
-  height: 2px;
+  height: 1rem;
   width: 4rem;
-  background: var(--rust);
+  background: url('./images/line.png') center/100% 100% no-repeat;
   margin: 0.8rem 0 0;
 }
 
 .scrap-h2.light { color: #fff; }
-.scrap-h2.light::after { background: rgba(255,255,255,0.5); }
+.scrap-h2.light::after { background: url('./images/line.png') center/100% 100% no-repeat; }
 
 /* ============================================
    JOB entries

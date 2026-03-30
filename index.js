@@ -52,7 +52,12 @@ if (contactForm) {
     const subject = document.querySelector("#contact-subject")?.value.trim() || "";
     const message = document.querySelector("#contact-message")?.value.trim() || "";
     const emailBody = `Contact Name: ${name}\n\n${message}`;
+    const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent("oewheless@gmail.com")}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoUrl = `mailto:oewheless@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+    const popup = window.open(gmailComposeUrl, "_blank", "noopener");
 
-    window.location.href = `mailto:oewheless@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+    if (!popup) {
+      window.location.href = mailtoUrl;
+    }
   });
 }
