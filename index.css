@@ -27,7 +27,7 @@
   /* Typography */
   --font-serif:    'Playfair Display', Georgia, serif;
   --font-body:     'Libre Baskerville', Georgia, serif;
-  --font-stamp:    'Special Elite', monospace;
+  --font-stamp: 'Roboto Condensed', sans-serif;
  
   /* Sizes */
   --font-size-small:  1.6rem;
