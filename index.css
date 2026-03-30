@@ -691,7 +691,7 @@ a {
 /* Polaroid-style photo */
 .photo-polaroid {
   position: relative;
-  background-image: url('./images/polariodframe.png');
+  background-image: url('./images/polaroidframe.png');
   background-size: 100% 100%;
   padding: 8% 8% 22% 8%;
   max-width: 34rem;
