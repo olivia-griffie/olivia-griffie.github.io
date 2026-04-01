@@ -538,6 +538,12 @@ a {
   flex-shrink: 0;
 }
 
+.hero-polaroid {
+  width: 30rem;
+  max-width: 100%;
+  transform: rotate(3deg);
+}
+
 .about,
 .contact {
   position: relative;
@@ -796,42 +802,11 @@ a {
   display: flex;
   justify-content: center;
 }
- 
-/* Polaroid-style photo */
-.photo-polaroid {
-  position: relative;
-  background-image: url('./images/polaroidframe.png');
-  background-size: 100% 100%;
-  padding: 7.2% 7.2% 20.5% 7.2%;
-  max-width: 34rem;
-  transform: rotate(1.8deg);
-  transition: transform 0.3s ease;
-  box-shadow: none;
-}
 
-.photo-polaroid:hover {
-  transform: rotate(0.5deg) scale(1.02);
-}
- 
-.photo-polaroid:hover {
-  transform: rotate(0.5deg) scale(1.02);
-}
- 
-.about__photo {
-  display: block;
-  width: 100%;
-  aspect-ratio: 0.98 / 1;
-  object-fit: cover;
-  object-position: center top;
-}
- 
-.polaroid-caption {
-  display: block;
-  text-align: center;
-  font-family: var(--font-stamp);
-  font-size: 1.4rem;
-  color: var(--ink-muted);
-  margin-top: 1.4rem;
+.about__polaroid-image {
+  width: 34rem;
+  max-width: 100%;
+  transform: rotate(2deg);
 }
  
 /* --------------------------------------- */
