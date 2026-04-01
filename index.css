@@ -780,13 +780,13 @@ a {
   justify-content: space-between;
   gap: var(--gutter-normal);
   flex-wrap: wrap;
-  filter: sepia(0.6) opacity(0.6) grayscale(0.3);
 }
  
 .client__logo {
   height: 5.5rem;
   max-width: 15rem;
   object-fit: contain;
+  filter: grayscale(1) brightness(0);
 }
  
 @media (max-width: 700px) {
@@ -816,6 +816,7 @@ a {
 .about__polaroid-image {
   width: 34rem;
   max-width: 100%;
+  padding-top: 3rem;
   transform: rotate(2deg);
 }
  
@@ -846,26 +847,21 @@ a {
   position: relative;
   max-width: 98rem;
   margin: 0 auto;
-  min-height: 88rem;
+  min-height: 74rem;
 }
 
 .contact-note__bg {
-  width: 118%;
-  height: 100%;
-  min-height: 88rem;
-  object-fit: cover;
-  object-position: center center;
+  width: 100%;
+  height: auto;
   display: block;
-  max-width: none;
-  margin-left: -9%;
 }
 
 .contact-note__content {
   position: absolute;
-  inset: 20.2% 12% 10.2% 20%;
+  inset: 12.5% 8.5% 9% 15%;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 1.3rem;
 }
 
 .contact-note__field {
@@ -885,8 +881,7 @@ a {
 
 .contact-note__field input,
 .contact-note__field textarea {
-  width: 90%;
-  height: 70%;
+  width: 92%;
   border: 1px solid rgba(74, 69, 64, 0.16);
   border-radius: 1.4rem;
   background: rgba(255, 252, 247, 0.72);
@@ -915,12 +910,13 @@ a {
 }
 
 .contact-note__field--message textarea {
-  min-height: 14rem;
-  height: 70%;
+  min-height: 12rem;
 }
 
 .contact-note__actions {
-  padding-top: 0.5rem;
+  padding-top: 0;
+  margin-top: -0.8rem;
+  align-self: flex-start;
 }
 
 @media (max-width: 700px) {
@@ -958,9 +954,20 @@ a {
   list-style: none;
   gap: var(--gutter-normal);
 }
+
+.footer__social-link-item a {
+  width: 4.8rem;
+  height: 4.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
  
 .footer__social-image {
-  height: 4.5rem;
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  display: block;
   opacity: 0.5;
   transition: opacity 0.2s;
   filter: sepia(0.3);
@@ -1181,7 +1188,7 @@ a {
 
 .contact-banner {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.2rem;
 }
 
 .contact-layout__grid {
@@ -1228,21 +1235,98 @@ a {
 }
 
 .copy-btn {
+  position: relative;
   border: 1px solid rgba(160, 120, 80, 0.28);
   background: rgba(255, 255, 255, 0.8);
   color: var(--kraft-dark);
   border-radius: 999px;
-  padding: 0.7rem 1.2rem;
-  font-family: var(--font-stamp);
-  font-size: 1.15rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  width: 4.2rem;
+  height: 4.2rem;
+  padding: 0;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
 }
 
 .copy-btn:hover {
   color: var(--rust);
   border-color: rgba(184, 76, 43, 0.35);
+}
+
+.copy-btn::before {
+  content: "";
+  width: 1.55rem;
+  height: 1.8rem;
+  border: 2px solid currentColor;
+  border-radius: 0.35rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.copy-btn::after {
+  content: attr(data-status);
+  position: absolute;
+  bottom: calc(100% + 0.6rem);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-stamp);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(56, 56, 56, 0.92);
+  color: #fff;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.copy-btn[data-status]:not([data-status=""])::after {
+  opacity: 1;
+}
+
+.copy-btn:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 2px;
+}
+
+.case-study {
+  display: grid;
+  gap: 3rem;
+}
+
+.case-study__intro {
+  max-width: 70rem;
+}
+
+.case-study__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.4rem;
+}
+
+.case-study__figure {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(160, 120, 80, 0.2);
+  border-radius: 2.4rem;
+  padding: 2rem;
+}
+
+.case-study__image {
+  width: 100%;
+  display: block;
+  border-radius: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.case-study__figure p {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.65;
 }
 
 .contact-socials {
@@ -1304,7 +1388,8 @@ a {
   .contact-layout__grid,
   .faq-grid,
   .feature-grid--three,
-  .project-grid {
+  .project-grid,
+  .case-study__gallery {
     grid-template-columns: 1fr;
   }
 

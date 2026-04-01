@@ -25,6 +25,10 @@ const backToTopButton = document.querySelector(".back-to-top");
 let isBackToTopRendered = false;
 
 let alterStyles = (isBackToTopRendered) => {
+  if (!backToTopButton) {
+    return;
+  }
+
   backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
   backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
   backToTopButton.style.transform = isBackToTopRendered
@@ -32,15 +36,17 @@ let alterStyles = (isBackToTopRendered) => {
     : "scale(0)";
 };
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 700) {
-    isBackToTopRendered = true;
-    alterStyles(isBackToTopRendered);
-  } else {
-    isBackToTopRendered = false;
-    alterStyles(isBackToTopRendered);
-  }
-});
+if (backToTopButton) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 700) {
+      isBackToTopRendered = true;
+      alterStyles(isBackToTopRendered);
+    } else {
+      isBackToTopRendered = false;
+      alterStyles(isBackToTopRendered);
+    }
+  });
+}
 
 const contactForm = document.querySelector("#contact-form");
 const copyButtons = document.querySelectorAll(".copy-btn");
@@ -83,18 +89,24 @@ logoLinks.forEach((link) => {
 
 copyButtons.forEach((button) => {
   button.addEventListener("click", async () => {
-    const originalLabel = button.textContent;
+    const originalLabel = button.getAttribute("aria-label") || "Copy";
     const copyValue = button.dataset.copy || "";
 
     try {
       await navigator.clipboard.writeText(copyValue);
-      button.textContent = "Copied";
+      button.dataset.status = "Copied";
+      button.setAttribute("aria-label", "Copied");
+      button.setAttribute("title", "Copied");
     } catch (error) {
-      button.textContent = "Failed";
+      button.dataset.status = "Failed";
+      button.setAttribute("aria-label", "Failed");
+      button.setAttribute("title", "Failed");
     }
 
     window.setTimeout(() => {
-      button.textContent = originalLabel;
+      button.dataset.status = "";
+      button.setAttribute("aria-label", originalLabel);
+      button.setAttribute("title", originalLabel);
     }, 1400);
   });
 });
