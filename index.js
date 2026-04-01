@@ -53,9 +53,15 @@ logoLinks.forEach((link) => {
     return;
   }
 
+  logoVideo.loop = true;
+  logoVideo.preload = "auto";
+  logoVideo.muted = true;
+  logoVideo.defaultMuted = true;
+  logoVideo.load();
+
   const playLogo = () => {
+    link.classList.add("nav__logo-link--playing");
     logoVideo.currentTime = 0;
-    logoVideo.style.opacity = "1";
     const playAttempt = logoVideo.play();
 
     if (playAttempt && typeof playAttempt.catch === "function") {
@@ -64,9 +70,9 @@ logoLinks.forEach((link) => {
   };
 
   const stopLogo = () => {
+    link.classList.remove("nav__logo-link--playing");
     logoVideo.pause();
     logoVideo.currentTime = 0;
-    logoVideo.style.opacity = "0";
   };
 
   link.addEventListener("mouseenter", playLogo);

@@ -383,17 +383,22 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
+  width: fit-content;
 }
 
 .nav__logo-video {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  left: 50%;
+  top: 50%;
+  height: 10rem;
+  width: auto;
+  transform: translate(-50%, -50%);
   object-fit: contain;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.18s ease;
+  z-index: 2;
+  mix-blend-mode: multiply;
 }
  
 .nav__logo {
@@ -403,6 +408,19 @@ a {
   mix-blend-mode: multiply;
   position: relative;
   z-index: 1;
+  transition: opacity 0.18s ease;
+}
+
+.nav__logo-link.nav__logo-link--playing .nav__logo,
+.nav__logo-link:hover .nav__logo,
+.nav__logo-link:focus-visible .nav__logo {
+  opacity: 0;
+}
+
+.nav__logo-link.nav__logo-link--playing .nav__logo-video,
+.nav__logo-link:hover .nav__logo-video,
+.nav__logo-link:focus-visible .nav__logo-video {
+  opacity: 1;
 }
  
 .nav__items {
@@ -994,6 +1012,9 @@ a {
 .home-hero__polaroid {
   width: 100%;
   max-width: 38rem;
+  opacity: 1;
+  background: #fff;
+  mix-blend-mode: normal;
 }
 
 .home-hero__content {
