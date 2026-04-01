@@ -1,604 +1,211 @@
-/* ============================================
-   RESUME PAGE — Scrapbook / Mood Board Style
-   Matching STYLE.jpg: layered paper scraps,
-   library card, typewriter text, warm linen bg
-   ============================================ */
-
-/* ----- Page base ----- */
 .resume-page {
-  background-color: #e8e0d0;
-  background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(180,160,120,0.18) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(160,180,150,0.12) 0%, transparent 50%);
-  min-height: 100vh;
+  background: #f5f0e8;
 }
 
-/* ----- Nav override for resume page ----- */
 .resume-nav {
-  background: rgba(232, 224, 208, 0.92);
-  backdrop-filter: blur(6px);
+  background: transparent;
   position: sticky;
   top: 0;
   z-index: 100;
   padding: 1.6rem var(--gutter-normal);
-  border-bottom: var(--border-kraft);
   max-width: 100%;
 }
 
-/* ----- Main board ----- */
-.resume-board {
-  max-width: 1200px;
+.resume-main {
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 4rem var(--gutter-normal) 8rem;
+  padding: 5rem var(--gutter-normal) 9rem;
+}
+
+.resume-hero {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: auto;
-  gap: 2.4rem;
-  align-items: start;
-  position: relative;
-}
-
-.resume-flower {
-  position: absolute;
-  width: 10rem;
-  pointer-events: none;
-  opacity: 0.82;
-  z-index: 1;
-}
-
-.resume-flower--left {
-  top: 8rem;
-  left: -1rem;
-  transform: rotate(-14deg);
-}
-
-.resume-flower--right {
-  right: 0;
-  bottom: 14rem;
-  transform: rotate(11deg);
-}
-
-/* ----- Board items — shared ----- */
-.board-item {
-  position: relative;
-  transform: rotate(var(--r, 0deg));
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.board-item:hover {
-  transform: rotate(0deg) scale(1.01);
-  z-index: 10;
-}
-
-/* ----- Grid placement ----- */
-.hero-card        { grid-column: 1 / 8;  grid-row: 1; --r: -1deg; }
-.quote-scrap      { grid-column: 8 / 13; grid-row: 1; --r: 3deg; align-self: start; }
-.skills-card      { grid-column: 1 / 6;  grid-row: 2; --r: -1.5deg; }
-.experience-card  { grid-column: 6 / 13; grid-row: 2 / 4; --r: 0.8deg; }
-.edu-awards-card  { grid-column: 1 / 6;  grid-row: 3; --r: 1.5deg; }
-.flannel-deco     { grid-column: 2 / 5;  grid-row: 4; --r: -3deg; }
-.cta-card         { grid-column: 5 / 11; grid-row: 4; --r: -0.5deg; }
-
-@media (max-width: 900px) {
-  .resume-board {
-    grid-template-columns: 1fr;
-  }
-  .hero-card, .quote-scrap, .skills-card, .experience-card,
-  .edu-awards-card, .flannel-deco, .cta-card {
-    grid-column: 1 / -1;
-    grid-row: auto;
-  }
-}
-
-/* ----- Tape images ----- */
-.tape-img {
-  position: absolute;
-  z-index: 5;
-  pointer-events: none;
-}
-
-.tape-img--topleft {
-  top: -1.8rem;
-  left: 2rem;
-  width: 9rem;
-  transform: rotate(-8deg);
-  opacity: 0.9;
-}
-
-.tape-img--topleft-sm {
-  top: -1.4rem;
-  left: 3rem;
-  width: 7rem;
-  transform: rotate(-5deg);
-  opacity: 0.85;
-}
-
-.skills-card .tape-img--topleft-sm {
-  top: -2rem;
-  left: 2.2rem;
-  width: 9.2rem;
-  transform: rotate(-4deg);
-}
-
-.tape-img--topcenter {
-  top: -1.6rem;
-  left: 50%;
-  transform: translateX(-50%) rotate(2deg);
-  width: 8rem;
-  opacity: 0.9;
-}
-
-/* ============================================
-   LIBRARY CARD
-   ============================================ */
-.library-card {
-  background: url('./images/tanpaper.png') center/100% 100% no-repeat;
-  border: none;
-  padding: 2.8rem 3rem 3rem;
-  box-shadow: none;
-  font-family: var(--font-stamp);
-}
-
-.library-card__top-rule {
-  font-family: var(--font-stamp);
-  font-size: 1.1rem;
-  letter-spacing: 0.22em;
-  color: var(--kraft-dark);
-  text-align: center;
-  border-bottom: 1px solid var(--kraft);
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-}
-
-.library-field {
-  margin-bottom: 1.6rem;
-  border-bottom: 1px solid rgba(160,130,80,0.2);
-  padding-bottom: 1.4rem;
-}
-
-.library-field:last-child {
-  border-bottom: none;
-}
-
-.library-label {
-  display: block;
-  font-family: var(--font-stamp);
-  font-size: 1.05rem;
-  letter-spacing: 0.22em;
-  color: var(--kraft-dark);
-  text-transform: uppercase;
-  margin-bottom: 0.4rem;
-}
-
-.library-name {
-  font-family: 'Hunter Script', cursive;
-  font-size: 4.8rem;
-  font-weight: 600;
-  color: var(--ink);
-  line-height: 1;
-  margin: 0;
-}
-
-.library-name::after { display: none; }
-
-.library-value {
-  font-family: var(--font-stamp);
-  font-size: 1.5rem;
-  color: var(--ink-muted);
-  margin: 0;
-  line-height: 1.6;
-}
-
-.library-value.small {
-  font-size: 1.25rem;
-}
-
-.library-value.blurb {
-  font-family: var(--font-body);
-  font-size: 1.45rem;
-  font-style: normal;
-  line-height: 1.7;
-}
-
-.library-table {
-  margin-top: 1.8rem;
-  border: 1px solid rgba(160,130,80,0.3);
-}
-
-.library-table__row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1rem;
-  padding: 0.6rem 1rem;
-  border-bottom: 1px solid rgba(160,130,80,0.2);
-  font-family: var(--font-stamp);
-  font-size: 1.25rem;
-  color: var(--ink-muted);
+  grid-template-columns: minmax(24rem, 34rem) 1fr;
+  gap: 5rem;
   align-items: center;
+  margin-bottom: 10rem;
 }
 
-.library-table__row:last-child { border-bottom: none; }
-
-.library-table__row--head {
-  background: rgba(160,130,80,0.1);
-  font-size: 1.05rem;
-  letter-spacing: 0.15em;
-  color: var(--kraft-dark);
-  text-transform: uppercase;
-}
-
-.library-table__row a {
-  font-family: var(--font-stamp);
-  font-size: 1.25rem;
-  color: var(--rust);
-  text-decoration: underline;
-}
-
-/* ============================================
-   QUOTE SCRAP
-   ============================================ */
-.quote-scrap {
-  max-width: 22rem;
-  margin-left: auto;
-}
-
-.quote-full-img {
+.resume-hero__media img {
   width: 100%;
   display: block;
-  mix-blend-mode: multiply;
 }
 
-/* ============================================
-   SKILLS — bluepaper
-   ============================================ */
-.bluepaper-wrap {
-  position: relative;
-  display: block;
-  overflow: visible;
-}
-
-.bluepaper-img {
-  width: 112%;
-  display: block;
-  mix-blend-mode: multiply;
-  border-radius: 2px;
-  max-width: none;
-  margin-left: -6%;
-}
-
-.bluepaper-content {
-  position: absolute;
-  inset: 6.5% 7% 7.5%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-/* ============================================
-   EXPERIENCE — paper card with grid bg
-   ============================================ */
-.experience-card {
-  background: url('./images/gridpaper.jpg') center/100% 100% no-repeat;
-  border: none;
-  padding: 3.5rem 3rem 3rem;
-  box-shadow: none;
-}
-
-/* ============================================
-   EDU + AWARDS card
-   ============================================ */
-.edu-awards-card {
-  background: url('./images/tanpaper.png') center/100% 100% no-repeat;
-  border: none;
-  padding: 3.5rem 3rem 3rem;
-  box-shadow: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-/* Ticket */
-.ticket-wrap {
-  position: relative;
-  margin: 0.8rem auto 1.8rem;
-  max-width: 32rem;
-  width: 100%;
-}
-
-.ticket-bg-img {
-  width: 100%;
-  display: block;
-  mix-blend-mode: multiply;
-}
-
-.ticket-text {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 1.6rem 2rem;
-  text-align: center;
-}
-
-.ticket-year {
+.resume-chip {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(160, 120, 80, 0.2);
   font-family: var(--font-stamp);
   font-size: 1.2rem;
-  letter-spacing: 0.2em;
-  color: var(--kraft-dark);
-  text-transform: uppercase;
-}
-
-.ticket-degree {
-  font-family: 'Oliver', cursive;
-  font-size: 1.8rem;
-  font-style: normal;
-  color: var(--ink);
-  font-weight: 700;
-}
-
-.ticket-school {
-  font-family: var(--font-stamp);
-  font-size: 1.3rem;
-  color: var(--ink-muted);
   letter-spacing: 0.08em;
-}
-
-/* References */
-.ref-entry {
-  display: grid;
-  grid-template-columns: 1.4rem 1fr;
-  align-items: start;
-  gap: 1rem;
-  margin-bottom: 1.8rem;
-}
-
-.ref-star {
-  color: var(--kraft);
-  font-size: 1.2rem;
-  margin-top: 0.4rem;
-  flex-shrink: 0;
-}
-
-.ref-name {
-  font-family: 'Oliver', cursive;
-  font-style: normal;
-  font-size: 1.7rem;
-  color: var(--ink);
-  margin: 0 0 0.5rem;
-}
-
-.ref-email {
-  font-family: var(--font-stamp);
-  font-size: 1.3rem;
-  color: var(--rust);
-  text-decoration: underline;
-  display: inline-block;
-}
-
-/* ============================================
-   FLANNEL deco
-   ============================================ */
-.flannel-deco {
-  position: relative;
-  border-radius: 2px;
-  overflow: hidden;
-  box-shadow: none;
-}
-
-.flannel-img {
-  width: 100%;
-  display: block;
-  filter: saturate(0.8) brightness(0.92);
-}
-
-.flannel-label {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--font-stamp);
-  font-size: 1.4rem;
-  letter-spacing: 0.1em;
-  color: #fff;
-  text-align: center;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-  white-space: nowrap;
-}
-
-/* ============================================
-   NOTEBOOK deco
-   ============================================ */
-/* ============================================
-   CTA card
-   ============================================ */
-.cta-card {
-  background: url('./images/bluepaper.png') center/100% 100% no-repeat;
-  border: none;
-  padding: 3.2rem 3rem 3rem;
-  text-align: center;
-  box-shadow: none;
-}
-
-.cta-heading {
-  font-family: 'Hunter Script', cursive;
-  font-size: 3.2rem;
-  color: var(--ink);
-  margin: 0 0 2.5rem;
-  font-style: normal;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 1.2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: -0.3rem;
-}
-
-/* ============================================
-   Shared scrap labels & headings
-   ============================================ */
-.scrap-label {
-  font-family: var(--font-stamp);
-  font-size: 1.1rem;
-  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--kraft-dark);
-  margin-bottom: 0;
-  display: block;
 }
 
-.skills-card .scrap-label.light { color: var(--denim); }
+.resume-hero__copy h1 {
+  font-size: 5.8rem;
+  margin: 2rem 0 1.6rem;
+  line-height: 1;
+}
 
-.scrap-h2 {
-  font-family: 'Oliver', cursive;
-  font-size: 2.8rem;
-  font-weight: 700;
+.resume-hero__copy p {
+  font-size: 1.7rem;
+  line-height: 1.75;
+  max-width: 60rem;
+}
+
+.resume-hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 2.8rem;
+}
+
+.resume-hero__stats div {
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(160, 120, 80, 0.3);
+}
+
+.resume-hero__stats strong {
+  display: block;
+  font-family: var(--font-stamp);
+  font-size: 3rem;
   color: var(--ink);
-  margin-bottom: 0.4rem;
-  line-height: 1.1;
 }
 
-.scrap-h2::after {
+.resume-hero__stats span {
+  font-family: var(--font-stamp);
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--kraft-dark);
+}
+
+.resume-timeline,
+.resume-portfolio {
+  margin-bottom: 9rem;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 88rem;
+  margin: 0 auto;
+}
+
+.timeline::before {
   content: '';
-  display: block;
-  height: 1.6rem;
-  width: 7rem;
-  background: url('./images/line.png') center/100% 100% no-repeat;
-  margin: 1rem 0 0;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(160, 120, 80, 0.25);
+  transform: translateX(-50%);
 }
 
-.skills-card .scrap-h2.light { color: #31465f; }
-.scrap-h2.light::after { background: url('./images/line.png') center/100% 100% no-repeat; }
-
-/* ============================================
-   JOB entries
-   ============================================ */
-.job {
-  margin-bottom: 2.4rem;
+.timeline-item {
+  width: calc(50% - 3rem);
+  position: relative;
 }
 
-.job:last-child { margin-bottom: 0; }
-
-.job__meta {
-  margin-bottom: 0.4rem;
+.timeline-item--left {
+  align-self: flex-start;
 }
 
-.job__date {
-  display: inline-block;
+.timeline-item--right {
+  align-self: flex-end;
+}
+
+.timeline-year {
+  position: absolute;
+  top: 1.8rem;
   font-family: var(--font-stamp);
   font-size: 1.15rem;
   letter-spacing: 0.12em;
-  color: var(--kraft-dark);
-  background: var(--cream-dark);
-  border: 1px solid var(--kraft);
-  padding: 0.2rem 0.9rem;
   text-transform: uppercase;
+  color: var(--kraft-dark);
 }
 
-.job__title {
-  font-family: var(--font-stamp);
+.timeline-item--left .timeline-year {
+  right: -8rem;
+}
+
+.timeline-item--right .timeline-year {
+  left: -8rem;
+}
+
+.timeline-card {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(160, 120, 80, 0.18);
+  border-radius: 2.4rem;
+  padding: 2.2rem;
+}
+
+.timeline-card h3 {
+  margin-bottom: 0.8rem;
   font-size: 2rem;
   font-style: normal;
-  font-weight: 700;
-  color: var(--ink);
-  margin: 0.5rem 0 0.2rem;
-  line-height: 1.2;
 }
 
-.job__company {
-  font-family: var(--font-stamp);
-  font-size: 1.3rem;
-  letter-spacing: 0.06em;
-  color: var(--rust);
-  margin: 0 0 0.8rem;
-}
-
-.job__bullets {
-  list-style: none;
-  padding: 0;
+.timeline-card p,
+.timeline-card small {
+  display: block;
   margin: 0;
-}
-
-.job__bullets li {
-  font-family: var(--font-body);
-  font-size: 1.5rem;
   color: var(--ink-muted);
+}
+
+.timeline-card small {
+  margin-top: 0.8rem;
+  font-size: 1.35rem;
   line-height: 1.6;
-  padding-left: 1.6rem;
-  position: relative;
-  margin-bottom: 0.4rem;
 }
 
-.job__bullets li::before {
-  content: '✦';
-  position: absolute;
-  left: 0;
-  color: var(--kraft);
-  font-size: 0.85rem;
-  top: 0.55rem;
-}
-
-.job-rule {
-  height: 1px;
-  background: rgba(160,130,80,0.25);
-  margin: 2rem 0;
-  border: none;
-}
-
-/* ============================================
-   SKILL groups
-   ============================================ */
-.skill-group {
-  margin-bottom: 1.6rem;
-}
-
-.skill-group__title {
-  font-family: var(--font-stamp);
-  font-size: 1.1rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--kraft-dark);
-  margin-bottom: 0.7rem;
+.resume-group h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2.2rem;
   font-style: normal;
 }
 
-.skills-card .skill-group__title.light { color: #4a6580; }
+.resume-group + .resume-group {
+  margin-top: 5rem;
+}
 
-.skill-tags {
+.resume-cta {
   display: flex;
+  gap: 1.4rem;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 4rem;
 }
 
-.skill-tags span {
-  font-family: var(--font-stamp);
-  font-size: 1.15rem;
-  letter-spacing: 0.05em;
-  background: rgba(200,170,120,0.25);
-  border: 1px solid rgba(160,130,80,0.4);
-  padding: 0.3rem 0.9rem;
-  color: var(--ink-muted);
-  transition: background 0.2s;
-}
+@media (max-width: 980px) {
+  .resume-hero,
+  .resume-hero__stats {
+    grid-template-columns: 1fr;
+  }
 
-.skill-tags span:hover {
-  background: var(--ink);
-  color: var(--cream);
-  border-color: var(--ink);
-}
+  .timeline::before {
+    left: 2rem;
+    transform: none;
+  }
 
-.skills-card .skill-tags.light span {
-  background: rgba(255,255,255,0.24);
-  border-color: rgba(74,101,128,0.28);
-  color: #36506a;
-}
+  .timeline-item,
+  .timeline-item--left,
+  .timeline-item--right {
+    width: 100%;
+    align-self: stretch;
+    padding-left: 5rem;
+  }
 
-.skills-card .skill-tags.light span:hover {
-  background: rgba(255,255,255,0.45);
-  color: #213244;
+  .timeline-year,
+  .timeline-item--left .timeline-year,
+  .timeline-item--right .timeline-year {
+    position: static;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
 }

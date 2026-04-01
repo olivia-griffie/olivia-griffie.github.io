@@ -9,16 +9,13 @@
   <meta name="keywords" content="Olivia Griffie, Graphic Designer, UI Design, UX Designer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital@0;1&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital@0;1&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
-
-  <!-- ***** Header ***** -->
-  <header class="header" role="banner" id="top">
+  <header class="header header--wireframe" role="banner" id="top">
     <div class="grid-bg"></div>
-    <img src="./images/driedflower.png" class="page-flower page-flower--header" alt="" aria-hidden="true" />
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items nav__items--left">
@@ -35,135 +32,80 @@
       </nav>
     </div>
 
-    <div class="header__text-box row">
-      <div class="header__text">
-        <img src="./images/tape2.png" class="tape-img tape-img--top" alt="" aria-hidden="true" />
-        <p class="header__eyebrow">designer</p>
-        <h1 class="heading-primary">
-
-          <span>hi, i'm liv.</span>
-        </h1>
-
-        <p class="header__sub">welcome to my digital scrapbook</p>
-        <a href="#contact" class="btn btn--dark">Get in touch &rarr;</a>
+    <div class="row home-hero">
+      <div class="home-hero__media">
+        <img src="./images/momandster2.png" class="home-hero__polaroid" alt="Olivia with a child in a polaroid frame" />
       </div>
-      <!-- Decorative torn paper corner -->
-      <div class="header__deco">
-        <img src="./images/momandster2.png" class="hero-polaroid" alt="Olivia with a child in a polaroid frame" />
-        <div class="deco-card deco-card--1">
-          <a href="#about" class="deco-label">buzzing with ideas</a>
+      <div class="home-hero__content">
+        <span class="home-hero__chip">Welcome to the world of captivating web design</span>
+        <h1 class="home-hero__title">Hi, I'm Liv.</h1>
+        <p class="home-hero__summary">Designer with a background in print and UX/UI design, a passion for layout and illustration, and the kind of curiosity that keeps a project evolving until it feels just right.</p>
+        <div class="home-hero__stats">
+          <div class="hero-stat">
+            <strong>05+</strong>
+            <span>Years of design</span>
+          </div>
+          <div class="hero-stat">
+            <strong>20+</strong>
+            <span>Clients supported</span>
+          </div>
+          <div class="hero-stat">
+            <strong>100+</strong>
+            <span>Assets shipped</span>
+          </div>
+        </div>
+        <div class="home-hero__actions">
+          <a href="#work" class="btn btn--dark">See My Work</a>
+          <a href="#contact" class="btn">Contact Me</a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- ***** Marquee Ticker ***** -->
-  <div class="marquee-wrap">
-    <div class="marquee">
-      <span>Build it &bull; Ship it &bull; Dream it &bull; Build it &bull; Ship it &bull; Dream it &bull; Build it &bull; Ship it &bull; Dream it &bull; Build it &bull; Ship it &bull; Dream it &bull; Build it &bull; Ship it &bull; Dream it &bull;</span>
-    </div>
-  </div>
-
-  <main role="main">
-
-    <!-- ***** Work ***** -->
-    <section class="work" id="work">
+  <main role="main" class="homepage-main">
+    <section class="wire-section" id="about">
       <div class="row">
-        <div class="section-label">
-          <span class="section-tag">02 — Projects</span>
-          <h2>My Work</h2>
+        <div class="section-heading section-heading--center">
+          <span class="section-tag">Creative Skills</span>
+          <h2>Services I Bring To The Table</h2>
+          <p class="section-copy">The structure follows your new wireframe, while the visual language stays rooted in your softer scrapbook palette.</p>
         </div>
-
-        <div class="work__boxes">
-
-          <div class="work__box">
-            <div class="work__text paper-card">
-              <img src="./images/tape.png" class="tape-img tape-img--corner" alt="" aria-hidden="true" />
-              <h3>Burgermeister Site</h3>
-              <p>a Demo eCommerce Site</p>
-              <ul class="work__list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-              <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.png" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <div class="image-frame">
-                <img src="./images/project-1.png" class="work__image" alt="Project 1" />
-              </div>
-            </div>
-          </div>
-
-          <div class="work__box work__box--reverse">
-            <div class="work__text paper-card">
-              <img src="./images/tape2.png" class="tape-img tape-img--corner tape-img--right" alt="" aria-hidden="true" />
-              <h3>Calculator</h3>
-              <p>A clean, elegant calculator app built with modern React.</p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-              <div class="work__links">
-                <a href="#" class="link__text">Visit Site <span>&rarr;</span></a>
-                <a href="#">
-                  <img src="./images/github.png" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <div class="image-frame image-frame--tilted">
-                <img src="./images/project-2.png" class="work__image" alt="Project 2" />
-              </div>
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text paper-card">
-              <img src="./images/tape.png" class="tape-img tape-img--corner" alt="" aria-hidden="true" />
-              <h3>Notificator</h3>
-              <p>Real-time notification system powering modern web apps.</p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-              <div class="work__links">
-                <a href="#" class="link__text">Visit Site <span>&rarr;</span></a>
-                <a href="#">
-                  <img src="./images/github.png" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <div class="image-frame">
-                <img src="./images/project-3.png" class="work__image" alt="Project 3" />
-              </div>
-            </div>
-          </div>
-
+        <div class="feature-grid feature-grid--three">
+          <article class="feature-card">
+            <h3>Brand Identity</h3>
+            <p>Logo systems, collateral, and visual consistency across print and digital spaces.</p>
+          </article>
+          <article class="feature-card">
+            <h3>UX / UI Design</h3>
+            <p>Wireframes and polished interfaces built to feel thoughtful, warm, and usable.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Web Support</h3>
+            <p>Front-end styling, asset handling, and launch-ready cleanup for portfolio and marketing sites.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Print Production</h3>
+            <p>Production-aware design with strong proofing habits and clean prepress execution.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Marketing Design</h3>
+            <p>Email visuals, campaign support, and supporting assets that strengthen a brand story.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Fast Learning</h3>
+            <p>I’m comfortable picking up new tools, systems, and workflows whenever a project needs it.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ***** Clients ***** -->
-    <section class="client" id="clients">
+    <section class="wire-section wire-section--soft" id="clients">
       <div class="row">
-        <div class="section-label">
-          <span class="section-tag">03 — Clients</span>
-          <h2>Worked With</h2>
+        <div class="section-heading section-heading--center">
+          <span class="section-tag">Worked With</span>
+          <h2>Clients and Teams I’ve Supported</h2>
         </div>
-        <div class="client__logos">
+        <div class="client__logos client__logos--centered">
           <img src="./images/asulogo.png" class="client__logo" alt="ASU" />
           <img src="./images/planetfitness.png" class="client__logo" alt="Planet Fitness" />
           <img src="./images/Renewal-by-Andersen-logo.png" class="client__logo" alt="Renewal" />
@@ -173,66 +115,180 @@
       </div>
     </section>
 
-    <!-- ***** About ***** -->
-    <section class="about" id="about">
-      <img src="./images/flower2.png" class="page-flower page-flower--about" alt="" aria-hidden="true" />
+    <section class="wire-section" id="work">
       <div class="row">
-        <div class="section-label">
-          <span class="section-tag">04 — About</span>
-          <h2>About Me</h2>
+        <div class="section-heading section-heading--center">
+          <span class="section-tag">My Works</span>
+          <h2>Selected Portfolio Pieces</h2>
         </div>
-        <div class="about__content">
-          <div class="about__text paper-card">
-            <img src="./images/tape2.png" class="tape-img tape-img--top-center" alt="" aria-hidden="true" />
-            <!-- Replace with info about yourself -->
-            <p>
-             I am a Designer with a background in print and UX/UI design with a passion for layout, illustration, and clean function. I have an excellent understanding of marketing, production, website design, corporate identity, product packaging, advertisements, and multimedia design. I am looking for a remote position at a company that could use a highly experienced and versatile designer. I am willing to learn absolutely any new skill, coding language or program. 
-            </p>
-            <p>I build things for the web and love every step of it — from the first sketch to the final deploy.</p>
-<a href="./resume.html" class="btn">My Resume &rarr;</a>
+        <div class="project-grid">
+          <article class="project-card">
+            <img src="./images/project-1.png" class="project-card__image" alt="Burgermeister Site" />
+            <div class="project-card__body">
+              <h3>Burgermeister Site</h3>
+              <p>Demo eCommerce experience built with clean browsing flow and product-forward hierarchy.</p>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="./images/project-2.png" class="project-card__image" alt="Calculator app" />
+            <div class="project-card__body">
+              <h3>Calculator</h3>
+              <p>A minimal, modern front-end concept focused on clarity, responsiveness, and polish.</p>
+              <ul class="work__list">
+                <li>React</li>
+                <li>Next.js</li>
+                <li>Node</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="./images/project-3.png" class="project-card__image" alt="Notificator interface" />
+            <div class="project-card__body">
+              <h3>Notificator</h3>
+              <p>Notification-focused UI concept with attention to states, spacing, and clear hierarchy.</p>
+              <ul class="work__list">
+                <li>Next.js</li>
+                <li>MongoDB</li>
+                <li>UI Systems</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wire-section">
+      <div class="row about-split">
+        <div class="about-split__copy">
+          <div class="section-heading">
+            <span class="section-tag">About Me</span>
+            <h2>Designer, Builder, and Fast Learner</h2>
           </div>
-          <div class="about__photo-container">
-            <img class="about__polaroid-image" src="./images/mepolaroid.png" alt="Olivia in a polaroid frame" />
+          <div class="about-note">
+            <p>I am a Designer with a background in print and UX/UI design with a passion for layout, illustration, and clean function. I have an excellent understanding of marketing, production, website design, corporate identity, product packaging, advertisements, and multimedia design.</p>
+            <p>I am looking for a remote position at a company that could use a highly experienced and versatile designer. I am willing to learn absolutely any new skill, coding language or program.</p>
+            <a href="./resume.html" class="btn">My Resume</a>
+          </div>
+        </div>
+        <div class="about-split__media">
+          <img class="about__polaroid-image" src="./images/mepolaroid.png" alt="Olivia in a polaroid frame" />
+        </div>
+      </div>
+    </section>
+
+    <section class="wire-section wire-section--soft">
+      <div class="row">
+        <div class="section-heading section-heading--center">
+          <span class="section-tag">Testimonials</span>
+          <h2>What Clients Say About Me</h2>
+        </div>
+        <div class="feature-grid feature-grid--three">
+          <article class="quote-card">
+            <p>“Reliable, thoughtful, and able to make complicated ideas feel visually effortless.”</p>
+            <strong>Creative Partner</strong>
+          </article>
+          <article class="quote-card">
+            <p>“Olivia balances creativity with production realism, which makes projects smoother.”</p>
+            <strong>Marketing Team</strong>
+          </article>
+          <article class="quote-card">
+            <p>“She communicates clearly, learns quickly, and makes every round of work better.”</p>
+            <strong>Client Feedback</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wire-section" id="contact">
+      <div class="row">
+        <div class="contact-banner">
+          <span class="section-tag">Get In Touch</span>
+          <h2>We’d love to hear from you.</h2>
+          <p class="section-copy">Your visual voice deserves to feel as clear online as it does in print.</p>
+        </div>
+
+        <div class="contact-layout__grid">
+          <aside class="contact-sidebar">
+            <div class="contact-mini-card">
+              <span>Email</span>
+              <a href="mailto:oewheless@gmail.com">oewheless@gmail.com</a>
+            </div>
+            <div class="contact-mini-card">
+              <span>Phone</span>
+              <p>434.610.4833</p>
+            </div>
+            <div class="contact-mini-card">
+              <span>Location</span>
+              <p>Somewhere in the World</p>
+            </div>
+            <div class="contact-mini-card contact-mini-card--social">
+              <span>My Social Profiles</span>
+              <div class="contact-socials">
+                <a href="https://github.com/olivia-griffie"><img src="./images/github.png" alt="GitHub" /></a>
+                <a href="https://www.linkedin.com/in/olivia-griffie-032860173/"><img src="./images/linkedin.png" alt="LinkedIn" /></a>
+                <a href="https://dribbble.com/olivia-griffie"><img src="./images/dribbble-logo.svg" alt="Dribbble" /></a>
+              </div>
+            </div>
+          </aside>
+
+          <div class="contact__info contact__card">
+            <form class="contact-note" id="contact-form">
+              <img src="./images/note.png" class="contact-note__bg" alt="" aria-hidden="true" />
+              <div class="contact-note__content">
+                <div class="contact-note__field">
+                  <label for="contact-name">Contact Name</label>
+                  <input id="contact-name" name="contact-name" type="text" placeholder="Your name" required />
+                </div>
+                <div class="contact-note__field">
+                  <label for="contact-subject">Subject Line</label>
+                  <input id="contact-subject" name="contact-subject" type="text" placeholder="What is this about?" required />
+                </div>
+                <div class="contact-note__field contact-note__field--message">
+                  <label for="contact-message">Message</label>
+                  <textarea id="contact-message" name="contact-message" rows="6" placeholder="Write your message here..." required></textarea>
+                </div>
+                <div class="contact-note__actions">
+                  <button type="submit" class="btn btn--dark">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-list">
+            <details open>
+              <summary>Can you work with remote clients?</summary>
+              <p>Absolutely. I’m comfortable collaborating remotely and adapting to different team tools and workflows.</p>
+            </details>
+            <details>
+              <summary>How long does a project usually take?</summary>
+              <p>That depends on scope, but I’m happy to talk through goals and timeline early so expectations stay clear.</p>
+            </details>
+            <details>
+              <summary>Do you only design for web?</summary>
+              <p>No. My background spans web, print, brand identity, and production-aware design work.</p>
+            </details>
+            <details>
+              <summary>Can you help refine an existing brand?</summary>
+              <p>Yes. I enjoy stepping into evolving brands and helping them feel more cohesive and polished.</p>
+            </details>
+          </div>
+          <div class="faq-sidecard">
+            <h3>Still have questions?</h3>
+            <p>If you want to talk through a role, collaboration, or project idea, I’m happy to chat.</p>
+            <a href="mailto:oewheless@gmail.com" class="btn">Contact Me</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ***** Contact ***** -->
-  <section class="contact" id="contact">
-    <img src="./images/driedflower.png" class="page-flower page-flower--contact" alt="" aria-hidden="true" />
-    <div class="row">
-      <div class="section-label">
-        <span class="section-tag">05 — Contact</span>
-        <h2>Get in Touch</h2>
-      </div>
-      <div class="contact__info contact__card">
-        <form class="contact-note" id="contact-form">
-          <img src="./images/note.png" class="contact-note__bg" alt="" aria-hidden="true" />
-          <div class="contact-note__content">
-            <div class="contact-note__field">
-              <label for="contact-name">Contact Name</label>
-              <input id="contact-name" name="contact-name" type="text" placeholder="Your name" required />
-            </div>
-            <div class="contact-note__field">
-              <label for="contact-subject">Subject Line</label>
-              <input id="contact-subject" name="contact-subject" type="text" placeholder="What is this about?" required />
-            </div>
-            <div class="contact-note__field contact-note__field--message">
-              <label for="contact-message">Message</label>
-              <textarea id="contact-message" name="contact-message" rows="6" placeholder="Write your message here..." required></textarea>
-            </div>
-            <div class="contact-note__actions">
-              <button type="submit" class="btn btn--dark">Send Message &rarr;</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- ***** Footer ***** -->
   <footer role="contentinfo" class="footer">
     <div class="row">
       <ul class="footer__social-links">
@@ -252,7 +308,7 @@
           </a>
         </li>
       </ul>
-      <p class="footer__credit">&copy; 2026 — Portfolio Designed & Created by Olivia Griffie</p>
+      <p class="footer__credit">&copy; 2026 â€” Portfolio Designed & Created by Olivia Griffie</p>
     </div>
   </footer>
 
