@@ -788,6 +788,10 @@ a {
   object-fit: contain;
   filter: grayscale(1) brightness(0);
 }
+
+.client__logos--centered .client__logo:nth-child(4) {
+  height: 6.3rem;
+}
  
 @media (max-width: 700px) {
   .client__logos { gap: 3rem; justify-content: center; }
@@ -915,7 +919,7 @@ a {
 
 .contact-note__actions {
   padding-top: 0;
-  margin-top: -1.4rem;
+  margin-top: -20rem;
   align-self: flex-start;
 }
 
@@ -1048,6 +1052,18 @@ a {
 
 .home-hero__summary {
   margin: 0 0 2.8rem;
+}
+
+.hero-cert {
+  margin: -1.4rem 0 2.6rem;
+  font-family: var(--font-stamp);
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+}
+
+.hero-cert strong {
+  font-weight: 700;
 }
 
 .home-hero__stats {
@@ -1185,6 +1201,22 @@ a {
 .about-note p {
   font-size: 1.55rem;
   line-height: 1.75;
+}
+
+.resume-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-top: 2.4rem;
+}
+
+.resume-links__label {
+  font-family: var(--font-stamp);
+  font-size: 1.35rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--kraft-dark);
 }
 
 .contact-banner {
