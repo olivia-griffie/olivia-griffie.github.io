@@ -381,6 +381,19 @@ a {
 .nav__logo-link {
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nav__logo-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
 }
  
 .nav__logo {
@@ -388,6 +401,8 @@ a {
   width: auto;
   opacity: 0.85;
   mix-blend-mode: multiply;
+  position: relative;
+  z-index: 1;
 }
  
 .nav__items {
@@ -1153,6 +1168,7 @@ a {
   grid-template-columns: 28rem 1fr;
   gap: 2.6rem;
   margin-bottom: 4rem;
+  align-items: start;
 }
 
 .contact-sidebar {

@@ -44,6 +44,36 @@ window.addEventListener("scroll", () => {
 
 const contactForm = document.querySelector("#contact-form");
 const copyButtons = document.querySelectorAll(".copy-btn");
+const logoLinks = document.querySelectorAll(".nav__logo-link");
+
+logoLinks.forEach((link) => {
+  const logoVideo = link.querySelector(".nav__logo-video");
+
+  if (!logoVideo) {
+    return;
+  }
+
+  const playLogo = () => {
+    logoVideo.currentTime = 0;
+    logoVideo.style.opacity = "1";
+    const playAttempt = logoVideo.play();
+
+    if (playAttempt && typeof playAttempt.catch === "function") {
+      playAttempt.catch(() => {});
+    }
+  };
+
+  const stopLogo = () => {
+    logoVideo.pause();
+    logoVideo.currentTime = 0;
+    logoVideo.style.opacity = "0";
+  };
+
+  link.addEventListener("mouseenter", playLogo);
+  link.addEventListener("mouseleave", stopLogo);
+  link.addEventListener("focus", playLogo);
+  link.addEventListener("blur", stopLogo);
+});
 
 copyButtons.forEach((button) => {
   button.addEventListener("click", async () => {
