@@ -426,34 +426,11 @@ a {
   z-index: 2;
 }
 
-.nav__star {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 5.2rem;
-  height: 5.2rem;
-  transform: translate(-50%, -50%) scale(0.9);
-  object-fit: contain;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 1;
-  mix-blend-mode: multiply;
-  filter: brightness(1.08) contrast(1.35);
-  transition: opacity 0.18s ease, transform 0.18s ease;
-}
-
 .nav__link:hover,
 .nav__link:focus-visible,
 .nav__link.nav__link--active {
   color: var(--ink);
   font-weight: 700;
-}
-
-.nav__link:hover .nav__star,
-.nav__link:focus-visible .nav__star,
-.nav__link.nav__link--active .nav__star {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
 }
  
 @media (max-width: 500px) {
@@ -1006,26 +983,14 @@ a {
 
 .home-hero__content {
   max-width: 64rem;
-}
-
-.home-hero__chip {
-  display: inline-block;
-  padding: 0.8rem 1.6rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(160, 120, 80, 0.2);
-  font-family: var(--font-stamp);
-  font-size: 1.2rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--kraft-dark);
+  position: relative;
 }
 
 .home-hero__title {
   font-family: 'Oliver', normal;
   font-size: 7rem;
   line-height: 1;
-  margin: 2.4rem 0 1.2rem;
+  margin: 1rem 0 1.2rem;
 }
 
 .home-hero__summary,
@@ -1109,7 +1074,6 @@ a {
 }
 
 .feature-card,
-.quote-card,
 .project-card,
 .contact-mini-card,
 .faq-sidecard,
@@ -1144,6 +1108,14 @@ a {
   display: block;
   border-radius: 1.8rem;
   margin-bottom: 1.8rem;
+}
+
+.project-card__link {
+  display: block;
+}
+
+.project-card__body h3 a {
+  color: inherit;
 }
 
 .project-card__body p {
@@ -1206,15 +1178,55 @@ a {
   color: var(--ink);
 }
 
+.contact-mini-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.contact-mini-card__row p,
+.contact-mini-card__row a {
+  flex: 1;
+}
+
+.copy-btn {
+  border: 1px solid rgba(160, 120, 80, 0.28);
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--kraft-dark);
+  border-radius: 999px;
+  padding: 0.7rem 1.2rem;
+  font-family: var(--font-stamp);
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  color: var(--rust);
+  border-color: rgba(184, 76, 43, 0.35);
+}
+
 .contact-socials {
   display: flex;
   gap: 1rem;
+  align-items: center;
+}
+
+.contact-socials a {
+  width: 4.2rem;
+  height: 4.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-socials img {
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 3.2rem;
+  height: 3.2rem;
   object-fit: contain;
+  display: block;
 }
 
 .faq-grid {

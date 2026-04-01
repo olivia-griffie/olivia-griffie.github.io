@@ -19,15 +19,15 @@
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items nav__items--left">
-          <li class="nav__item"><a href="#work" class="nav__link"><video class="nav__star" muted playsinline preload="metadata"><source src="./images/staranimation.mp4" type="video/mp4"></video><span class="nav__link-text">Work</span></a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link"><video class="nav__star" muted playsinline preload="metadata"><source src="./images/staranimation.mp4" type="video/mp4"></video><span class="nav__link-text">Clients</span></a></li>
+          <li class="nav__item"><a href="#work" class="nav__link"><span class="nav__link-text">Work</span></a></li>
+          <li class="nav__item"><a href="#clients" class="nav__link"><span class="nav__link-text">Clients</span></a></li>
         </ul>
         <a href="#top" class="nav__logo-link" aria-label="Olivia Griffie home">
           <img src="./images/oliviagriffielogo.png" class="nav__logo" alt="Olivia Griffie" />
         </a>
         <ul class="nav__items nav__items--right">
-          <li class="nav__item"><a href="#about" class="nav__link"><video class="nav__star" muted playsinline preload="metadata"><source src="./images/staranimation.mp4" type="video/mp4"></video><span class="nav__link-text">About</span></a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link"><video class="nav__star" muted playsinline preload="metadata"><source src="./images/staranimation.mp4" type="video/mp4"></video><span class="nav__link-text">Contact</span></a></li>
+          <li class="nav__item"><a href="#about" class="nav__link"><span class="nav__link-text">About</span></a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link"><span class="nav__link-text">Contact</span></a></li>
         </ul>
       </nav>
     </div>
@@ -37,7 +37,8 @@
         <img src="./images/momandster2.png" class="home-hero__polaroid" alt="Olivia with a child in a polaroid frame" />
       </div>
       <div class="home-hero__content">
-        <span class="home-hero__chip">Welcome to the world of captivating web design</span>
+        <img src="./images/tape2.png" class="tape-img tape-img--top" alt="" aria-hidden="true" />
+        <p class="header__eyebrow">designer</p>
         <h1 class="home-hero__title">Hi, I'm Liv.</h1>
         <p class="home-hero__summary">Designer with a background in print and UX/UI design, a passion for layout and illustration, and the kind of curiosity that keeps a project evolving until it feels just right.</p>
         <div class="home-hero__stats">
@@ -68,7 +69,6 @@
         <div class="section-heading section-heading--center">
           <span class="section-tag">Creative Skills</span>
           <h2>Services I Bring To The Table</h2>
-          <p class="section-copy">The structure follows your new wireframe, while the visual language stays rooted in your softer scrapbook palette.</p>
         </div>
         <div class="feature-grid feature-grid--three">
           <article class="feature-card">
@@ -123,9 +123,11 @@
         </div>
         <div class="project-grid">
           <article class="project-card">
-            <img src="./images/project-1.png" class="project-card__image" alt="Burgermeister Site" />
+            <a href="./example1.html" class="project-card__link">
+              <img src="./images/project-1.png" class="project-card__image" alt="Example 1" />
+            </a>
             <div class="project-card__body">
-              <h3>Burgermeister Site</h3>
+              <h3><a href="./example1.html">Example 1</a></h3>
               <p>Demo eCommerce experience built with clean browsing flow and product-forward hierarchy.</p>
               <ul class="work__list">
                 <li>HTML</li>
@@ -135,9 +137,11 @@
             </div>
           </article>
           <article class="project-card">
-            <img src="./images/project-2.png" class="project-card__image" alt="Calculator app" />
+            <a href="./example2.html" class="project-card__link">
+              <img src="./images/project-2.png" class="project-card__image" alt="Example 2" />
+            </a>
             <div class="project-card__body">
-              <h3>Calculator</h3>
+              <h3><a href="./example2.html">Example 2</a></h3>
               <p>A minimal, modern front-end concept focused on clarity, responsiveness, and polish.</p>
               <ul class="work__list">
                 <li>React</li>
@@ -147,9 +151,11 @@
             </div>
           </article>
           <article class="project-card">
-            <img src="./images/project-3.png" class="project-card__image" alt="Notificator interface" />
+            <a href="./example3.html" class="project-card__link">
+              <img src="./images/project-3.png" class="project-card__image" alt="Example 3" />
+            </a>
             <div class="project-card__body">
-              <h3>Notificator</h3>
+              <h3><a href="./example3.html">Example 3</a></h3>
               <p>Notification-focused UI concept with attention to states, spacing, and clear hierarchy.</p>
               <ul class="work__list">
                 <li>Next.js</li>
@@ -172,34 +178,11 @@
           <div class="about-note">
             <p>I am a Designer with a background in print and UX/UI design with a passion for layout, illustration, and clean function. I have an excellent understanding of marketing, production, website design, corporate identity, product packaging, advertisements, and multimedia design.</p>
             <p>I am looking for a remote position at a company that could use a highly experienced and versatile designer. I am willing to learn absolutely any new skill, coding language or program.</p>
-            <a href="./resume.html" class="btn">My Resume</a>
+            <a href="./images/Olivia%20Griffie%20-%20Resume%202026.docx" download="Olivia Griffie - Resume 2026.docx" class="btn">Download Resume</a>
           </div>
         </div>
         <div class="about-split__media">
           <img class="about__polaroid-image" src="./images/mepolaroid.png" alt="Olivia in a polaroid frame" />
-        </div>
-      </div>
-    </section>
-
-    <section class="wire-section wire-section--soft">
-      <div class="row">
-        <div class="section-heading section-heading--center">
-          <span class="section-tag">Testimonials</span>
-          <h2>What Clients Say About Me</h2>
-        </div>
-        <div class="feature-grid feature-grid--three">
-          <article class="quote-card">
-            <p>“Reliable, thoughtful, and able to make complicated ideas feel visually effortless.”</p>
-            <strong>Creative Partner</strong>
-          </article>
-          <article class="quote-card">
-            <p>“Olivia balances creativity with production realism, which makes projects smoother.”</p>
-            <strong>Marketing Team</strong>
-          </article>
-          <article class="quote-card">
-            <p>“She communicates clearly, learns quickly, and makes every round of work better.”</p>
-            <strong>Client Feedback</strong>
-          </article>
         </div>
       </div>
     </section>
@@ -216,15 +199,24 @@
           <aside class="contact-sidebar">
             <div class="contact-mini-card">
               <span>Email</span>
-              <a href="mailto:oewheless@gmail.com">oewheless@gmail.com</a>
+              <div class="contact-mini-card__row">
+                <a href="mailto:oewheless@gmail.com">oewheless@gmail.com</a>
+                <button type="button" class="copy-btn" data-copy="oewheless@gmail.com">Copy</button>
+              </div>
             </div>
             <div class="contact-mini-card">
               <span>Phone</span>
-              <p>434.610.4833</p>
+              <div class="contact-mini-card__row">
+                <p>434.610.4833</p>
+                <button type="button" class="copy-btn" data-copy="434.610.4833">Copy</button>
+              </div>
             </div>
             <div class="contact-mini-card">
               <span>Location</span>
-              <p>Somewhere in the World</p>
+              <div class="contact-mini-card__row">
+                <p>Lynchburg, VA (Working for your teams remotely)</p>
+                <button type="button" class="copy-btn" data-copy="Lynchburg, VA (Working for your teams remotely)">Copy</button>
+              </div>
             </div>
             <div class="contact-mini-card contact-mini-card--social">
               <span>My Social Profiles</span>

@@ -43,37 +43,24 @@ window.addEventListener("scroll", () => {
 });
 
 const contactForm = document.querySelector("#contact-form");
-const navLinks = document.querySelectorAll(".nav__link");
+const copyButtons = document.querySelectorAll(".copy-btn");
 
-navLinks.forEach((link) => {
-  const starVideo = link.querySelector(".nav__star");
+copyButtons.forEach((button) => {
+  button.addEventListener("click", async () => {
+    const originalLabel = button.textContent;
+    const copyValue = button.dataset.copy || "";
 
-  if (!starVideo) {
-    return;
-  }
-
-  starVideo.loop = true;
-
-  const playStar = () => {
-    link.classList.add("nav__link--active");
-    starVideo.currentTime = 0;
-    const playAttempt = starVideo.play();
-
-    if (playAttempt && typeof playAttempt.catch === "function") {
-      playAttempt.catch(() => {});
+    try {
+      await navigator.clipboard.writeText(copyValue);
+      button.textContent = "Copied";
+    } catch (error) {
+      button.textContent = "Failed";
     }
-  };
 
-  const stopStar = () => {
-    link.classList.remove("nav__link--active");
-    starVideo.pause();
-    starVideo.currentTime = 0;
-  };
-
-  link.addEventListener("mouseenter", playStar);
-  link.addEventListener("mouseleave", stopStar);
-  link.addEventListener("focus", playStar);
-  link.addEventListener("blur", stopStar);
+    window.setTimeout(() => {
+      button.textContent = originalLabel;
+    }, 1400);
+  });
 });
 
 if (contactForm) {
