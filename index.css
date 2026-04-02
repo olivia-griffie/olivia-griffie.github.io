@@ -1379,7 +1379,7 @@ a[href*="github"] img {
   padding: 1rem 1.5rem;
   border: 1.5px solid rgba(120, 100, 76, 0.7);
   border-radius: 1.6rem;
-  background: #efd15f;
+  background: rgba(127, 157, 187, 0.2);
   color: var(--ink);
   cursor: pointer;
   font-family: var(--font-stamp);
@@ -1392,13 +1392,14 @@ a[href*="github"] img {
 .folder-btn:hover,
 .folder-btn:focus-visible {
   transform: translateY(-1px);
-  border-color: rgba(107, 140, 106, 0.85);
+  background: rgba(184, 76, 43, 0.12);
+  border-color: rgba(184, 76, 43, 0.55);
   outline: none;
 }
 
 .folder-btn.is-active {
-  background: #c8d3ab;
-  border-color: rgba(107, 140, 106, 0.85);
+  background: rgba(184, 76, 43, 0.16);
+  border-color: rgba(184, 76, 43, 0.55);
 }
 
 .folder-icon {
@@ -1427,7 +1428,7 @@ a[href*="github"] img {
   gap: 0.9rem;
   padding: 1rem 1.4rem;
   border-bottom: 1.5px solid rgba(120, 100, 76, 0.72);
-  background: #8a9b69;
+  background: rgba(127, 157, 187, 0.92);
   color: rgba(255, 250, 242, 0.96);
 }
 
@@ -1488,7 +1489,7 @@ a[href*="github"] img {
   padding: 1rem 1.6rem;
   border: 1.5px solid rgba(184, 76, 43, 0.35);
   border-radius: 999px;
-  background: transparent;
+  background: rgba(184, 76, 43, 0.06);
   color: var(--rust);
   font-family: var(--font-stamp);
   font-size: 1.35rem;
