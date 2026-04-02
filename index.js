@@ -51,6 +51,9 @@ if (backToTopButton) {
 const contactForm = document.querySelector("#contact-form");
 const copyButtons = document.querySelectorAll(".copy-btn");
 const logoLinks = document.querySelectorAll(".nav__logo-link");
+const prototypeOpenButtons = document.querySelectorAll("[data-prototype-open]");
+const prototypeCloseButtons = document.querySelectorAll("[data-prototype-close]");
+let activePrototypeModal = null;
 
 logoLinks.forEach((link) => {
   const logoVideo = link.querySelector(".nav__logo-video");
@@ -128,3 +131,35 @@ if (contactForm) {
     }
   });
 }
+
+const setPrototypeModal = (modal, isOpen) => {
+  if (!modal) {
+    return;
+  }
+
+  modal.classList.toggle("is-open", isOpen);
+  modal.setAttribute("aria-hidden", isOpen ? "false" : "true");
+  document.body.style.overflow = isOpen ? "hidden" : "";
+  activePrototypeModal = isOpen ? modal : null;
+};
+
+prototypeOpenButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modalId = button.getAttribute("data-prototype-open");
+    const modal = modalId ? document.getElementById(modalId) : null;
+    setPrototypeModal(modal, true);
+  });
+});
+
+prototypeCloseButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modal = button.closest(".prototype-modal");
+    setPrototypeModal(modal, false);
+  });
+});
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && activePrototypeModal) {
+    setPrototypeModal(activePrototypeModal, false);
+  }
+});
