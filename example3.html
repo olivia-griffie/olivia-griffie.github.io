@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-  <title>Olivia Griffie | Example 3</title>
+  <title>Olivia Griffie | ASU Print Site Navigation Fix</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital@0;1&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -37,31 +37,42 @@
       <div class="row case-study">
         <div class="case-study__intro">
           <div class="section-heading">
-            <span class="section-tag">Example 3</span>
-            <h2>Notificator</h2>
+            <span class="section-tag">Work 3</span>
+            <h2>ASU Print Site Navigation Fix</h2>
           </div>
           <div class="about-note">
-            <p>This example centers on a notification-based interface with clear visual hierarchy and state-driven composition.</p>
-            <p>It is designed to feel fast, legible, and adaptable across a modern web product.</p>
-            <a href="./index.html#work" class="btn">Back to Work</a>
+            <p><strong>Brand source &amp; constraints</strong><br>The design originated directly from ASU's official brand system, so colors, typography hierarchy, and logo treatment were non-negotiable. Maroon <strong>#8C1D40</strong> and Gold <strong>#FFC629</strong> remained the primary brand colors, paired with the Pitchfork logo mark and the Arizona State University wordmark lockup.</p>
+            <p><strong>Typography</strong><br>The site title "ASU Print Online" stayed large and bold, navigation links used a medium-weight hierarchy, and the CTA buttons remained pill-shaped in ASU gold and maroon to preserve the official system.</p>
+            <p><strong>Constraint</strong><br>The storefront platform injected ASU's global navigation through an external JavaScript file. That created a layout conflict with the eCommerce platform's own header, resulting in logo stacking, overlapping elements, broken spacing, and clipped actions at different viewport widths.</p>
+            <p><strong>Desktop layout audit</strong><br>Screenshots across multiple desktop widths showed three states: a wide viewport where the layout was stable, a mid-width state where the logo began overlapping the "ASU Print Online" title and surrounding nav, and a narrow desktop state where the logo floated on top of the title while the cart button clipped out of view.</p>
+            <p><strong>Mobile issues</strong><br>On smaller screens, the category grid collapsed poorly, thumbnails cropped inconsistently, and the responsive hamburger pattern worked but shifted the Search and Cart placement. The goal was to stabilize the header behavior and improve the category layout without breaking ASU's brand fidelity.</p>
+            <p><strong>Process</strong><br>First, I referenced ASU's brand guidelines and locked the palette, wordmark treatment, and hierarchy. Then I audited the eCommerce platform's native header structure, identified where the external JS utility nav was colliding with it, and tested mobile behavior in DevTools, including iPhone SE and tablet breakpoints.</p>
+            <p><strong>What was resolved</strong><br>The logo and title no longer overlap at any tested viewport width, the external JS nav now sits cleanly in its own utility row on desktop, the mobile hamburger collapse remains stable at iPhone SE width, and the category grid now falls from three columns to two on mobile while keeping the ASU maroon, gold, and white system intact.</p>
+            <div class="case-study__actions">
+              <a href="./index.html#work" class="btn">Back to Work</a>
+            </div>
           </div>
         </div>
         <div class="case-study__gallery">
           <figure class="case-study__figure">
-            <img src="./images/project-3.png" class="case-study__image" alt="Notification dashboard concept" />
-            <p>The dashboard centers the most important alerts first, using contrast and spacing to help users read priority quickly.</p>
+            <img src="./images/asu-print-wide-stable.png" class="case-study__image" alt="ASU Print Online wide desktop viewport with stable navigation layout" />
+            <p>This wide desktop state shows the intended structure working correctly: logo and title aligned, full navigation visible, pill CTAs in brand colors, and the header holding together without collisions.</p>
           </figure>
           <figure class="case-study__figure">
-            <img src="./images/starlogo.png" class="case-study__image" alt="Visual identity study for the interface" />
-            <p>Supporting visual identity work helps the product feel memorable while still fitting naturally into a functional UI system.</p>
+            <img src="./images/asu-print-mid-stable.png" class="case-study__image" alt="ASU Print Online mid-width desktop navigation layout" />
+            <p>The mid-width audit helped isolate where the injected global nav began competing with the storefront header, which was the key breakpoint for overlap and spacing failures.</p>
           </figure>
           <figure class="case-study__figure">
-            <img src="./images/goldengrid.png" class="case-study__image" alt="Grid and layout structure study" />
-            <p>Grid exploration keeps dense information organized, especially when multiple alert types and content states need to live together.</p>
+            <img src="./images/asu-print-mobile-broken.png" class="case-study__image" alt="ASU Print Online mobile layout before category grid adjustments" />
+            <p>This mobile capture documents the broken state before the fix, where the category presentation felt cramped and the storefront needed a more reliable responsive collapse pattern.</p>
           </figure>
           <figure class="case-study__figure">
-            <img src="./images/quote.png" class="case-study__image" alt="Supporting content and emphasis treatment" />
-            <p>Accent modules like this explore ways to break up utility-heavy screens with moments of emphasis, clarity, and brand tone.</p>
+            <img src="./images/asu-print-mobile-fixed.png" class="case-study__image" alt="ASU Print Online mobile layout after responsive category grid fix" />
+            <p>After the adjustment, the storefront holds a cleaner two-column category layout on mobile, keeping the header stable while giving the product groupings more usable spacing.</p>
+          </figure>
+          <figure class="case-study__figure">
+            <img src="./images/asu-print-footer-layout.png" class="case-study__image" alt="ASU Print Online page showing desktop header and footer system together" />
+            <p>This broader page view confirms the header fix in context and shows how the storefront navigation now sits more cleanly within the larger ASU-branded page framework.</p>
           </figure>
         </div>
       </div>
