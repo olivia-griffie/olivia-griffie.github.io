@@ -193,16 +193,16 @@ img {
 /* --------------------------------------- */
  
 h1, h2, h3 {
-  font-family: 'Oliver', normal;
+  font-family: var(--font-serif);
   font-weight: 700;
   line-height: 1.15;
   color: var(--ink);
 }
  
 .heading-primary {
-  font-family: 'Oliver', normal;
+  font-family: var(--font-serif);
   font-size: var(--font-size-huge);
-  font-weight: normal; 
+  font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 1.1;
   position: relative;
@@ -584,6 +584,34 @@ a {
   bottom: 4rem;
   transform: rotate(8deg);
 }
+
+.page-flower--hero-left {
+  top: 18rem;
+  left: 4rem;
+  width: 16rem;
+  transform: rotate(-8deg);
+}
+
+.page-flower--work-right {
+  top: 16rem;
+  right: 2rem;
+  width: 14rem;
+  transform: rotate(12deg);
+}
+
+.page-flower--skills-left {
+  top: 12rem;
+  left: 2rem;
+  width: 13rem;
+  transform: rotate(-14deg);
+}
+
+.page-flower--contact-left {
+  left: 2rem;
+  bottom: 8rem;
+  width: 12rem;
+  transform: rotate(-10deg);
+}
  
 .deco-card {
   background: url('./images/ticket.png') center/100% 100% no-repeat;
@@ -821,7 +849,7 @@ a {
   width: 34rem;
   max-width: 100%;
   padding-top: 3rem;
-  transform: translateY(5rem) rotate(2deg);
+  transform: translateY(6rem) rotate(-5deg);
 }
  
 /* --------------------------------------- */
@@ -924,11 +952,11 @@ a {
 }
 
 .contact-note__actions .btn {
-  transform: translateY(-14rem);
+  transform: translateY(-20rem);
 }
 
 .contact-note__actions .btn:hover {
-  transform: translateY(calc(-14rem - 1px));
+  transform: translateY(calc(-20rem - 1px));
 }
 
 @media (max-width: 700px) {
@@ -1374,6 +1402,17 @@ a {
   gap: 1.2rem;
   flex-wrap: wrap;
   margin: 2.4rem 0 1.4rem;
+}
+
+.case-study__note {
+  margin: 0 0 2rem;
+  padding: 1rem 1.4rem;
+  border-radius: 1.6rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(160, 120, 80, 0.16);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
 }
 
 .btn--architect-mini {

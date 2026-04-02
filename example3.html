@@ -35,23 +35,29 @@
   <main class="homepage-main">
     <section class="wire-section">
       <div class="row case-study">
-        <div class="case-study__intro">
-          <div class="section-heading">
-            <span class="section-tag">Work 3</span>
-            <h2>ASU Print Site Navigation Fix</h2>
-          </div>
-          <div class="about-note">
-            <p><strong>Brand source &amp; constraints</strong><br>The design originated directly from ASU's official brand system, so colors, typography hierarchy, and logo treatment were non-negotiable. Maroon <strong>#8C1D40</strong> and Gold <strong>#FFC629</strong> remained the primary brand colors, paired with the Pitchfork logo mark and the Arizona State University wordmark lockup.</p>
-            <p><strong>Typography</strong><br>The site title "ASU Print Online" stayed large and bold, navigation links used a medium-weight hierarchy, and the CTA buttons remained pill-shaped in ASU gold and maroon to preserve the official system.</p>
-            <p><strong>Constraint</strong><br>The storefront platform injected ASU's global navigation through an external JavaScript file. That created a layout conflict with the eCommerce platform's own header, resulting in logo stacking, overlapping elements, broken spacing, and clipped actions at different viewport widths.</p>
-            <p><strong>Desktop layout audit</strong><br>Screenshots across multiple desktop widths showed three states: a wide viewport where the layout was stable, a mid-width state where the logo began overlapping the "ASU Print Online" title and surrounding nav, and a narrow desktop state where the logo floated on top of the title while the cart button clipped out of view.</p>
-            <p><strong>Mobile issues</strong><br>On smaller screens, the category grid collapsed poorly, thumbnails cropped inconsistently, and the responsive hamburger pattern worked but shifted the Search and Cart placement. The goal was to stabilize the header behavior and improve the category layout without breaking ASU's brand fidelity.</p>
-            <p><strong>Process</strong><br>First, I referenced ASU's brand guidelines and locked the palette, wordmark treatment, and hierarchy. Then I audited the eCommerce platform's native header structure, identified where the external JS utility nav was colliding with it, and tested mobile behavior in DevTools, including iPhone SE and tablet breakpoints.</p>
-            <p><strong>What was resolved</strong><br>The logo and title no longer overlap at any tested viewport width, the external JS nav now sits cleanly in its own utility row on desktop, the mobile hamburger collapse remains stable at iPhone SE width, and the category grid now falls from three columns to two on mobile while keeping the ASU maroon, gold, and white system intact.</p>
-            <div class="case-study__actions">
-              <a href="./index.html#work" class="btn">Back to Work</a>
+        <div class="section-heading">
+          <span class="section-tag">Problem Solving Within UX</span>
+          <h2>ASU Print Site Navigation Fix</h2>
+        </div>
+        <div class="case-study__top">
+          <div class="case-study__intro">
+            <div class="about-note">
+              <p><strong>Brand source &amp; constraints</strong><br>The design originated directly from ASU's official brand system, so colors, typography hierarchy, and logo treatment were non-negotiable. Maroon <strong>#8C1D40</strong> and Gold <strong>#FFC629</strong> remained the primary brand colors, paired with the Pitchfork logo mark and the Arizona State University wordmark lockup.</p>
+              <p><strong>Typography</strong><br>The site title "ASU Print Online" stayed large and bold, navigation links used a medium-weight hierarchy, and the CTA buttons remained pill-shaped in ASU gold and maroon to preserve the official system.</p>
+              <p><strong>Constraint</strong><br>The storefront platform injected ASU's global navigation through an external JavaScript file. That created a layout conflict with the eCommerce platform's own header, resulting in logo stacking, overlapping elements, broken spacing, and clipped actions at different viewport widths.</p>
+              <p><strong>Desktop layout audit</strong><br>Screenshots across multiple desktop widths showed three states: a wide viewport where the layout was stable, a mid-width state where the logo began overlapping the "ASU Print Online" title and surrounding nav, and a narrow desktop state where the logo floated on top of the title while the cart button clipped out of view.</p>
+              <p><strong>Mobile issues</strong><br>On smaller screens, the category grid collapsed poorly, thumbnails cropped inconsistently, and the responsive hamburger pattern worked but shifted the Search and Cart placement. The goal was to stabilize the header behavior and improve the category layout without breaking ASU's brand fidelity.</p>
+              <p><strong>Process</strong><br>First, I referenced ASU's brand guidelines and locked the palette, wordmark treatment, and hierarchy. Then I audited the eCommerce platform's native header structure, identified where the external JS utility nav was colliding with it, and tested mobile behavior in DevTools, including iPhone SE and tablet breakpoints.</p>
+              <p><strong>What was resolved</strong><br>The logo and title no longer overlap at any tested viewport width, the external JS nav now sits cleanly in its own utility row on desktop, the mobile hamburger collapse remains stable at iPhone SE width, and the category grid now falls from three columns to two on mobile while keeping the ASU maroon, gold, and white system intact.</p>
+              <div class="case-study__actions">
+                <a href="./index.html#work" class="btn">Back to Work</a>
+              </div>
             </div>
           </div>
+          <figure class="case-study__figure case-study__figure--hero">
+            <img src="./images/asu-preview-top.png" class="case-study__image" alt="ASU mobile storefront preview" />
+            <p>This mobile preview highlights the cleaner featured-category presentation after the navigation fix, showing the improved two-column product grid and more stable branded header treatment.</p>
+          </figure>
         </div>
         <div class="case-study__gallery">
           <figure class="case-study__figure">
