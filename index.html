@@ -219,7 +219,6 @@
           <!-- Desktop Widget: easy to remove later by deleting this block -->
           <section class="desktop-widget" aria-label="Desktop shortcuts widget">
             <div class="desktop-widget__header">
-              <p class="desktop-widget__eyebrow">Desktop shortcuts</p>
               <h2>A few quick ways to get to know me</h2>
               <p class="desktop-widget__intro">
                 Click a folder to open a file and learn a little more about how I work.
@@ -228,27 +227,27 @@
 
             <div class="desktop-widget__folders">
               <button class="folder-btn is-active" data-file="about" type="button" onclick="trackPortfolioEvent('desktop_widget_click', 'about_me')">
-                <span class="folder-icon" aria-hidden="true">[ ]</span>
+                <span class="folder-icon folder-icon--folder" aria-hidden="true"></span>
                 <span class="folder-label">about_me</span>
               </button>
 
               <button class="folder-btn" data-file="print" type="button" onclick="trackPortfolioEvent('desktop_widget_click', 'print_background')">
-                <span class="folder-icon" aria-hidden="true">[ ]</span>
+                <span class="folder-icon folder-icon--folder" aria-hidden="true"></span>
                 <span class="folder-label">print_background</span>
               </button>
 
               <button class="folder-btn" data-file="ux" type="button" onclick="trackPortfolioEvent('desktop_widget_click', 'ux_ui')">
-                <span class="folder-icon" aria-hidden="true">[ ]</span>
+                <span class="folder-icon folder-icon--folder" aria-hidden="true"></span>
                 <span class="folder-label">ux_ui</span>
               </button>
 
               <button class="folder-btn" data-file="resume" type="button" onclick="trackPortfolioEvent('desktop_widget_click', 'resume_pdf')">
-                <span class="folder-icon" aria-hidden="true">[=]</span>
+                <span class="folder-icon folder-icon--file" aria-hidden="true"></span>
                 <span class="folder-label">resume.pdf</span>
               </button>
 
               <button class="folder-btn" data-file="contact" type="button" onclick="trackPortfolioEvent('desktop_widget_click', 'contact_txt')">
-                <span class="folder-icon" aria-hidden="true">[=]</span>
+                <span class="folder-icon folder-icon--file" aria-hidden="true"></span>
                 <span class="folder-label">contact.txt</span>
               </button>
             </div>

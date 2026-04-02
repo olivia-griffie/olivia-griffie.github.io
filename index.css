@@ -1403,15 +1403,59 @@ a[href*="github"] img {
 }
 
 .folder-icon {
-  font-family: var(--font-stamp);
-  font-size: 1.1rem;
-  color: var(--ink-muted);
+  position: relative;
+  width: 1.7rem;
+  height: 1.25rem;
+  flex: 0 0 auto;
+  display: inline-block;
 }
 
 .folder-label {
   font-family: var(--font-stamp);
   font-size: 1.25rem;
   color: var(--ink);
+}
+
+.folder-icon--folder::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: -0.28rem;
+  width: 0.72rem;
+  height: 0.42rem;
+  border: 1.5px solid rgba(120, 100, 76, 0.75);
+  border-bottom: 0;
+  border-radius: 0.3rem 0.3rem 0 0;
+  background: rgba(127, 157, 187, 0.3);
+}
+
+.folder-icon--folder::after {
+  content: "";
+  position: absolute;
+  inset: 0.12rem 0 0 0;
+  border: 1.5px solid rgba(120, 100, 76, 0.75);
+  border-radius: 0.35rem;
+  background: rgba(127, 157, 187, 0.5);
+}
+
+.folder-icon--file::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid rgba(120, 100, 76, 0.75);
+  border-radius: 0.28rem;
+  background: rgba(250, 247, 242, 0.96);
+}
+
+.folder-icon--file::after {
+  content: "";
+  position: absolute;
+  right: 0.12rem;
+  top: 0.1rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: rgba(127, 157, 187, 0.28);
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
 }
 
 .file-window {
