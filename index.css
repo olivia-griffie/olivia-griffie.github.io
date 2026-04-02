@@ -754,6 +754,7 @@ a {
   border: 1px solid var(--kraft);
   padding: 0.28rem 0.8rem;
   color: var(--ink-muted);
+  border-radius: 999px;
 }
  
 .work__links {
@@ -949,10 +950,11 @@ a {
   padding-top: 0.4rem;
   margin-top: auto;
   align-self: flex-start;
+  transform: translateY(-10rem);
 }
 
 .contact-note__actions .btn:hover {
-  transform: translateY(-1px);
+  transform: translateY(calc(-10rem - 1px));
 }
 
 @media (max-width: 700px) {
@@ -970,6 +972,7 @@ a {
 
   .contact-note__actions {
     margin-top: 0;
+    transform: none;
   }
 
   .contact-note__actions .btn,
@@ -1013,13 +1016,19 @@ a {
   height: 4rem;
   object-fit: contain;
   display: block;
-  opacity: 0.5;
+  opacity: 0.82;
   transition: opacity 0.2s;
   filter: sepia(0.3);
 }
- 
+
 .footer__social-image:hover {
-  opacity: 0.9;
+  opacity: 1;
+}
+
+a[href*="github"] .footer__social-image,
+a[href*="github"] img {
+  opacity: 1;
+  filter: none;
 }
  
 .footer__credit {
@@ -1230,7 +1239,20 @@ a {
 }
 
 .project-card__body h3 a {
-  color: inherit;
+  color: var(--rust);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.12rem;
+  text-underline-offset: 0.22rem;
+  text-decoration-color: rgba(184, 76, 43, 0.55);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease, letter-spacing 0.2s ease;
+}
+
+.project-card__body h3 a:hover,
+.project-card__body h3 a:focus {
+  color: #8f351d;
+  text-decoration-color: #8f351d;
+  letter-spacing: 0.02em;
 }
 
 .project-card__body p {
@@ -1627,9 +1649,35 @@ a {
 
 .faq-list summary {
   cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.4rem;
   font-family: var(--font-stamp);
   font-size: 1.45rem;
   color: var(--ink);
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "";
+  width: 0.9rem;
+  height: 0.9rem;
+  flex: 0 0 auto;
+  border-right: 2px solid var(--rust);
+  border-bottom: 2px solid var(--rust);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  margin-top: -0.3rem;
+}
+
+.faq-list details[open] summary::after {
+  transform: rotate(225deg);
+  margin-top: 0.3rem;
 }
 
 .faq-list details p {
@@ -1668,6 +1716,19 @@ a {
 
   .prototype-modal__frame-wrap {
     height: 72vh;
+  }
+}
+
+@media (max-width: 700px) {
+  .prototype-modal__frame-wrap {
+    height: 58vh;
+  }
+
+  .prototype-modal__frame {
+    width: 135%;
+    height: 135%;
+    transform: scale(0.74);
+    transform-origin: top left;
   }
 }
  
