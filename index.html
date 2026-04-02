@@ -215,6 +215,100 @@
               <a href="./images/olivia_griffie_resume_final.docx" download="olivia_griffie_resume_final.docx" class="btn" onclick="gtag('event', 'resume_click', { 'resume_type': 'docx' });">DOC</a>
             </div>
           </div>
+
+          <!-- Desktop Widget: easy to remove later by deleting this block -->
+          <section class="desktop-widget" aria-label="Desktop shortcuts widget">
+            <div class="desktop-widget__header">
+              <p class="desktop-widget__eyebrow">Desktop shortcuts</p>
+              <h2>A few quick ways to get to know me</h2>
+              <p class="desktop-widget__intro">
+                Click a folder to open a file and learn a little more about how I work.
+              </p>
+            </div>
+
+            <div class="desktop-widget__folders">
+              <button class="folder-btn is-active" data-file="about" type="button" onclick="trackPortfolioEvent('desktop_widget_click', 'about_me')">
+                <span class="folder-icon" aria-hidden="true">[ ]</span>
+                <span class="folder-label">about_me</span>
+              </button>
+
+              <button class="folder-btn" data-file="print" type="button" onclick="trackPortfolioEvent('desktop_widget_click', 'print_background')">
+                <span class="folder-icon" aria-hidden="true">[ ]</span>
+                <span class="folder-label">print_background</span>
+              </button>
+
+              <button class="folder-btn" data-file="ux" type="button" onclick="trackPortfolioEvent('desktop_widget_click', 'ux_ui')">
+                <span class="folder-icon" aria-hidden="true">[ ]</span>
+                <span class="folder-label">ux_ui</span>
+              </button>
+
+              <button class="folder-btn" data-file="resume" type="button" onclick="trackPortfolioEvent('desktop_widget_click', 'resume_pdf')">
+                <span class="folder-icon" aria-hidden="true">[=]</span>
+                <span class="folder-label">resume.pdf</span>
+              </button>
+
+              <button class="folder-btn" data-file="contact" type="button" onclick="trackPortfolioEvent('desktop_widget_click', 'contact_txt')">
+                <span class="folder-icon" aria-hidden="true">[=]</span>
+                <span class="folder-label">contact.txt</span>
+              </button>
+            </div>
+
+            <div class="file-window">
+              <div class="file-window__titlebar">
+                <div class="window-dots" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <p class="file-window__path" id="file-path">C:\OLIVIA\about_me.txt</p>
+              </div>
+
+              <div class="file-window__content">
+                <div class="file-panel is-visible" id="file-about">
+                  <h3>Hi, I'm Olivia.</h3>
+                  <p>
+                    I'm a designer working across brand, UX/UI, and production systems. My background in
+                    print and front-end development shapes how I think about structure, clarity, and how
+                    design functions in the real world.
+                  </p>
+                </div>
+
+                <div class="file-panel" id="file-print">
+                  <h3>Print background</h3>
+                  <p>
+                    I have 10+ years of experience in print design, prepress, proofing, packaging, and
+                    production workflows. I enjoy turning complex production needs into clean, usable design.
+                  </p>
+                </div>
+
+                <div class="file-panel" id="file-ux">
+                  <h3>UX / UI</h3>
+                  <p>
+                    I design eCommerce experiences, wireframes, and front-end components with a focus on
+                    usability, visual clarity, and systems that scale.
+                  </p>
+                </div>
+
+                <div class="file-panel" id="file-resume">
+                  <h3>Resume</h3>
+                  <p>Want the quick version?</p>
+                  <a class="file-link" href="./images/olivia_griffie_resume_final.pdf" target="_blank" rel="noopener" onclick="gtag('event', 'resume_click', { 'resume_type': 'pdf_widget' });">
+                    Open resume.pdf
+                  </a>
+                </div>
+
+                <div class="file-panel" id="file-contact">
+                  <h3>Contact</h3>
+                  <p>Email: <a href="mailto:oewheless@gmail.com">oewheless@gmail.com</a></p>
+                  <p>
+                    LinkedIn:
+                    <a href="https://www.linkedin.com/in/olivia-griffie-032860173/" target="_blank" rel="noopener">
+                      Connect with me
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Desktop Widget -->
         </div>
         <div class="about-split__media">
           <img class="about__polaroid-image" src="./images/kidmepolaroid.png" alt="Photo of me as a child" />

@@ -1284,6 +1284,179 @@ a[href*="github"] img {
   line-height: 1.75;
 }
 
+.desktop-widget {
+  --widget-bg: #f4efe4;
+  --widget-panel: #fffaf0;
+  --widget-line: #5b4a3f;
+  --widget-accent: #b8c39b;
+  --widget-accent-dark: #7f8b63;
+  --widget-text: #2f241f;
+  --widget-shadow: 0 10px 24px rgba(47, 36, 31, 0.12);
+  margin-top: 2.4rem;
+  padding: 2rem;
+  border: 2px solid var(--widget-line);
+  border-radius: 2.4rem;
+  background:
+    linear-gradient(rgba(91, 74, 63, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 74, 63, 0.08) 1px, transparent 1px),
+    var(--widget-bg);
+  background-size: 24px 24px, 24px 24px, auto;
+  color: var(--widget-text);
+  box-shadow: var(--widget-shadow);
+}
+
+.desktop-widget__header {
+  margin-bottom: 1.5rem;
+}
+
+.desktop-widget__eyebrow {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-stamp);
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.desktop-widget__header h2 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  line-height: 1.1;
+}
+
+.desktop-widget__intro {
+  margin: 0;
+  max-width: 60ch;
+  font-size: 1.45rem;
+  line-height: 1.6;
+}
+
+.desktop-widget__folders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.folder-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--widget-line);
+  border-radius: 1.4rem 1.4rem 1rem 1rem;
+  background: #f7d96b;
+  color: var(--widget-text);
+  cursor: pointer;
+  font: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  box-shadow: 0 4px 0 rgba(91, 74, 63, 0.2);
+}
+
+.folder-btn:hover,
+.folder-btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 rgba(91, 74, 63, 0.2);
+  outline: none;
+}
+
+.folder-btn.is-active {
+  background: var(--widget-accent);
+}
+
+.folder-icon {
+  font-family: var(--font-stamp);
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+}
+
+.folder-label {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.file-window {
+  overflow: hidden;
+  border: 2px solid var(--widget-line);
+  border-radius: 1.8rem;
+  background: var(--widget-panel);
+  box-shadow: var(--widget-shadow);
+}
+
+.file-window__titlebar {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid var(--widget-line);
+  background: var(--widget-accent-dark);
+  color: #fffdf8;
+}
+
+.window-dots {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.window-dots span {
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgba(47, 36, 31, 0.35);
+  border-radius: 50%;
+  background: #f4efe4;
+}
+
+.file-window__path {
+  margin: 0;
+  font-family: var(--font-stamp);
+  font-size: 1.2rem;
+  word-break: break-word;
+}
+
+.file-window__content {
+  padding: 1.25rem;
+  min-height: 22rem;
+}
+
+.file-panel {
+  display: none;
+}
+
+.file-panel.is-visible {
+  display: block;
+}
+
+.file-panel h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 2.1rem;
+  font-style: normal;
+}
+
+.file-panel p {
+  margin: 0 0 0.9rem;
+  max-width: 62ch;
+  font-size: 1.45rem;
+  line-height: 1.6;
+}
+
+.file-link {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--widget-line);
+  border-radius: 1.2rem;
+  background: white;
+  color: var(--widget-text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.file-link:hover,
+.file-link:focus-visible {
+  background: var(--widget-accent);
+  outline: none;
+}
+
 .resume-links {
   display: flex;
   align-items: center;
@@ -1724,6 +1897,15 @@ a[href*="github"] img {
 }
 
 @media (max-width: 700px) {
+  .desktop-widget {
+    padding: 1.25rem;
+  }
+
+  .folder-btn {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
   .prototype-modal__frame-wrap {
     height: 58vh;
   }

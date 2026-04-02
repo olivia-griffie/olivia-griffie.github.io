@@ -21,6 +21,15 @@ const handleMouseDownOnce = () => {
 
 window.addEventListener('keydown', handleFirstTab)
 
+window.trackPortfolioEvent = (action, label) => {
+  if (typeof gtag === "function") {
+    gtag("event", action, {
+      event_category: "portfolio_engagement",
+      event_label: label,
+    });
+  }
+};
+
 const backToTopButton = document.querySelector(".back-to-top");
 let isBackToTopRendered = false;
 
@@ -53,6 +62,9 @@ const copyButtons = document.querySelectorAll(".copy-btn");
 const logoLinks = document.querySelectorAll(".nav__logo-link");
 const prototypeOpenButtons = document.querySelectorAll("[data-prototype-open]");
 const prototypeCloseButtons = document.querySelectorAll("[data-prototype-close]");
+const folderButtons = document.querySelectorAll(".folder-btn");
+const filePanels = document.querySelectorAll(".file-panel");
+const filePath = document.getElementById("file-path");
 let activePrototypeModal = null;
 
 logoLinks.forEach((link) => {
@@ -174,6 +186,37 @@ if (revealSections.length) {
       sectionObserver.observe(section);
     });
   }
+}
+
+if (folderButtons.length && filePath) {
+  const fileMap = {
+    about: "C:\\OLIVIA\\about_me.txt",
+    print: "C:\\OLIVIA\\print_background.txt",
+    ux: "C:\\OLIVIA\\ux_ui.txt",
+    resume: "C:\\OLIVIA\\resume.pdf",
+    contact: "C:\\OLIVIA\\contact.txt",
+  };
+
+  folderButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedFile = button.dataset.file;
+      const selectedPanel = selectedFile ? document.getElementById(`file-${selectedFile}`) : null;
+
+      if (!selectedPanel) {
+        return;
+      }
+
+      folderButtons.forEach((btn) => btn.classList.remove("is-active"));
+      button.classList.add("is-active");
+
+      filePanels.forEach((panel) => panel.classList.remove("is-visible"));
+      selectedPanel.classList.add("is-visible");
+
+      filePath.textContent = fileMap[selectedFile] || "C:\\OLIVIA\\about_me.txt";
+
+      window.trackPortfolioEvent("desktop_widget_click", selectedFile);
+    });
+  });
 }
 
 const setPrototypeModal = (modal, isOpen) => {
