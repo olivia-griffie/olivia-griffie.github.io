@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
   <title>Olivia Griffie | ASU Print Site Navigation Fix</title>
+  <meta name="description" content="Case study for an ASU-branded print storefront navigation fix, focused on resolving injected-header conflicts and improving responsive category behavior.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital@0;1&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -46,6 +47,7 @@
               <p><strong>Typography</strong><br>The site title "ASU Print Online" stayed large and bold, navigation links used a medium-weight hierarchy, and the CTA buttons remained pill-shaped in ASU gold and maroon to preserve the official system.</p>
               <p><strong>Constraint</strong><br>The storefront platform injected ASU's global navigation through an external JavaScript file. That created a layout conflict with the eCommerce platform's own header, resulting in logo stacking, overlapping elements, broken spacing, and clipped actions at different viewport widths.</p>
               <p><strong>Desktop layout audit</strong><br>Screenshots across multiple desktop widths showed three states: a wide viewport where the layout was stable, a mid-width state where the logo began overlapping the "ASU Print Online" title and surrounding nav, and a narrow desktop state where the logo floated on top of the title while the cart button clipped out of view.</p>
+              <p class="case-study__note"><strong>Process framing</strong><br>This case study functions as a diagnostic before-and-after: the broken mobile and mid-width states document the original navigation conflict, and the final responsive views show the repaired header and category layout after the cleanup.</p>
               <p><strong>Mobile issues</strong><br>On smaller screens, the category grid collapsed poorly, thumbnails cropped inconsistently, and the responsive hamburger pattern worked but shifted the Search and Cart placement. The goal was to stabilize the header behavior and improve the category layout without breaking ASU's brand fidelity.</p>
               <p><strong>Process</strong><br>First, I referenced ASU's brand guidelines and locked the palette, wordmark treatment, and hierarchy. Then I audited the eCommerce platform's native header structure, identified where the external JS utility nav was colliding with it, and tested mobile behavior in DevTools, including iPhone SE and tablet breakpoints.</p>
               <p><strong>What was resolved</strong><br>The logo and title no longer overlap at any tested viewport width, the external JS nav now sits cleanly in its own utility row on desktop, the mobile hamburger collapse remains stable at iPhone SE width, and the category grid now falls from three columns to two on mobile while keeping the ASU maroon, gold, and white system intact.</p>
@@ -89,6 +91,7 @@
       <ul class="footer__social-links">
         <li class="footer__social-link-item"><a href="https://dribbble.com/olivia-griffie" title="Dribbble"><img src="./images/dribbble-logo.svg" class="footer__social-image" alt="Dribbble"></a></li>
         <li class="footer__social-link-item"><a href="https://www.linkedin.com/in/olivia-griffie-032860173/" title="LinkedIn"><img src="./images/linkedin.png" class="footer__social-image" alt="Linkedin"></a></li>
+        <li class="footer__social-link-item"><a href="https://github.com/olivia-griffie" title="GitHub"><img src="./images/github.svg" class="footer__social-image" alt="GitHub"></a></li>
       </ul>
       <p class="footer__credit">&copy; 2026 | Portfolio Designed &amp; Created by Olivia Griffie</p>
     </div>
