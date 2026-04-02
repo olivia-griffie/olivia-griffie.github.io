@@ -950,11 +950,15 @@ a {
   padding-top: 0.4rem;
   margin-top: auto;
   align-self: flex-start;
-  transform: translateY(-10rem);
+  transform: translateY(-12rem);
+}
+
+.contact-note__actions .btn {
+  transform: none;
 }
 
 .contact-note__actions .btn:hover {
-  transform: translateY(calc(-10rem - 1px));
+  transform: translateY(-1px);
 }
 
 @media (max-width: 700px) {
