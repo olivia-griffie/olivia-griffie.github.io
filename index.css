@@ -1815,12 +1815,12 @@ a[href*="github"] img {
 }
 
 .case-study__live-frame {
-  width: 286%;
-  height: 286%;
+  width: 334%;
+  height: 334%;
   border: 0;
   display: block;
   background: #f4f3f8;
-  transform: scale(0.35);
+  transform: scale(0.3);
   transform-origin: top left;
 }
 
@@ -2049,9 +2049,9 @@ a[href*="github"] img {
   }
 
   .case-study__live-frame {
-    width: 344%;
-    height: 344%;
-    transform: scale(0.29);
+    width: 416%;
+    height: 416%;
+    transform: scale(0.24);
   }
 
   .prototype-modal {
@@ -2111,9 +2111,9 @@ a[href*="github"] img {
   }
 
   .case-study__live-frame {
-    width: 434%;
-    height: 434%;
-    transform: scale(0.23);
+    width: 556%;
+    height: 556%;
+    transform: scale(0.18);
   }
 
   .prototype-modal__frame-wrap {
