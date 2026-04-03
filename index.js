@@ -62,6 +62,7 @@ const copyButtons = document.querySelectorAll(".copy-btn");
 const logoLinks = document.querySelectorAll(".nav__logo-link");
 const prototypeOpenButtons = document.querySelectorAll("[data-prototype-open]");
 const prototypeCloseButtons = document.querySelectorAll("[data-prototype-close]");
+const shareButtons = document.querySelectorAll("[data-share-button]");
 const folderButtons = document.querySelectorAll(".folder-btn");
 const filePanels = document.querySelectorAll(".file-panel");
 const filePath = document.getElementById("file-path");
@@ -242,6 +243,47 @@ prototypeCloseButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const modal = button.closest(".prototype-modal");
     setPrototypeModal(modal, false);
+  });
+});
+
+shareButtons.forEach((button) => {
+  button.addEventListener("click", async () => {
+    const shareTitle = button.getAttribute("data-share-title") || document.title;
+    const shareUrl = window.location.href;
+
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: shareTitle,
+          url: shareUrl,
+        });
+      } else if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(shareUrl);
+        button.textContent = "Link copied!";
+        window.setTimeout(() => {
+          button.textContent = "Share this!";
+        }, 1600);
+      }
+    } catch (error) {
+      if (error && error.name === "AbortError") {
+        return;
+      }
+
+      if (navigator.clipboard?.writeText) {
+        try {
+          await navigator.clipboard.writeText(shareUrl);
+          button.textContent = "Link copied!";
+          window.setTimeout(() => {
+            button.textContent = "Share this!";
+          }, 1600);
+        } catch (clipboardError) {
+          button.textContent = "Share unavailable";
+          window.setTimeout(() => {
+            button.textContent = "Share this!";
+          }, 1600);
+        }
+      }
+    }
   });
 });
 
