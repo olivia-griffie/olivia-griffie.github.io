@@ -1782,9 +1782,6 @@ a[href*="github"] img {
 .case-study__live-widget-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1.2rem;
-  flex-wrap: wrap;
 }
 
 .case-study__live-pill {
@@ -1800,10 +1797,16 @@ a[href*="github"] img {
   text-transform: uppercase;
 }
 
-.case-study__live-link {
-  font-size: 1.3rem;
-  letter-spacing: 0.04em;
-  color: var(--rust);
+.case-study__live-pill--action {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.case-study__live-pill--action:hover,
+.case-study__live-pill--action:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(145, 156, 236, 0.18);
+  filter: saturate(1.05);
+  outline: none;
 }
 
 .case-study__live-frame-wrap {
