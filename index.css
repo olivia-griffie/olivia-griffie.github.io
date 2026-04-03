@@ -1827,14 +1827,16 @@ a[href*="github"] img {
 
 .prototype-modal__dialog {
   position: relative;
-  width: min(120rem, 100%);
-  max-height: calc(100vh - 4.8rem);
+  width: min(136rem, 100%);
+  height: min(92vh, 96rem);
   background: rgba(250, 247, 242, 0.98);
   border: 1px solid rgba(160, 120, 80, 0.2);
   border-radius: 2.8rem;
   box-shadow: 0 24px 70px rgba(56, 56, 56, 0.2);
   padding: 2.2rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .prototype-modal__header {
@@ -1842,7 +1844,8 @@ a[href*="github"] img {
   align-items: flex-start;
   justify-content: space-between;
   gap: 1.6rem;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.6rem;
+  flex: 0 0 auto;
 }
 
 .prototype-modal__header h2 {
@@ -1862,7 +1865,8 @@ a[href*="github"] img {
 }
 
 .prototype-modal__frame-wrap {
-  height: min(82vh, 88rem);
+  flex: 1 1 auto;
+  min-height: 0;
   border-radius: 2rem;
   overflow: hidden;
   background: #f4f3f8;
@@ -1980,12 +1984,12 @@ a[href*="github"] img {
   }
 
   .prototype-modal__dialog {
-    max-height: calc(100vh - 2.8rem);
+    height: min(94vh, 96rem);
     padding: 1.6rem;
   }
 
   .prototype-modal__frame-wrap {
-    height: 72vh;
+    min-height: 62vh;
   }
 }
 
@@ -2022,14 +2026,7 @@ a[href*="github"] img {
   }
 
   .prototype-modal__frame-wrap {
-    height: 58vh;
-  }
-
-  .prototype-modal__frame {
-    width: 135%;
-    height: 135%;
-    transform: scale(0.74);
-    transform-origin: top left;
+    min-height: 54vh;
   }
 }
  
