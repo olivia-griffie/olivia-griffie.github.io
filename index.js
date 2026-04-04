@@ -194,7 +194,6 @@ if (folderButtons.length && filePath) {
     about: "C:\\OLIVIA\\about_me.txt",
     print: "C:\\OLIVIA\\print_background.txt",
     ux: "C:\\OLIVIA\\ux_ui.txt",
-    resume: "C:\\OLIVIA\\resume.pdf",
     contact: "C:\\OLIVIA\\contact.txt",
   };
 
