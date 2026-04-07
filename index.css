@@ -1698,7 +1698,8 @@ a[href*="github"] img {
 }
 
 .case-study__intro-panel .about-note {
-  max-width: 88rem;
+  max-width: none;
+  margin: 0;
 }
 
 .case-study__intro-panel h3 {
@@ -1714,7 +1715,7 @@ a[href*="github"] img {
 
 .case-study__stack {
   display: grid;
-  gap: 2.8rem;
+  gap: 4rem;
 }
 
 .case-study__step {
