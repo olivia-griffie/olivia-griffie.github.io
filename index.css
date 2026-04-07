@@ -804,13 +804,49 @@ a {
 /* --------------------------------------- */
  
 .client__logos {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--gutter-normal);
-  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 0;
 }
  
+.client__logos::before,
+.client__logos::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.client__logos::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(247, 242, 232, 1), rgba(247, 242, 232, 0));
+}
+
+.client__logos::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(247, 242, 232, 1), rgba(247, 242, 232, 0));
+}
+
+.client__logos-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: client-logo-marquee 38s linear infinite;
+}
+
+.client__logos-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  flex: 0 0 auto;
+  padding-right: 4rem;
+}
+
 .client__logo {
   height: 5.5rem;
   max-width: 15rem;
@@ -818,12 +854,35 @@ a {
   filter: grayscale(1) brightness(0);
 }
 
-.client__logos--centered .client__logo:nth-child(4) {
+.client__logos-group .client__logo:nth-child(4) {
   height: 7.6rem;
+}
+
+@keyframes client-logo-marquee {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
  
 @media (max-width: 700px) {
-  .client__logos { gap: 3rem; justify-content: center; }
+  .client__logos::before,
+  .client__logos::after {
+    width: 2.5rem;
+  }
+
+  .client__logos-group {
+    gap: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .client__logo {
+    height: 4.5rem;
+    max-width: 11rem;
+  }
 }
  
 /* --------------------------------------- */
@@ -1250,8 +1309,22 @@ a[href*="github"] img {
 }
 
 .client__logos--centered {
-  justify-content: center;
-  gap: 4rem;
+  margin-top: 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client__logos {
+    overflow-x: auto;
+  }
+
+  .client__logos::before,
+  .client__logos::after {
+    display: none;
+  }
+
+  .client__logos-track {
+    animation: none;
+  }
 }
 
 .project-grid {
