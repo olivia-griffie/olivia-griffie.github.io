@@ -30,6 +30,37 @@ window.trackPortfolioEvent = (action, label) => {
   }
 };
 
+const normalizeAnalyticsLabel = (value) => {
+  return (value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "_")
+    .replace(/[^a-z0-9_:/#.-]/g, "");
+};
+
+const getClickableLabel = (element) => {
+  if (!element) {
+    return "";
+  }
+
+  const href = element.getAttribute("href");
+  const explicitLabel =
+    element.getAttribute("data-analytics-label") ||
+    element.getAttribute("aria-label") ||
+    element.getAttribute("title");
+  const textLabel = element.textContent || "";
+
+  return normalizeAnalyticsLabel(explicitLabel || textLabel || href || element.tagName || "click_target");
+};
+
+if (typeof gtag === "function") {
+  gtag("event", "page_view", {
+    page_title: document.title,
+    page_location: window.location.href,
+    page_path: `${window.location.pathname}${window.location.hash}`,
+  });
+}
+
 const backToTopButton = document.querySelector(".back-to-top");
 let isBackToTopRendered = false;
 
@@ -287,6 +318,29 @@ shareButtons.forEach((button) => {
       }
     }
   });
+});
+
+document.addEventListener("click", (event) => {
+  const clickable = event.target.closest("a[href], button");
+
+  if (!clickable || clickable.disabled) {
+    return;
+  }
+
+  const isAnchor = clickable.matches("a[href]");
+  const action = isAnchor ? "link_click" : "button_click";
+  const destination = isAnchor ? clickable.getAttribute("href") || "" : clickable.id || clickable.className || "button";
+
+  window.trackPortfolioEvent(action, getClickableLabel(clickable));
+
+  if (typeof gtag === "function") {
+    gtag("event", action, {
+      event_category: "portfolio_navigation",
+      event_label: getClickableLabel(clickable),
+      link_url: destination,
+      page_path: `${window.location.pathname}${window.location.hash}`,
+    });
+  }
 });
 
 window.addEventListener("keydown", (event) => {

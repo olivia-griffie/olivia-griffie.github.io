@@ -56,7 +56,7 @@ body.am-startup-active { overflow: hidden; }
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
   gap: 2rem;
-  padding: 2.25rem;
+  padding: 1.8rem;
   border-radius: 26px;
   background: rgba(255, 255, 255, 0.94);
   border: 1px solid rgba(17, 61, 110, 0.1);
@@ -68,7 +68,7 @@ body.am-startup-active { overflow: hidden; }
   display: flex;
   align-items: center;
   gap: 1rem;
-  min-height: 260px;
+  min-height: 200px;
 }
 
 .am-startup-logo {
