@@ -806,29 +806,9 @@ a {
 .client__logos {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   padding: 1rem 0;
-}
- 
-.client__logos::before,
-.client__logos::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 5rem;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.client__logos::before {
-  left: 0;
-  background: linear-gradient(to right, rgba(247, 242, 232, 1), rgba(247, 242, 232, 0));
-}
-
-.client__logos::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(247, 242, 232, 1), rgba(247, 242, 232, 0));
 }
 
 .client__logos-track {
@@ -869,11 +849,6 @@ a {
 }
  
 @media (max-width: 700px) {
-  .client__logos::before,
-  .client__logos::after {
-    width: 2.5rem;
-  }
-
   .client__logos-group {
     gap: 2.5rem;
     padding-right: 2.5rem;
@@ -1317,11 +1292,6 @@ a[href*="github"] img {
     overflow-x: auto;
   }
 
-  .client__logos::before,
-  .client__logos::after {
-    display: none;
-  }
-
   .client__logos-track {
     animation: none;
   }
@@ -1329,7 +1299,7 @@ a[href*="github"] img {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 2.6rem;
 }
 
@@ -1712,18 +1682,105 @@ a[href*="github"] img {
 
 .case-study {
   display: grid;
-  gap: 3rem;
+  gap: 3.2rem;
 }
 
 .case-study__intro {
-  max-width: 70rem;
+  max-width: none;
 }
 
-.case-study__top {
+.case-study__intro-panel {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(160, 120, 80, 0.2);
+  border-radius: 3rem;
+  padding: 3.2rem;
+  box-shadow: 0 1.2rem 3rem rgba(104, 80, 54, 0.08);
+}
+
+.case-study__intro-panel .about-note {
+  max-width: 88rem;
+}
+
+.case-study__intro-panel h3 {
+  font-size: clamp(2.6rem, 2.2rem + 1vw, 3.6rem);
+  margin: 0 0 1.6rem;
+  font-style: normal;
+}
+
+.case-study__intro-panel p {
+  font-size: 1.65rem;
+  line-height: 1.78;
+}
+
+.case-study__stack {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(34rem, 0.95fr);
+  gap: 2.8rem;
+}
+
+.case-study__step {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   gap: 2.4rem;
-  align-items: start;
+  align-items: stretch;
+  position: relative;
+}
+
+.case-study__step--reverse {
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+}
+
+.case-study__step-copy,
+.case-study__step-media {
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(160, 120, 80, 0.2);
+  border-radius: 2.6rem;
+  padding: 2.2rem;
+  box-shadow: 0 1rem 2.4rem rgba(104, 80, 54, 0.06);
+}
+
+.case-study__step-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.case-study__step-copy h3 {
+  font-size: 2.4rem;
+  margin: 0 0 1.1rem;
+  font-style: normal;
+}
+
+.case-study__step-copy p {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.72;
+}
+
+.case-study__step-media {
+  position: relative;
+  margin: 0;
+}
+
+.case-study__step-media p {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.65;
+}
+
+.case-study__step-arrow {
+  position: absolute;
+  width: 11rem;
+  height: auto;
+  top: 50%;
+  left: calc(50% - 5.5rem);
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.88;
+}
+
+.case-study__step--reverse .case-study__step-arrow {
+  transform: translateY(-50%) scaleX(-1);
 }
 
 .case-study__actions {
@@ -1777,12 +1834,6 @@ a[href*="github"] img {
   border-color: rgba(36, 79, 143, 0.45);
   color: #1d457f;
   background: rgba(224, 241, 255, 0.72);
-}
-
-.case-study__gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2.4rem;
 }
 
 .case-study__figure {
@@ -2099,8 +2150,7 @@ a[href*="github"] img {
   .contact-layout__grid,
   .faq-grid,
   .feature-grid--three,
-  .project-grid,
-  .case-study__gallery {
+  .project-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2108,8 +2158,26 @@ a[href*="github"] img {
     grid-template-columns: 1fr;
   }
 
-  .case-study__top {
+  .case-study__intro-panel {
+    padding: 2.5rem;
+  }
+
+  .case-study__step,
+  .case-study__step--reverse {
     grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .case-study__step-arrow {
+    position: static;
+    justify-self: center;
+    width: 8.6rem;
+    transform: rotate(90deg);
+    margin: -0.6rem 0;
+  }
+
+  .case-study__step--reverse .case-study__step-arrow {
+    transform: rotate(-90deg);
   }
 
   .case-study__live-frame-wrap {
