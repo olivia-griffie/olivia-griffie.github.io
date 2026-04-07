@@ -1323,6 +1323,10 @@ a[href*="github"] img {
   padding: 1.2rem;
 }
 
+.illustration-gallery__grid .project-card__image {
+  height: 31.5rem;
+}
+
 .project-card__body h3 a {
   color: var(--rust);
   font-weight: 700;
