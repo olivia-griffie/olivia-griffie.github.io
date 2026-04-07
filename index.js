@@ -153,15 +153,18 @@ if (contactForm) {
 }
 
 const revealSections = document.querySelectorAll(".wire-section");
+const isCaseStudyPage = Boolean(document.querySelector(".case-study"));
 
 if (revealSections.length) {
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  revealSections.forEach((section) => {
-    section.classList.add("reveal-section");
-  });
+  if (!isCaseStudyPage) {
+    revealSections.forEach((section) => {
+      section.classList.add("reveal-section");
+    });
+  }
 
-  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+  if (isCaseStudyPage || prefersReducedMotion || !("IntersectionObserver" in window)) {
     revealSections.forEach((section) => {
       section.classList.add("is-visible");
     });

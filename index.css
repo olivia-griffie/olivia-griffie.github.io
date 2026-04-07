@@ -1715,13 +1715,13 @@ a[href*="github"] img {
 
 .case-study__stack {
   display: grid;
-  gap: 4rem;
+  gap: 2.8rem;
 }
 
 .case-study__step {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  gap: 2.4rem;
+  gap: 3.6rem;
   align-items: stretch;
   position: relative;
 }
