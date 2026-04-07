@@ -1770,16 +1770,17 @@ a[href*="github"] img {
   position: absolute;
   width: 11rem;
   height: auto;
-  top: 50%;
+  top: auto;
+  bottom: 2.2rem;
   left: calc(50% - 5.5rem);
-  transform: translateY(-50%);
+  transform: none;
   pointer-events: none;
   z-index: 2;
   opacity: 0.88;
 }
 
 .case-study__step--reverse .case-study__step-arrow {
-  transform: translateY(-50%) scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .case-study__actions {
