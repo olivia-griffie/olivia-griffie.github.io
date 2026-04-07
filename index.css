@@ -1964,6 +1964,12 @@ a[href*="github"] img {
   max-height: 58rem;
 }
 
+.case-study__image--board-compact {
+  max-height: 36rem;
+  width: auto;
+  margin-inline: auto;
+}
+
 .reveal-section {
   opacity: 0;
   transform: translateY(2.4rem);
