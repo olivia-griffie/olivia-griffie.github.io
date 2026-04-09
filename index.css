@@ -1369,6 +1369,57 @@ a[href*="github"] img {
   line-height: 1.75;
 }
 
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.6rem;
+  align-items: start;
+}
+
+.testimonial-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(160, 120, 80, 0.2);
+  border-radius: 2.8rem;
+  padding: 3rem;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: 1.6rem;
+  left: 2.2rem;
+  font-family: var(--font-serif);
+  font-size: 6rem;
+  line-height: 1;
+  color: rgba(184, 76, 43, 0.22);
+}
+
+.testimonial-card__source {
+  margin: 0 0 1.4rem;
+  padding-left: 2.4rem;
+  font-family: var(--font-stamp);
+  font-size: 1.25rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--kraft-dark);
+}
+
+.testimonial-card__quote {
+  margin: 0;
+  font-size: 1.52rem;
+  line-height: 1.8;
+  color: var(--ink-muted);
+}
+
+.testimonial-card__quote p {
+  margin: 0 0 1.4rem;
+}
+
+.testimonial-card__quote p:last-child {
+  margin-bottom: 0;
+}
+
 .desktop-widget {
   margin-top: 2.4rem;
   padding: 2.8rem 2.2rem 2.2rem;
@@ -2163,6 +2214,7 @@ a[href*="github"] img {
 
 @media (max-width: 980px) {
   .home-hero,
+  .testimonial-grid,
   .about-split,
   .contact-layout__grid,
   .faq-grid,
@@ -2228,6 +2280,14 @@ a[href*="github"] img {
 }
 
 @media (max-width: 700px) {
+  .testimonial-card {
+    padding: 2.6rem 2rem;
+  }
+
+  .testimonial-card__source {
+    padding-left: 1.8rem;
+  }
+
   .about-split__media,
   .about-polaroid-stack {
     min-height: auto;
