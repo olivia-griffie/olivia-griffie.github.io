@@ -2052,12 +2052,13 @@ a[href*="github"] img {
   padding: 0.9rem 1.8rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.72);
-  color: #5b4b76;
+  border: 1px solid rgba(160, 120, 80, 0.2);
+  color: var(--kraft-dark);
   font-family: var(--font-stamp);
   font-size: 1.45rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  box-shadow: 0 0.8rem 2.2rem rgba(128, 72, 104, 0.08);
+  box-shadow: 0 1.2rem 3rem rgba(104, 80, 54, 0.08);
 }
 
 .bookbuddy-hero__title {
@@ -2073,7 +2074,7 @@ a[href*="github"] img {
   max-width: 64rem;
   font-size: 1.9rem;
   line-height: 1.85;
-  color: rgba(80, 54, 85, 0.92);
+  color: var(--ink-muted);
 }
 
 .bookbuddy-hero__actions {
@@ -2096,11 +2097,12 @@ a[href*="github"] img {
   gap: 1rem;
   padding: 1.3rem 1.5rem;
   border-radius: 1.8rem;
-  background: rgba(255, 255, 255, 0.58);
-  color: #5c4968;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(160, 120, 80, 0.2);
+  color: var(--ink-muted);
   font-size: 1.55rem;
   line-height: 1.6;
-  box-shadow: 0 1rem 2.4rem rgba(128, 72, 104, 0.08);
+  box-shadow: 0 1rem 2.4rem rgba(104, 80, 54, 0.06);
 }
 
 .bookbuddy-hero__highlights li::before {
@@ -2111,10 +2113,9 @@ a[href*="github"] img {
   margin: 0;
   padding: 1.8rem;
   border-radius: 3.4rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.2));
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.6) inset,
-    0 2rem 4rem rgba(151, 85, 113, 0.16);
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(160, 120, 80, 0.2);
+  box-shadow: 0 1rem 2.4rem rgba(104, 80, 54, 0.06);
 }
 
 .bookbuddy-hero__promo {
@@ -2127,13 +2128,9 @@ a[href*="github"] img {
   gap: 3.6rem;
 }
 
-.section-tag--bookbuddy {
-  color: #d34d92;
-}
-
 .case-study__intro-panel--bookbuddy {
-  background: linear-gradient(180deg, rgba(255, 244, 249, 0.98), rgba(255, 255, 255, 0.92));
-  border-color: rgba(216, 100, 153, 0.16);
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(160, 120, 80, 0.2);
 }
 
 .bookbuddy-pill-grid {
@@ -2158,8 +2155,8 @@ a[href*="github"] img {
 
 .case-study__step-copy--bookbuddy,
 .case-study__step-media--bookbuddy {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 247, 251, 0.9));
-  border-color: rgba(216, 100, 153, 0.14);
+  background: rgba(255, 255, 255, 0.74);
+  border-color: rgba(160, 120, 80, 0.2);
 }
 
 .bookbuddy-icon-showcase {
