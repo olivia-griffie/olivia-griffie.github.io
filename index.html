@@ -3,14 +3,402 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Olivia Griffie</title>
-  <meta http-equiv="refresh" content="0; url=/home/" />
-  <link rel="canonical" href="https://oliviagriffie.com/home/" />
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+  <title>Olivia Griffie | Design</title>
+  <meta name="description" content="Portfolio of Olivia Griffie, an East Coast designer working across brand identity, UX/UI, print, and front-end web support.">
+  <meta name="keywords" content="Olivia Griffie, Graphic Designer, UI Design, UX Designer" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCYMFHQY3Q"></script>
   <script>
-    window.location.replace('/home/' + window.location.search + window.location.hash);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DCYMFHQY3Q');
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital@0;1&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
 </head>
+
 <body>
-  <p>Redirecting to <a href="/home/">/home/</a>...</p>
+  <header class="header header--wireframe" role="banner" id="top">
+    <div class="grid-bg"></div>
+    <img src="images/flower2.png" class="page-flower page-flower--hero-left" alt="" aria-hidden="true" />
+    <img src="images/driedflower.png" class="page-flower page-flower--header" alt="" aria-hidden="true" />
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items nav__items--left">
+          <li class="nav__item"><a href="work/" class="nav__link"><span class="nav__link-text">Work</span></a></li>
+          <li class="nav__item"><a href="illustration/" class="nav__link"><span class="nav__link-text">Illustration</span></a></li>
+          <li class="nav__item"><a href="#clients" class="nav__link"><span class="nav__link-text">Clients</span></a></li>
+        </ul>
+        <a href="#top" class="nav__logo-link" aria-label="Olivia Griffie home">
+          <video class="nav__logo-video" muted playsinline preload="metadata" aria-hidden="true">
+            <source src="images/og-logo-hover.mp4" type="video/mp4">
+          </video>
+          <img src="images/oliviagriffielogo.png" class="nav__logo" alt="Olivia Griffie" />
+        </a>
+        <ul class="nav__items nav__items--right">
+          <li class="nav__item"><a href="about/" class="nav__link"><span class="nav__link-text">About</span></a></li>
+          <li class="nav__item"><a href="images/Olivia_Griffie_Resume_Web.pdf" class="nav__link" download><span class="nav__link-text">Resume</span></a></li>
+          <li class="nav__item"><a href="contact/" class="nav__link"><span class="nav__link-text">Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="row home-hero">
+      <div class="home-hero__media">
+        <img src="images/mepolaroid.png" class="home-hero__polaroid" alt="Image of me" />
+      </div>
+      <div class="home-hero__content">
+        <img src="images/tape2.png" class="tape-img tape-img--top" alt="" aria-hidden="true" />
+        <p class="header__eyebrow">designer</p>
+        <h1 class="home-hero__title">Hi, I'm Liv.</h1>
+        <p class="home-hero__summary">UX &amp; UI designer with roots in print - I design interfaces, brands, and the front-end code behind them.</p>
+        <p class="hero-cert"><strong>Google UX Design Certified</strong></p>
+        <div class="home-hero__stats">
+          <div class="hero-stat">
+            <strong>10+</strong>
+            <span>Years of design</span>
+          </div>
+          <div class="hero-stat">
+            <strong>20+</strong>
+            <span>Clients supported</span>
+          </div>
+          <div class="hero-stat">
+            <strong>6+</strong>
+            <span>eCommerce websites built</span>
+          </div>
+        </div>
+        <div class="home-hero__actions">
+          <a href="work/" class="btn btn--dark">See My Work</a>
+          <a href="images/Olivia_Griffie_Resume_Web.pdf" class="btn" download>Resume</a>
+          <a href="contact/" class="btn">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main role="main" class="homepage-main">
+    <section class="wire-section" id="work">
+      <img src="images/driedflower.png" class="page-flower page-flower--work-right" alt="" aria-hidden="true" />
+      <div class="row">
+        <div class="section-heading section-heading--center">
+          <span class="section-tag">My Works</span>
+          <h2>Examples of What I Do</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <a href="burgermeister-site-build/" class="project-card__link">
+              <img src="images/burgermeister-preview-top.png" class="project-card__image" alt="Burgermeister homepage preview" />
+            </a>
+            <div class="project-card__body">
+              <h3><a href="burgermeister-site-build/">Site Builds</a></h3>
+              <p>Restaurant web concept focused on bold branding, clear browsing flow, and a product-first layout that keeps ordering pathways easy to follow.</p>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <a href="architect-mini/" class="project-card__link">
+              <img src="images/architect-mini-login.png" class="project-card__image" alt="Architect Mini login page preview" />
+            </a>
+            <div class="project-card__body">
+              <h3><a href="architect-mini/">Widget Builds</a></h3>
+              <p>Architect Mini is a lightweight, embeddable widget designed to help printing shops and ecommerce platforms offer customizable, print-ready document templates starting with a business card creator.</p>
+              <ul class="work__list">
+                <li>UX</li>
+                <li>UI</li>
+                <li>CSS</li>
+                <li>HTML5</li>
+                <li>JS</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <a href="mobile-fix-example/" class="project-card__link">
+              <img src="images/asu-preview-top.png" class="project-card__image" alt="ASU mobile site preview" />
+            </a>
+            <div class="project-card__body">
+              <h3><a href="mobile-fix-example/">Mobile Optimization</a></h3>
+              <p>Responsive navigation cleanup for an ASU-branded print storefront, resolving injected-header conflicts and improving mobile category layout.</p>
+              <ul class="work__list">
+                <li>JS</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <a href="brand-identity/" class="project-card__link">
+              <img src="images/shenandoah-sovereign-final-draft.png" class="project-card__image project-card__image--contain" alt="Shenandoah Sovereign final brand identity board" />
+            </a>
+            <div class="project-card__body">
+              <h3><a href="brand-identity/">Brand Design</a></h3>
+              <p>Identity system for a Virginia wedding and catering company, balancing elevated occasion with a grounded Blue Ridge palette and botanical support assets.</p>
+              <ul class="work__list">
+                <li>Brand Identity</li>
+                <li>Logo Design</li>
+                <li>Print</li>
+                <li>Illustration</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <a href="bookbuddy/" class="project-card__link">
+              <img src="images/bookbuddy-promo.png" class="project-card__image" alt="Book Buddy writing app promotional graphic" />
+            </a>
+            <div class="project-card__body">
+              <h3><a href="bookbuddy/">Book Buddy</a></h3>
+              <p>Desktop writing app concept and beta build for authors, combining world-building, chapter drafting, progress goals, and export tools in one guided workspace.</p>
+              <ul class="work__list">
+                <li>UX</li>
+                <li>UI</li>
+                <li>Electron</li>
+                <li>JavaScript</li>
+                <li>SQLite</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <a href="illustration/" class="project-card__link">
+              <img src="images/illustration-ty-gouache.png" class="project-card__image project-card__image--contain" alt="Illustration gallery preview" />
+            </a>
+            <div class="project-card__body">
+              <h3><a href="illustration/">Illustration</a></h3>
+              <p>Digital and traditional illustration work spanning character design, portraits, invitation art, animal studies, and painted material explorations.</p>
+              <ul class="work__list">
+                <li>Procreate</li>
+                <li>Photoshop</li>
+                <li>Krita</li>
+                <li>Gouache</li>
+                <li>Pencil</li>
+                <li>Ink</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wire-section" id="about">
+      <img src="images/flower2.png" class="page-flower page-flower--skills-left" alt="" aria-hidden="true" />
+      <div class="row">
+        <div class="section-heading section-heading--center">
+          <span class="section-tag">Skills</span>
+          <h2>Services I Bring to the Table</h2>
+        </div>
+        <div class="feature-grid feature-grid--three">
+          <article class="feature-card">
+            <h3>Brand Identity</h3>
+            <p>Logo systems, collateral, and visual consistency across print and digital spaces.</p>
+          </article>
+          <article class="feature-card">
+            <h3>UX / UI Design</h3>
+            <p>Wireframes and polished interfaces built to feel thoughtful, warm, and usable.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Web Support</h3>
+            <p>Front-end styling, asset handling, and launch-ready cleanup for portfolio and marketing sites.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Print Production</h3>
+            <p>Production-aware design with strong proofing habits and clean prepress execution.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Marketing Design</h3>
+            <p>Email visuals, campaign support, and supporting assets that strengthen a brand story.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Figma</h3>
+            <p>Wireframing, interface systems, component thinking, and polished design exploration for product and brand work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wire-section wire-section--soft" id="clients">
+      <div class="row">
+        <div class="section-heading section-heading--center">
+          <span class="section-tag">Worked with</span>
+        </div>
+        <div class="client__logos client__logos--centered">
+          <div class="client__logos-group">
+            <img src="images/asulogo.png" class="client__logo" alt="ASU" />
+            <img src="images/planetfitness.png" class="client__logo" alt="Planet Fitness" />
+            <img src="images/Renewal-by-Andersen-logo.png" class="client__logo" alt="Renewal by Andersen" />
+            <img src="images/cmnlogo.png" class="client__logo" alt="CMN" />
+            <img src="images/cmulogo.png" class="client__logo" alt="CMU" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wire-section">
+      <div class="row about-split">
+        <div class="about-split__copy">
+          <div class="section-heading">
+            <span class="section-tag">About Me</span>
+            <h2>Designer &amp; Builder with a creative focus</h2>
+          </div>
+          <div class="about-note">
+            <p>I'm a designer with roots in print and a deep pull toward the web - drawn to the kind of work where layout, texture, and type come together to make something feel considered. I've spent 10+ years working across brand identity, UX/UI, eCommerce, and production design, and I still find the most satisfaction in projects that evolve until they feel just right.</p>
+            <p>I'm based on the East Coast and work remotely with teams and clients who care about the details.</p>
+          </div>
+        </div>
+        <div class="about-split__media">
+          <div class="about-polaroid-stack">
+            <img class="about__polaroid-image about__polaroid-image--main" src="images/retro-photo-of-me.png" alt="Retro photo of me" />
+            <img class="about__polaroid-image about__polaroid-image--art" src="images/about-polaroid-1.png" alt="Polaroid-style self portrait artwork" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wire-section wire-section--soft" id="testimonials">
+      <div class="row">
+        <div class="section-heading section-heading--center">
+          <span class="section-tag">Testimonials</span>
+          <h2>What People Have Said About Working With Me</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card testimonial-card--featured">
+            <p class="testimonial-card__source">Former Manager</p>
+            <div class="testimonial-card__quote">
+              <p>"Olivia is energetic and extremely motivated when it comes to working on projects and designs. She stays well-organized and makes sure to follow-through on her projects so that nothing is missed. She is always open to learning new systems and programs and learns quickly. She will investigate to make sure the correct procedure is being used and to make sure the outcome is correct.</p>
+              <p>Olivia consistently demonstrates an eye for detail and thinks critically about user experience and communication. She has a positive attitude and strong communication skills. She takes initiative, seeks to improve her skills, and is always willing to go the extra mile to achieve the best results.</p>
+              <p>Olivia was always friendly and accommodating with our clients. She communicated well with them, providing well-investigated and thought-out answers to any of their questions. She always made sure she understood exactly what they were looking for and made sure to meet their expectations.</p>
+              <p>I highly recommend Olivia ... She would be a valuable asset to any team or organization."</p>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <p class="testimonial-card__source">Former Client</p>
+            <p class="testimonial-card__quote">"Olivia was great to work with. She was so responsive and very attentive to details. Often, I would think that I had taken everything into consideration and she would get deep into the project details and identify potential confusion and make sure to ask great questions to make sure storefronts and products were built exactly as they needed to be. She is good at coming up with creative solutions to fit a need. I would highly recommend working with her and hope to work with her again in the future."</p>
+          </article>
+          <article class="testimonial-card">
+            <p class="testimonial-card__source">Former CoWorker</p>
+            <p class="testimonial-card__quote">"Olivia is very versatile in that she moves fluidly from UX strategy and wireframes to polished UI, and then can dive right into the HTML, CSS, and JavaScript to make the concepts a reality. In short, she's a full stack designer who really can do it all."</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wire-section" id="contact">
+      <img src="images/driedflower.png" class="page-flower page-flower--contact-left" alt="" aria-hidden="true" />
+      <img src="images/flower2.png" class="page-flower page-flower--contact" alt="" aria-hidden="true" />
+      <div class="row">
+        <div class="contact-banner">
+          <span class="section-tag">Get In Touch</span>
+          <h2>I'd love to hear from you.</h2>
+        </div>
+
+        <div class="contact-layout__grid">
+          <aside class="contact-sidebar">
+            <div class="contact-mini-card">
+              <span>Email</span>
+              <div class="contact-mini-card__row">
+                <a href="mailto:oewheless@gmail.com">oewheless@gmail.com</a>
+                <button type="button" class="copy-btn" data-copy="oewheless@gmail.com" aria-label="Copy email address" title="Copy email address" data-status=""></button>
+              </div>
+            </div>
+            <div class="contact-mini-card contact-mini-card--social">
+              <span>My Social Profiles</span>
+              <div class="contact-socials">
+                <a href="https://dribbble.com/olivia-griffie" title="Dribbble" aria-label="Dribbble profile"><img src="images/dribbble-logo.svg" alt="Dribbble" /></a>
+                <a href="https://www.linkedin.com/in/olivia-griffie-032860173/" title="LinkedIn" aria-label="LinkedIn profile"><img src="images/linkedin.svg" alt="LinkedIn" /></a>
+                <a href="https://github.com/olivia-griffie" title="GitHub" aria-label="GitHub profile"><img src="images/github.svg" alt="GitHub" /></a>
+              </div>
+            </div>
+          </aside>
+
+          <div class="contact__info contact__card">
+            <form class="contact-note" id="contact-form" action="https://formspree.io/f/mnjobdyp" method="POST">
+              <img src="images/note.png" class="contact-note__bg" alt="" aria-hidden="true" />
+              <div class="contact-note__content">
+                <input type="hidden" name="_subject" value="Portfolio contact form submission" />
+                <div class="contact-note__field">
+                  <label for="contact-name">Contact Name</label>
+                  <input id="contact-name" name="name" type="text" placeholder="Your name" required />
+                </div>
+                <div class="contact-note__field">
+                  <label for="contact-email">Email Address</label>
+                  <input id="contact-email" name="email" type="email" placeholder="your@email.com" required />
+                </div>
+                <div class="contact-note__field">
+                  <label for="contact-subject">Subject Line</label>
+                  <input id="contact-subject" name="subject" type="text" placeholder="What is this about?" required />
+                </div>
+                <div class="contact-note__field contact-note__field--message">
+                  <label for="contact-message">Message</label>
+                  <textarea id="contact-message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+                </div>
+                <div class="contact-note__actions">
+                  <button type="submit" class="btn btn--dark">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-list">
+            <details open>
+              <summary>Can you work with remote clients?</summary>
+              <p>Absolutely. I’m comfortable collaborating remotely and adapting to different team tools and workflows.</p>
+            </details>
+            <details>
+              <summary>How long does a project usually take?</summary>
+              <p>That depends on scope, but I’m happy to talk through goals and timeline early so expectations stay clear. Website builds can take anywhere from 3-6 weeks depending on the project.</p>
+            </details>
+            <details>
+              <summary>Do you only design for web?</summary>
+              <p>No. My background spans web, print, brand identity, and production-aware design work.</p>
+            </details>
+            <details>
+              <summary>Can you help refine an existing brand?</summary>
+              <p>Yes. I enjoy stepping into evolving brands and helping them feel more cohesive and polished.</p>
+            </details>
+          </div>
+          <div class="faq-sidecard">
+            <h3>Still Have Questions?</h3>
+            <p>If you want to talk through a role, collaboration, or project idea, I’m happy to chat.</p>
+            <a href="mailto:oewheless@gmail.com" class="btn">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://dribbble.com/olivia-griffie" title="Dribbble">
+            <img src="images/dribbble-logo.svg" class="footer__social-image" alt="Dribbble">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.linkedin.com/in/olivia-griffie-032860173/" title="LinkedIn">
+            <img src="images/linkedin.svg" class="footer__social-image" alt="LinkedIn">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://github.com/olivia-griffie" title="GitHub">
+            <img src="images/github.svg" class="footer__social-image" alt="GitHub">
+          </a>
+        </li>
+      </ul>
+      <p class="footer__credit">&copy; 2026 | Portfolio Designed &amp; Created by Olivia Griffie</p>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="images/arrow.png" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+
+  <script src="index.js"></script>
 </body>
 </html>
+
