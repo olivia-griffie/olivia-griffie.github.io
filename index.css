@@ -2513,8 +2513,12 @@ a[href*="github"] img {
 
 .bookbuddy-visual-card__stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(8rem, 1fr));
   gap: 1.2rem;
+}
+
+.bookbuddy-visual-card__stat strong {
+  overflow-wrap: break-word;
 }
 
 .bookbuddy-visual-card__stat {
@@ -2620,6 +2624,10 @@ a[href*="github"] img {
   display: grid;
   align-content: start;
   gap: 1.2rem;
+}
+
+.bookbuddy-feature-row--copy-only .bookbuddy-feature-copy {
+  grid-column: 1 / -1;
 }
 
 .bookbuddy-feature-media__image {
