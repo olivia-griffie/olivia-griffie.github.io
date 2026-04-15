@@ -1,0 +1,39 @@
+.container,
+.row {
+  max-width: 116rem;
+  margin: 0 auto;
+  padding-inline: 3rem;
+}
+
+.section {
+  padding: var(--space-32) 0;
+}
+
+.section--soft {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.section__heading {
+  margin-bottom: var(--space-16);
+}
+
+.section__eyebrow {
+  font-family: var(--font-family-stamp);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-brand-sage);
+}
+
+.section__title {
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-2xl);
+  line-height: 1.15;
+  color: var(--color-ink);
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--space-12);
+}

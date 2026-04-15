@@ -1,6 +1,7 @@
 /* --------------------------------------- */
 /* ----- Basic Setup ----- */
 /* --------------------------------------- */
+/* Source architecture mirrors this production file in /src/css and /src/js. */
  
 * {
   margin: 0;
@@ -20,44 +21,84 @@
   font-style: normal;
 }
 :root {
-  --cream:       #f5f0e8;
-  --cream-dark:  #ede5d0;
-  --kraft:       #c8a97a;
-  --kraft-dark:  #a07850;
-  --ink:         #383838;
-  --ink-muted:   #4a4540;
-  --rust:        #b84c2b;
-  --sage:        #6b8c6a;
-  --denim:       #7f9dbb;
+  --color-bg: #f5f0e8;
+  --color-bg-soft: #faf7f2;
+  --color-surface: #ffffff;
+  --color-border: rgba(160, 120, 80, 0.3);
+  --color-ink: #383838;
+  --color-ink-muted: #4a4540;
+  --color-accent: #b84c2b;
+  --color-accent-soft: rgba(184, 76, 43, 0.08);
+  --color-accent-strong: #8f351d;
+  --color-brand-sage: #6b8c6a;
+  --color-brand-denim: #7f9dbb;
+  --color-brand-kraft: #c8a97a;
+  --color-brand-kraft-strong: #a07850;
+  --color-grid-line: rgba(100, 120, 160, 0.12);
   --tape-yellow: rgba(255, 235, 150, 0.75);
-  --tape-blue:   rgba(180, 210, 230, 0.75);
-  --paper-white: #faf7f2;
-  --grid-line:   rgba(100, 120, 160, 0.12);
- 
+  --tape-blue: rgba(180, 210, 230, 0.75);
+
   /* Typography */
-  --font-serif:    'Playfair Display', Georgia, serif;
-  --font-body:     'Libre Baskerville', Georgia, serif;
-  --font-stamp: 'Roboto Condensed', sans-serif;
- 
-  /* Sizes */
-  --font-size-small:  1.6rem;
+  --font-family-serif: 'Playfair Display', Georgia, serif;
+  --font-family-body: 'Libre Baskerville', Georgia, serif;
+  --font-family-stamp: 'Roboto Condensed', system-ui, sans-serif;
+  --font-size-xs: 1.2rem;
+  --font-size-sm: 1.4rem;
+  --font-size-md: 1.6rem;
+  --font-size-lg: 2rem;
+  --font-size-xl: 2.6rem;
+  --font-size-2xl: 3.2rem;
+  --font-size-3xl: 4.2rem;
+
+  /* Existing site scales */
+  --font-size-small: 1.6rem;
   --font-size-normal: 1.9rem;
   --font-size-medium: 2.6rem;
-  --font-size-large:  4.2rem;
-  --font-size-huge:   7rem;
- 
+  --font-size-large: 4.2rem;
+  --font-size-huge: 7rem;
+
   /* Spacing */
-  --gutter-huge:   11rem;
+  --space-2: 0.4rem;
+  --space-4: 0.8rem;
+  --space-6: 1.2rem;
+  --space-8: 1.6rem;
+  --space-12: 2.4rem;
+  --space-16: 3.2rem;
+  --space-24: 4.8rem;
+  --space-32: 6.4rem;
+  --gutter-huge: 11rem;
   --gutter-medium: 5rem;
   --gutter-normal: 3rem;
-  --gutter-small:  1.8rem;
- 
+  --gutter-small: 1.8rem;
+
   /* Layout */
   --container-max-width: 1160px;
-  --container-medium:    760px;
- 
-  /* Borders */
-  --border-kraft: 1px solid rgba(160, 120, 80, 0.3);
+  --container-medium: 760px;
+
+  /* Radius */
+  --radius-pill: 999px;
+  --radius-md: 1.4rem;
+  --radius-lg: 2.4rem;
+
+  /* Shadows */
+  --shadow-soft: 0 18px 28px rgba(56, 56, 56, 0.18);
+
+  /* Legacy aliases */
+  --cream: var(--color-bg);
+  --cream-dark: #ede5d0;
+  --kraft: var(--color-brand-kraft);
+  --kraft-dark: var(--color-brand-kraft-strong);
+  --ink: var(--color-ink);
+  --ink-muted: var(--color-ink-muted);
+  --rust: var(--color-accent);
+  --sage: var(--color-brand-sage);
+  --denim: var(--color-brand-denim);
+  --paper-white: var(--color-bg-soft);
+  --grid-line: var(--color-grid-line);
+  --font-serif: var(--font-family-serif);
+  --font-body: var(--font-family-body);
+  --font-stamp: var(--font-family-stamp);
+  --border-kraft: 1px solid var(--color-border);
 }
  
 html {
@@ -167,11 +208,11 @@ img {
 }
  
 .section-tag {
-  font-family: var(--font-stamp);
-  font-size: 1.3rem;
+  font-family: var(--font-family-stamp);
+  font-size: var(--font-size-xs);
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--kraft-dark);
+  color: var(--color-brand-kraft-strong);
   display: block;
   margin-bottom: 0.8rem;
 }
@@ -278,18 +319,21 @@ a {
 }
  
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 1.1rem 2.8rem 1.2rem;
   border: 1.5px solid rgba(184, 76, 43, 0.45);
-  font-family: var(--font-stamp);
-  font-size: 1.5rem;
+  font-family: var(--font-family-stamp);
+  font-size: var(--font-size-sm);
   letter-spacing: 0.06em;
-  color: var(--rust);
+  text-transform: uppercase;
+  color: var(--color-accent);
   text-decoration: none;
   position: relative;
   transition: background 0.2s, color 0.2s, transform 0.2s, border-color 0.2s;
   background: transparent;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   overflow: hidden;
 }
  
@@ -298,22 +342,22 @@ a {
 }
  
 .btn:hover {
-  background: rgba(184, 76, 43, 0.08);
-  color: var(--rust);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
   border-color: rgba(184, 76, 43, 0.6);
   transform: translateY(-1px);
 }
  
 .btn--dark {
   background: transparent;
-  color: var(--rust);
+  color: var(--color-accent);
   border-color: rgba(184, 76, 43, 0.45);
 }
  
 .btn--dark:hover {
-  background: rgba(184, 76, 43, 0.08);
+  background: var(--color-accent-soft);
   border-color: rgba(184, 76, 43, 0.6);
-  color: var(--rust);
+  color: var(--color-accent);
 }
  
 .link__text {
@@ -1313,6 +1357,12 @@ a[href*="github"] img {
   object-position: top center;
 }
 
+.project-card__meta {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
 .project-card__link {
   display: block;
 }
@@ -1380,7 +1430,7 @@ a[href*="github"] img {
   position: relative;
   background: rgba(255, 255, 255, 0.76);
   border: 1px solid rgba(160, 120, 80, 0.2);
-  border-radius: 2.8rem;
+  border-radius: var(--radius-lg);
   padding: 3rem;
 }
 

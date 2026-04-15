@@ -1,0 +1,4 @@
+.page-contact .contact-stack {
+  display: grid;
+  gap: var(--space-12);
+}

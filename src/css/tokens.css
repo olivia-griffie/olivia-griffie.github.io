@@ -1,0 +1,68 @@
+:root {
+  /* Base colors */
+  --color-bg: #f5f0e8;
+  --color-bg-soft: #faf7f2;
+  --color-surface: #ffffff;
+  --color-border: rgba(160, 120, 80, 0.3);
+
+  --color-ink: #383838;
+  --color-ink-muted: #4a4540;
+
+  --color-accent: #b84c2b;
+  --color-accent-soft: rgba(184, 76, 43, 0.08);
+  --color-accent-strong: #8f351d;
+
+  --color-brand-sage: #6b8c6a;
+  --color-brand-denim: #7f9dbb;
+  --color-brand-kraft: #c8a97a;
+  --color-brand-kraft-strong: #a07850;
+  --color-grid-line: rgba(100, 120, 160, 0.12);
+
+  /* Typography */
+  --font-family-serif: "Playfair Display", Georgia, serif;
+  --font-family-body: "Libre Baskerville", Georgia, serif;
+  --font-family-stamp: "Roboto Condensed", system-ui, sans-serif;
+
+  --font-size-xs: 1.2rem;
+  --font-size-sm: 1.4rem;
+  --font-size-md: 1.6rem;
+  --font-size-lg: 2rem;
+  --font-size-xl: 2.6rem;
+  --font-size-2xl: 3.2rem;
+  --font-size-3xl: 4.2rem;
+
+  /* Spacing */
+  --space-2: 0.4rem;
+  --space-4: 0.8rem;
+  --space-6: 1.2rem;
+  --space-8: 1.6rem;
+  --space-12: 2.4rem;
+  --space-16: 3.2rem;
+  --space-24: 4.8rem;
+  --space-32: 6.4rem;
+
+  /* Radius */
+  --radius-pill: 999px;
+  --radius-lg: 2.4rem;
+  --radius-md: 1.4rem;
+
+  /* Shadows */
+  --shadow-soft: 0 18px 28px rgba(56, 56, 56, 0.18);
+
+  /* Legacy aliases for the current production CSS */
+  --cream: var(--color-bg);
+  --cream-dark: #ede5d0;
+  --kraft: var(--color-brand-kraft);
+  --kraft-dark: var(--color-brand-kraft-strong);
+  --ink: var(--color-ink);
+  --ink-muted: var(--color-ink-muted);
+  --rust: var(--color-accent);
+  --sage: var(--color-brand-sage);
+  --denim: var(--color-brand-denim);
+  --paper-white: var(--color-bg-soft);
+  --grid-line: var(--color-grid-line);
+
+  --font-serif: var(--font-family-serif);
+  --font-body: var(--font-family-body);
+  --font-stamp: var(--font-family-stamp);
+}
