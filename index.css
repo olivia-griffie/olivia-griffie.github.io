@@ -2031,40 +2031,6 @@ a[href*="github"] img {
   margin-inline: auto;
 }
 
-.header--bookbuddy {
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 12% 22%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 22%),
-    radial-gradient(circle at 85% 18%, rgba(255, 193, 128, 0.34), rgba(255, 193, 128, 0) 18%),
-    linear-gradient(180deg, #ffd6ef 0%, #ffc6e3 48%, #ffdcee 100%);
-}
-
-.header--bookbuddy::before,
-.header--bookbuddy::after {
-  content: "";
-  position: absolute;
-  border-radius: 999px;
-  pointer-events: none;
-  opacity: 0.48;
-}
-
-.header--bookbuddy::before {
-  width: 64rem;
-  height: 64rem;
-  left: -14rem;
-  top: 7rem;
-  border: 3.6rem solid rgba(255, 130, 184, 0.24);
-}
-
-.header--bookbuddy::after {
-  width: 48rem;
-  height: 48rem;
-  right: -10rem;
-  bottom: -12rem;
-  border: 2.8rem solid rgba(255, 141, 90, 0.2);
-}
-
 .bookbuddy-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(34rem, 0.98fr);
@@ -2092,15 +2058,6 @@ a[href*="github"] img {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   box-shadow: 0 0.8rem 2.2rem rgba(128, 72, 104, 0.08);
-}
-
-.bookbuddy-hero__logo-wrap {
-  max-width: 44rem;
-}
-
-.bookbuddy-hero__logo {
-  width: 100%;
-  display: block;
 }
 
 .bookbuddy-hero__title {
@@ -2475,10 +2432,6 @@ a[href*="github"] img {
   .bookbuddy-hero {
     grid-template-columns: 1fr;
     padding-top: 3rem;
-  }
-
-  .bookbuddy-hero__logo-wrap {
-    max-width: 36rem;
   }
 
   .bookbuddy-hero__title {
