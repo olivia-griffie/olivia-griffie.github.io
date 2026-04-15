@@ -11,7 +11,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-DCYMFHQY3Q');
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,9 +24,8 @@
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items nav__items--left">
-          <li class="nav__item"><a href="../work/" class="nav__link"><span class="nav__link-text">Work</span></a></li>
-          <li class="nav__item"><a href="../illustration/" class="nav__link"><span class="nav__link-text">Illustration</span></a></li>
-          <li class="nav__item"><a href="/#clients" class="nav__link"><span class="nav__link-text">Clients</span></a></li>
+          <li class="nav__item"><a href="/work/" class="nav__link"><span class="nav__link-text">Work</span></a></li>
+          <li class="nav__item"><a href="/illustration/" class="nav__link"><span class="nav__link-text">Illustration</span></a></li>
         </ul>
         <a href="/" class="nav__logo-link" aria-label="Olivia Griffie home">
           <video class="nav__logo-video" muted playsinline preload="metadata" aria-hidden="true">
@@ -36,9 +34,9 @@
           <img src="../images/oliviagriffielogo.png" class="nav__logo" alt="Olivia Griffie" />
         </a>
         <ul class="nav__items nav__items--right">
-          <li class="nav__item"><a href="../about/" class="nav__link"><span class="nav__link-text">About</span></a></li>
-          <li class="nav__item"><a href="../images/Olivia_Griffie_Resume_Web.pdf" class="nav__link" download><span class="nav__link-text">Resume</span></a></li>
-          <li class="nav__item"><a href="../contact/" class="nav__link"><span class="nav__link-text">Contact</span></a></li>
+          <li class="nav__item"><a href="/about/" class="nav__link"><span class="nav__link-text">About</span></a></li>
+          <li class="nav__item"><a href="/images/Olivia_Griffie_Resume_Web.pdf" class="nav__link" download><span class="nav__link-text">Resume</span></a></li>
+          <li class="nav__item"><a href="/contact/" class="nav__link"><span class="nav__link-text">Contact</span></a></li>
         </ul>
       </nav>
     </div>
@@ -48,7 +46,7 @@
         <h1 class="bookbuddy-hero__title">A companion for the creative process.</h1>
         <p class="bookbuddy-hero__summary">Book Buddy is a desktop writing application I designed and built in Electron to help authors move from early ideas to a finished manuscript without losing clarity, structure, or momentum along the way.</p>
         <div class="bookbuddy-hero__actions">
-          <a href="../work/" class="btn">Back to Work</a>
+          <a href="/work/" class="btn">Back to Work</a>
           <a href="#details" class="btn">Explore the Build</a>
         </div>
         <ul class="bookbuddy-hero__highlights" aria-label="Book Buddy highlights">
@@ -62,124 +60,240 @@
       </figure>
     </div>
   </header>
+
   <main class="homepage-main">
     <section class="wire-section">
       <div class="row case-study case-study--bookbuddy" id="details">
         <div class="bookbuddy-layout">
+
+          <!-- Heading -->
           <div class="section-heading bookbuddy-section-heading">
             <span class="section-tag">Book Buddy</span>
             <h2>Designing a writing workspace that supports momentum.</h2>
           </div>
 
+          <!-- Intro copy -->
           <div class="bookbuddy-intro-copy">
             <div class="about-note">
-              <h3>Guided structure without boxing the writer in.</h3>
-              <p><strong>Desktop Writing App &middot; Electron Beta</strong></p>
-              <p>Book Buddy helps writers create a project, define genre and premise, build world details, shape characters, outline scenes, and move those decisions directly into chapter drafts. The experience is designed to reduce cognitive load by keeping each stage visible but focused, so writers always know where they are in the process.</p>
-              <p><strong>My Focus</strong><br>I designed the UX and UI, mapped the workflow architecture, and built the app experience in Electron with modular front-end code and Electron-compatible storage patterns that support drafting, autosave, and structured story data.</p>
-              <p><strong>Current State</strong><br>Book Buddy is currently in beta with one active project slot while multi-project functionality is being tested and expanded.</p>
+              <h3>Built from the ground up.</h3>
+              <p>Book Buddy is a writing companion app I created from scratch — concept, user flow, visual identity, and entire interface. My goal was to build a tool that supports authors with structure, clarity, and motivation without overwhelming them.</p>
+              <p><strong>My Role</strong><br>Founder &amp; Senior Visual Designer. I owned product strategy, UX architecture, UI design, visual identity, front-end styling, and the component library.</p>
+              <p><strong>Current State</strong><br>Beta with one active project slot while multi-project functionality is tested and expanded.</p>
             </div>
           </div>
 
-          <aside class="bookbuddy-intro-visual" aria-label="Book Buddy visual summary">
+          <!-- Project snapshot aside -->
+          <aside class="bookbuddy-intro-visual" aria-label="Book Buddy project snapshot">
             <div class="bookbuddy-visual-card">
-              <img src="../images/bookbuddylogo.png" class="bookbuddy-visual-card__logo" alt="Book Buddy logo" />
-              <div class="bookbuddy-visual-card__stats">
-                <div class="bookbuddy-visual-card__stat">
-                  <span>Workflow</span>
-                  <strong>Plot to draft</strong>
+              <img src="../images/bookbuddylogo.png" class="bookbuddy-visual-card__logo" alt="Book Buddy logo" loading="lazy" />
+              <div class="bookbuddy-snapshot-meta">
+                <div class="bookbuddy-snapshot-meta__item">
+                  <span>Timeline</span>
+                  <strong>6 weeks</strong>
                 </div>
-                <div class="bookbuddy-visual-card__stat">
+                <div class="bookbuddy-snapshot-meta__item">
+                  <span>Tools</span>
+                  <strong>Figma · HTML/CSS · GitHub</strong>
+                </div>
+                <div class="bookbuddy-snapshot-meta__item">
                   <span>Focus</span>
-                  <strong>Clear progression</strong>
-                </div>
-                <div class="bookbuddy-visual-card__stat">
-                  <span>Format</span>
-                  <strong>Desktop beta</strong>
+                  <strong>UX · UI · Visual Identity · Front-End</strong>
                 </div>
               </div>
             </div>
           </aside>
 
+          <!-- The Problem -->
+          <div class="bookbuddy-problem-header">
+            <span class="section-tag">The Problem</span>
+            <h3>Most writing tools fall into two extremes.</h3>
+            <p>Writers told me they wanted something in the middle — organized, warm, and creative. Not clinical or chaotic.</p>
+          </div>
+
           <div class="bookbuddy-overview-grid">
             <article class="bookbuddy-overview-card">
-              <span class="section-tag">Key Design Idea</span>
-              <h3>Modular structure that keeps creative energy moving</h3>
-              <p>I focused on modular design and contextual continuity so writers can move through setup, planning, and drafting without the app feeling fragmented or overwhelming.</p>
+              <span class="section-tag">Too complex</span>
+              <h3>Scrivener</h3>
+              <p>Powerful, but steep learning curve. Writers feel overwhelmed before they've written a word.</p>
             </article>
             <article class="bookbuddy-overview-card">
-              <span class="section-tag">Current Status</span>
-              <h3>Beta product with one active project slot</h3>
-              <p>Book Buddy is currently in beta while multi-project functionality is being tested and expanded, with autosave, export support, and structured story data already in place.</p>
+              <span class="section-tag">Too generic</span>
+              <h3>Notion</h3>
+              <p>Flexible but blank-canvas paralysis. No writing-specific structure or built-in motivation.</p>
             </article>
             <article class="bookbuddy-overview-card">
-              <span class="section-tag">Skills &amp; Stack</span>
-              <h3>Built for flexible drafting and future growth</h3>
-              <div class="bookbuddy-pill-grid" aria-label="Book Buddy skills">
-                <span class="bookbuddy-pill">CSS</span>
-                <span class="bookbuddy-pill">HTML5</span>
-                <span class="bookbuddy-pill">JSON</span>
-                <span class="bookbuddy-pill">JavaScript</span>
-                <span class="bookbuddy-pill">SQLite</span>
-                <span class="bookbuddy-pill">GitHub</span>
-                <span class="bookbuddy-pill">Modular code</span>
-                <span class="bookbuddy-pill">Electron-compatible storage</span>
-              </div>
+              <span class="section-tag">Visually flat</span>
+              <h3>Dabble</h3>
+              <p>Clean but sterile. Nothing about the interface inspires a writer to open it every day.</p>
             </article>
           </div>
 
+          <!-- Feature stack -->
           <div class="bookbuddy-feature-stack">
-            <section class="bookbuddy-feature-row">
-              <div class="bookbuddy-feature-copy">
-                <span class="section-tag">Workflow Foundation</span>
-                <h3>Beginning with a workflow authors can actually follow</h3>
-                <p>The app opens with project setup so the writer can define genre, premise, and story direction before getting lost in details. From there, the interface branches into plot, character, scene, and drafting spaces that feel connected instead of siloed.</p>
-              </div>
-              <figure class="bookbuddy-feature-media">
-                <img src="../images/bookbuddy-promo.png" class="bookbuddy-feature-media__image" alt="Book Buddy promotional graphic" />
-              </figure>
-            </section>
 
-            <section class="bookbuddy-feature-row bookbuddy-feature-row--reverse bookbuddy-feature-row--band bookbuddy-feature-row--copy-only">
+            <!-- Goals -->
+            <section class="bookbuddy-feature-row bookbuddy-feature-row--copy-only bookbuddy-feature-row--band">
               <div class="bookbuddy-feature-copy">
-                <span class="section-tag">Progressive Disclosure</span>
-                <h3>Using progressive disclosure to keep the interface calm</h3>
-                <p>I focused on modular sections so writers only see the information needed for the step they are in. That keeps the workspace distraction-free while still making the larger manuscript structure feel close at hand.</p>
+                <span class="section-tag">Goals</span>
+                <h3>What I set out to solve</h3>
+                <ul class="bookbuddy-check-list">
+                  <li>Reduce cognitive overload for writers at every stage</li>
+                  <li>Create a workspace that feels calm and inspiring, not clinical</li>
+                  <li>Make progress visible and motivating</li>
+                  <li>Build a UI system that feels intentional and consistent</li>
+                  <li>Support structure without boxing writers in</li>
+                </ul>
               </div>
             </section>
 
+            <!-- Research -->
             <section class="bookbuddy-feature-row bookbuddy-feature-row--copy-only">
               <div class="bookbuddy-feature-copy">
-                <span class="section-tag">Draft Continuity</span>
-                <h3>Keeping story planning tied to draft execution</h3>
-                <p>Characters, scenes, and world-building notes are not isolated reference pages. They are designed to feed the drafting flow directly, helping authors turn planning work into chapter progress and daily writing momentum.</p>
+                <span class="section-tag">Research &amp; Insights</span>
+                <h3>What writers told me through interviews and surveys</h3>
+                <ul class="bookbuddy-check-list">
+                  <li>Writers want structure, but not complexity</li>
+                  <li>Warm, editorial design resonates strongly</li>
+                  <li>Progress needs to be visible to sustain momentum</li>
+                  <li>Decorative UI should support the experience, not distract</li>
+                  <li>Long-form writing requires excellent typography</li>
+                </ul>
               </div>
             </section>
 
-            <section class="bookbuddy-feature-row bookbuddy-feature-row--reverse bookbuddy-feature-row--band">
-              <figure class="bookbuddy-feature-media">
-                <div class="bookbuddy-visual-card bookbuddy-visual-card--compact">
-                  <img src="../images/bookbuddylogo.png" class="bookbuddy-wordmark" alt="Book Buddy wordmark logo" />
-                  <p>The visual language stays warm and encouraging, while the structure keeps the product grounded and usable for real manuscript work.</p>
-                </div>
-              </figure>
+            <!-- Process image -->
+            <figure class="bookbuddy-process-figure">
+              <img src="../images/bookbuddy-process-grid.png" loading="lazy" class="bookbuddy-process-figure__image" alt="Book Buddy design process showing information architecture, wireframes, visual design system, and iterations" />
+              <figcaption>Information architecture, wireframe exploration, visual design system, and iteration notes — the full process from concept to final build.</figcaption>
+            </figure>
+
+            <!-- IA -->
+            <section class="bookbuddy-feature-row bookbuddy-feature-row--copy-only">
               <div class="bookbuddy-feature-copy">
-                <span class="section-tag">Reliability</span>
-                <h3>Building trust through autosave, continuity, and export options</h3>
-                <p>Writers need to feel that their work is safe and moving somewhere. Autosave, contextual panels, and PDF or DOC export help the product feel reliable enough for active manuscript work instead of a temporary brainstorming tool.</p>
+                <span class="section-tag">1 — Information Architecture</span>
+                <h3>Built around the natural flow of writing</h3>
+                <p>The IA is organized into three modes so writers never lose their place in the process. Each section feeds into the next — planning feeds drafting, drafting feeds progress.</p>
+                <div class="bookbuddy-ia-strip">
+                  <div class="bookbuddy-ia-node">
+                    <strong>Write</strong>
+                    <span>Chapters · Scenes · Notes</span>
+                  </div>
+                  <div class="bookbuddy-ia-arrow" aria-hidden="true">→</div>
+                  <div class="bookbuddy-ia-node">
+                    <strong>Organize</strong>
+                    <span>Characters · Plot · Worldbuilding</span>
+                  </div>
+                  <div class="bookbuddy-ia-arrow" aria-hidden="true">→</div>
+                  <div class="bookbuddy-ia-node">
+                    <strong>Progress</strong>
+                    <span>Goals · Streaks · Word Count</span>
+                  </div>
+                </div>
               </div>
             </section>
+
+            <!-- Wireframes -->
+            <section class="bookbuddy-feature-row bookbuddy-feature-row--copy-only bookbuddy-feature-row--band">
+              <div class="bookbuddy-feature-copy">
+                <span class="section-tag">2 — Wireframes &amp; Concept Exploration</span>
+                <h3>Three directions explored, one clear winner</h3>
+                <p>I explored three visual directions before settling on the final approach. Each direction was prototyped and tested against the research insights.</p>
+                <div class="bookbuddy-direction-grid">
+                  <div class="bookbuddy-direction-card">
+                    <strong>Minimalist</strong>
+                    <p>Clean, monochrome. Felt too stripped for a creative space writers would spend hours in.</p>
+                  </div>
+                  <div class="bookbuddy-direction-card">
+                    <strong>Editorial</strong>
+                    <p>Serif headings, generous whitespace. Strong foundation but needed warmth to feel inviting.</p>
+                  </div>
+                  <div class="bookbuddy-direction-card bookbuddy-direction-card--selected">
+                    <strong>Editorial Warmth ✦</strong>
+                    <p>Soft neutrals, subtle textures, warm accent. Writers immediately recognized it as their ideal workspace.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Design System -->
+            <section class="bookbuddy-feature-row bookbuddy-feature-row--copy-only">
+              <div class="bookbuddy-feature-copy">
+                <span class="section-tag">3 — Visual Design System</span>
+                <h3>A full system built from scratch to ensure consistency</h3>
+                <p>Every interface decision is backed by a component library and token system. This is what makes the product feel intentional at every screen — not just the hero view.</p>
+                <div class="bookbuddy-pill-grid">
+                  <span class="bookbuddy-pill">Color tokens</span>
+                  <span class="bookbuddy-pill">Typography scale</span>
+                  <span class="bookbuddy-pill">Spacing scale</span>
+                  <span class="bookbuddy-pill">Component library</span>
+                  <span class="bookbuddy-pill">Iconography style</span>
+                  <span class="bookbuddy-pill">Responsive rules</span>
+                  <span class="bookbuddy-pill">Interaction patterns</span>
+                </div>
+              </div>
+            </section>
+
+            <!-- Iterations -->
+            <section class="bookbuddy-feature-row bookbuddy-feature-row--copy-only bookbuddy-feature-row--band">
+              <div class="bookbuddy-feature-copy">
+                <span class="section-tag">4 — Iterations</span>
+                <h3>Two rounds of focused refinement before final build</h3>
+                <div class="bookbuddy-iteration-grid">
+                  <div class="bookbuddy-iteration-card">
+                    <strong>Iteration 1 → 2</strong>
+                    <ul>
+                      <li>Improved contrast across all components</li>
+                      <li>Simplified chapter cards to reduce noise</li>
+                      <li>Reduced decorative elements in the workspace</li>
+                      <li>Softened elevation and shadows sitewide</li>
+                    </ul>
+                  </div>
+                  <div class="bookbuddy-iteration-card">
+                    <strong>Iteration 2 → 3</strong>
+                    <ul>
+                      <li>Added progress rings to dashboard</li>
+                      <li>Introduced chapter health indicators</li>
+                      <li>Refined mobile writing mode for small screens</li>
+                      <li>Improved long-form typography for readability</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Final design heading -->
+            <section class="bookbuddy-feature-row bookbuddy-feature-row--copy-only">
+              <div class="bookbuddy-feature-copy">
+                <span class="section-tag">Final Design</span>
+                <h3>A workspace that feels warm, structured, and motivating</h3>
+                <p>The final experience spans a full dashboard, chapter workspace, writing challenges, character sheets, progress tracking, and a dark-mode writing environment. Key screens below.</p>
+              </div>
+            </section>
+
+            <!-- App screenshots -->
+            <div class="bookbuddy-screens-grid">
+              <figure class="bookbuddy-screen">
+                <img src="../images/bookbuddy-app-dashboard.png" loading="lazy" class="bookbuddy-screen__image" alt="Book Buddy dashboard showing project overview, progress stats, workflow steps, and sidebar navigation" />
+                <figcaption>Dashboard — project overview with progress tracking, next-step prompts, and full workflow navigation</figcaption>
+              </figure>
+              <figure class="bookbuddy-screen">
+                <img src="../images/bookbuddy-app-challenges.png" loading="lazy" class="bookbuddy-screen__image" alt="Book Buddy writing challenges view in dark mode showing prompts and rich text editor" />
+                <figcaption>Writing challenges — dark mode prompt view with contextual character and scene metadata, rich text editor, and draft insertion</figcaption>
+              </figure>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
   </main>
+
   <footer role="contentinfo" class="footer footer--bookbuddy">
     <div class="row">
       <ul class="footer__social-links">
-        <li class="footer__social-link-item"><a href="https://dribbble.com/olivia-griffie" title="Dribbble"><img src="../images/dribbble-logo.svg" class="footer__social-image" alt="Dribbble"></a></li>
-        <li class="footer__social-link-item"><a href="https://www.linkedin.com/in/olivia-griffie-032860173/" title="LinkedIn"><img src="../images/linkedin.svg" class="footer__social-image" alt="LinkedIn"></a></li>
-        <li class="footer__social-link-item"><a href="https://github.com/olivia-griffie" title="GitHub"><img src="../images/github.svg" class="footer__social-image" alt="GitHub"></a></li>
+        <li class="footer__social-link-item"><a href="https://dribbble.com/olivia-griffie" title="Dribbble"><img src="../images/dribbble-logo.svg" class="footer__social-image" alt="Dribbble" loading="lazy"></a></li>
+        <li class="footer__social-link-item"><a href="https://www.linkedin.com/in/olivia-griffie-032860173/" title="LinkedIn"><img src="../images/linkedin.svg" class="footer__social-image" alt="LinkedIn" loading="lazy"></a></li>
+        <li class="footer__social-link-item"><a href="https://github.com/olivia-griffie" title="GitHub"><img src="../images/github.svg" class="footer__social-image" alt="GitHub" loading="lazy"></a></li>
       </ul>
       <p class="footer__credit">&copy; 2026 | Portfolio Designed &amp; Created by Olivia Griffie</p>
     </div>
