@@ -2353,6 +2353,187 @@ a[href*="github"] img {
   text-transform: uppercase;
 }
 
+.burgermeister-case-study {
+  gap: 4rem;
+}
+
+.burgermeister-hero {
+  grid-column: 2 / span 10;
+  text-align: center;
+  padding: 6.4rem 4rem;
+  background: #F9F6F1;
+  border: 1px solid rgba(160, 120, 80, 0.18);
+  border-radius: 3.2rem;
+}
+
+.burgermeister-hero h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #2E2E2E;
+}
+
+.burgermeister-hero__subtitle {
+  max-width: 68rem;
+  margin: 1.8rem auto 0;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #5A5A5A;
+}
+
+.burgermeister-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 3.2rem;
+}
+
+.burgermeister-split {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.burgermeister-split--reverse .burgermeister-media-card {
+  grid-column: 1 / span 6;
+}
+
+.burgermeister-split--reverse .burgermeister-copy-card {
+  grid-column: 7 / -1;
+}
+
+.burgermeister-copy-card,
+.burgermeister-media-card,
+.burgermeister-detail-card {
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(160, 120, 80, 0.2);
+  border-radius: 2.8rem;
+  box-shadow: 0 1rem 2.4rem rgba(104, 80, 54, 0.06);
+}
+
+.burgermeister-copy-card {
+  grid-column: 1 / span 6;
+  padding: 3.2rem;
+}
+
+.burgermeister-copy-card h2,
+.burgermeister-centerpiece h2,
+.burgermeister-detail-card h2,
+.burgermeister-closing h2 {
+  margin: 0 0 1.4rem;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #3E3E3E;
+  font-style: normal;
+}
+
+.burgermeister-copy-card p,
+.burgermeister-detail-card p,
+.burgermeister-closing p {
+  margin: 0 0 1.6rem;
+  font-size: 1.8rem;
+  line-height: 1.75;
+  color: #5A5A5A;
+}
+
+.burgermeister-copy-card p:last-child,
+.burgermeister-detail-card p:last-child,
+.burgermeister-closing p:last-child {
+  margin-bottom: 0;
+}
+
+.burgermeister-media-card {
+  grid-column: 7 / -1;
+  margin: 0;
+  padding: 1.6rem;
+}
+
+.burgermeister-media-card__image {
+  width: 100%;
+  display: block;
+  border-radius: 1.8rem;
+}
+
+.burgermeister-centerpiece {
+  grid-column: 3 / span 8;
+  text-align: center;
+}
+
+.burgermeister-media-card--centered {
+  margin-top: 2rem;
+  padding: 1.6rem;
+}
+
+.burgermeister-media-card--centered figcaption {
+  margin-top: 1.2rem;
+  padding: 0 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: #7A7A7A;
+}
+
+.burgermeister-split--band {
+  padding: 3.2rem;
+  background: #F3E9D2;
+  border-radius: 3.2rem;
+}
+
+.burgermeister-copy-card--band,
+.burgermeister-media-card--band {
+  background: rgba(255, 255, 255, 0.46);
+}
+
+.burgermeister-detail-cards {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2.4rem;
+}
+
+.burgermeister-detail-card {
+  grid-column: span 4;
+  padding: 2.6rem;
+}
+
+.burgermeister-detail-card__icon {
+  display: inline-flex;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-bottom: 1.4rem;
+  border-radius: 999px;
+  background: #4E6E5D;
+  box-shadow: 0 0 0 0.5rem rgba(78, 110, 93, 0.14);
+}
+
+.burgermeister-detail-card__image {
+  width: 100%;
+  display: block;
+  margin-top: 2rem;
+  border-radius: 1.8rem;
+}
+
+.burgermeister-closing {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 6.4rem 4rem;
+  border-top: 2px solid rgba(201, 78, 46, 0.22);
+}
+
+.burgermeister-case-study .section-tag,
+.burgermeister-closing .section-tag {
+  color: #C94E2E;
+}
+
+.burgermeister-closing p {
+  max-width: 76rem;
+  margin-inline: auto;
+}
+
 .reveal-section {
   opacity: 0;
   transform: translateY(2.4rem);
@@ -2574,7 +2755,10 @@ a[href*="github"] img {
   .bookbuddy-layout,
   .bookbuddy-feature-row,
   .bookbuddy-overview-grid,
-  .bookbuddy-hero {
+  .bookbuddy-hero,
+  .burgermeister-grid,
+  .burgermeister-split,
+  .burgermeister-detail-cards {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
@@ -2592,8 +2776,35 @@ a[href*="github"] img {
   .bookbuddy-hero__copy,
   .bookbuddy-hero__media,
   .bookbuddy-feature-row--reverse .bookbuddy-feature-copy,
-  .bookbuddy-feature-row--reverse .bookbuddy-feature-media {
+  .bookbuddy-feature-row--reverse .bookbuddy-feature-media,
+  .burgermeister-copy-card,
+  .burgermeister-media-card,
+  .burgermeister-split--reverse .burgermeister-copy-card,
+  .burgermeister-split--reverse .burgermeister-media-card {
     grid-column: span 4;
+  }
+
+  .burgermeister-hero,
+  .burgermeister-centerpiece,
+  .burgermeister-detail-cards,
+  .burgermeister-closing {
+    grid-column: 1 / -1;
+  }
+
+  .burgermeister-detail-card {
+    grid-column: span 4;
+  }
+
+  .burgermeister-hero h1 {
+    font-size: 4.8rem;
+  }
+
+  .burgermeister-hero__subtitle {
+    font-size: 2.1rem;
+  }
+
+  .burgermeister-split--band {
+    padding: 2.4rem;
   }
 
   .bookbuddy-hero {
@@ -2717,7 +2928,10 @@ a[href*="github"] img {
   .bookbuddy-layout,
   .bookbuddy-feature-row,
   .bookbuddy-overview-grid,
-  .bookbuddy-hero {
+  .bookbuddy-hero,
+  .burgermeister-grid,
+  .burgermeister-split,
+  .burgermeister-detail-cards {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.6rem;
   }
@@ -2736,8 +2950,43 @@ a[href*="github"] img {
   .bookbuddy-hero__copy,
   .bookbuddy-hero__media,
   .bookbuddy-feature-row--reverse .bookbuddy-feature-copy,
-  .bookbuddy-feature-row--reverse .bookbuddy-feature-media {
+  .bookbuddy-feature-row--reverse .bookbuddy-feature-media,
+  .burgermeister-hero,
+  .burgermeister-centerpiece,
+  .burgermeister-copy-card,
+  .burgermeister-media-card,
+  .burgermeister-detail-card,
+  .burgermeister-closing,
+  .burgermeister-split--reverse .burgermeister-copy-card,
+  .burgermeister-split--reverse .burgermeister-media-card {
     grid-column: 1 / -1;
+  }
+
+  .burgermeister-hero {
+    padding: 4.8rem 2rem;
+  }
+
+  .burgermeister-hero h1 {
+    font-size: 4rem;
+  }
+
+  .burgermeister-hero__subtitle {
+    font-size: 1.9rem;
+  }
+
+  .burgermeister-copy-card,
+  .burgermeister-detail-card,
+  .burgermeister-media-card,
+  .burgermeister-closing {
+    padding: 2rem;
+  }
+
+  .burgermeister-split--band {
+    padding: 1.8rem;
+  }
+
+  .burgermeister-closing {
+    padding-block: 4.8rem;
   }
 
   .bookbuddy-hero__title {
