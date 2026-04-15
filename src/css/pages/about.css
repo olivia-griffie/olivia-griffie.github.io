@@ -1,0 +1,4 @@
+.page-about .about-grid {
+  display: grid;
+  gap: var(--space-16);
+}

@@ -1,0 +1,4 @@
+.page-case-study .case-study-shell {
+  display: grid;
+  gap: var(--space-24);
+}

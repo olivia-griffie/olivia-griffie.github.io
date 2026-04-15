@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
+  <title>Olivia Griffie | Book Buddy</title>
+  <meta name="description" content="Case study for Book Buddy, a desktop writing application designed and built to guide authors from early ideas through finished manuscript drafts." />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCYMFHQY3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DCYMFHQY3Q');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital@0;1&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../index.css" />
+</head>
+<body>
+  <header class="header header--wireframe" id="top">
+    <div class="grid-bg"></div>
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items nav__items--left">
+          <li class="nav__item"><a href="../work/" class="nav__link"><span class="nav__link-text">Work</span></a></li>
+          <li class="nav__item"><a href="../illustration/" class="nav__link"><span class="nav__link-text">Illustration</span></a></li>
+          <li class="nav__item"><a href="../home/#clients" class="nav__link"><span class="nav__link-text">Clients</span></a></li>
+        </ul>
+        <a href="../home/" class="nav__logo-link" aria-label="Olivia Griffie home">
+          <video class="nav__logo-video" muted playsinline preload="metadata" aria-hidden="true">
+            <source src="../images/og-logo-hover.mp4" type="video/mp4">
+          </video>
+          <img src="../images/oliviagriffielogo.png" class="nav__logo" alt="Olivia Griffie" />
+        </a>
+        <ul class="nav__items nav__items--right">
+          <li class="nav__item"><a href="../about/" class="nav__link"><span class="nav__link-text">About</span></a></li>
+          <li class="nav__item"><a href="../images/Olivia_Griffie_Resume_Web.pdf" class="nav__link" download><span class="nav__link-text">Resume</span></a></li>
+          <li class="nav__item"><a href="../contact/" class="nav__link"><span class="nav__link-text">Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="row bookbuddy-hero">
+      <div class="bookbuddy-hero__copy">
+        <p class="bookbuddy-hero__eyebrow">App Build</p>
+        <h1 class="bookbuddy-hero__title">A companion for the creative process.</h1>
+        <p class="bookbuddy-hero__summary">Book Buddy is a desktop writing application I designed and built in Electron to help authors move from early ideas to a finished manuscript without losing clarity, structure, or momentum along the way.</p>
+        <div class="bookbuddy-hero__actions">
+          <a href="../work/" class="btn">Back to Work</a>
+          <a href="#details" class="btn">Explore the Build</a>
+        </div>
+        <ul class="bookbuddy-hero__highlights" aria-label="Book Buddy highlights">
+          <li>World-building, characters, scenes, and drafts connected in one workflow</li>
+          <li>Clean sidebar navigation, autosave, and contextual reference panels</li>
+          <li>PDF and DOC export support with beta testing for multi-project expansion</li>
+        </ul>
+      </div>
+      <figure class="bookbuddy-hero__media">
+        <img src="../images/bookbuddy-promo.png" class="bookbuddy-hero__promo" alt="Book Buddy promotional graphic featuring the app identity and writing workflow message" />
+      </figure>
+    </div>
+  </header>
+  <main class="homepage-main">
+    <section class="wire-section">
+      <div class="row case-study case-study--bookbuddy" id="details">
+        <div class="bookbuddy-layout">
+          <div class="section-heading bookbuddy-section-heading">
+            <span class="section-tag">Book Buddy</span>
+            <h2>Designing a writing workspace that supports momentum.</h2>
+          </div>
+
+          <div class="bookbuddy-intro-copy">
+            <div class="about-note">
+              <h3>Guided structure without boxing the writer in.</h3>
+              <p><strong>Desktop Writing App &middot; Electron Beta</strong></p>
+              <p>Book Buddy helps writers create a project, define genre and premise, build world details, shape characters, outline scenes, and move those decisions directly into chapter drafts. The experience is designed to reduce cognitive load by keeping each stage visible but focused, so writers always know where they are in the process.</p>
+              <p><strong>My Focus</strong><br>I designed the UX and UI, mapped the workflow architecture, and built the app experience in Electron with modular front-end code and Electron-compatible storage patterns that support drafting, autosave, and structured story data.</p>
+              <p><strong>Current State</strong><br>Book Buddy is currently in beta with one active project slot while multi-project functionality is being tested and expanded.</p>
+            </div>
+          </div>
+
+          <aside class="bookbuddy-intro-visual" aria-label="Book Buddy visual summary">
+            <div class="bookbuddy-visual-card">
+              <img src="../images/bookbuddylogo.png" class="bookbuddy-visual-card__logo" alt="Book Buddy logo" />
+              <div class="bookbuddy-visual-card__stats">
+                <div class="bookbuddy-visual-card__stat">
+                  <span>Workflow</span>
+                  <strong>Plot to draft</strong>
+                </div>
+                <div class="bookbuddy-visual-card__stat">
+                  <span>Focus</span>
+                  <strong>Clear progression</strong>
+                </div>
+                <div class="bookbuddy-visual-card__stat">
+                  <span>Format</span>
+                  <strong>Desktop beta</strong>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <div class="bookbuddy-overview-grid">
+            <article class="bookbuddy-overview-card">
+              <span class="section-tag">Key Design Idea</span>
+              <h3>Modular structure that keeps creative energy moving</h3>
+              <p>I focused on modular design and contextual continuity so writers can move through setup, planning, and drafting without the app feeling fragmented or overwhelming.</p>
+            </article>
+            <article class="bookbuddy-overview-card">
+              <span class="section-tag">Current Status</span>
+              <h3>Beta product with one active project slot</h3>
+              <p>Book Buddy is currently in beta while multi-project functionality is being tested and expanded, with autosave, export support, and structured story data already in place.</p>
+            </article>
+            <article class="bookbuddy-overview-card">
+              <span class="section-tag">Skills &amp; Stack</span>
+              <h3>Built for flexible drafting and future growth</h3>
+              <div class="bookbuddy-pill-grid" aria-label="Book Buddy skills">
+                <span class="bookbuddy-pill">CSS</span>
+                <span class="bookbuddy-pill">HTML5</span>
+                <span class="bookbuddy-pill">JSON</span>
+                <span class="bookbuddy-pill">JavaScript</span>
+                <span class="bookbuddy-pill">SQLite</span>
+                <span class="bookbuddy-pill">GitHub</span>
+                <span class="bookbuddy-pill">Modular code</span>
+                <span class="bookbuddy-pill">Electron-compatible storage</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="bookbuddy-feature-stack">
+            <section class="bookbuddy-feature-row">
+              <div class="bookbuddy-feature-copy">
+                <span class="section-tag">Workflow Foundation</span>
+                <h3>Beginning with a workflow authors can actually follow</h3>
+                <p>The app opens with project setup so the writer can define genre, premise, and story direction before getting lost in details. From there, the interface branches into plot, character, scene, and drafting spaces that feel connected instead of siloed.</p>
+              </div>
+              <figure class="bookbuddy-feature-media">
+                <img src="../images/bookbuddy-promo.png" class="bookbuddy-feature-media__image" alt="Book Buddy promotional graphic" />
+              </figure>
+            </section>
+
+            <section class="bookbuddy-feature-row bookbuddy-feature-row--reverse bookbuddy-feature-row--band">
+              <div class="bookbuddy-feature-copy">
+                <span class="section-tag">Progressive Disclosure</span>
+                <h3>Using progressive disclosure to keep the interface calm</h3>
+                <p>I focused on modular sections so writers only see the information needed for the step they are in. That keeps the workspace distraction-free while still making the larger manuscript structure feel close at hand.</p>
+              </div>
+            </section>
+
+            <section class="bookbuddy-feature-row">
+              <div class="bookbuddy-feature-copy">
+                <span class="section-tag">Draft Continuity</span>
+                <h3>Keeping story planning tied to draft execution</h3>
+                <p>Characters, scenes, and world-building notes are not isolated reference pages. They are designed to feed the drafting flow directly, helping authors turn planning work into chapter progress and daily writing momentum.</p>
+              </div>
+            </section>
+
+            <section class="bookbuddy-feature-row bookbuddy-feature-row--reverse bookbuddy-feature-row--band">
+              <figure class="bookbuddy-feature-media">
+                <div class="bookbuddy-visual-card bookbuddy-visual-card--compact">
+                  <img src="../images/bookbuddylogo.png" class="bookbuddy-wordmark" alt="Book Buddy wordmark logo" />
+                  <p>The visual language stays warm and encouraging, while the structure keeps the product grounded and usable for real manuscript work.</p>
+                </div>
+              </figure>
+              <div class="bookbuddy-feature-copy">
+                <span class="section-tag">Reliability</span>
+                <h3>Building trust through autosave, continuity, and export options</h3>
+                <p>Writers need to feel that their work is safe and moving somewhere. Autosave, contextual panels, and PDF or DOC export help the product feel reliable enough for active manuscript work instead of a temporary brainstorming tool.</p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo" class="footer footer--bookbuddy">
+    <div class="row">
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item"><a href="https://dribbble.com/olivia-griffie" title="Dribbble"><img src="../images/dribbble-logo.svg" class="footer__social-image" alt="Dribbble"></a></li>
+        <li class="footer__social-link-item"><a href="https://www.linkedin.com/in/olivia-griffie-032860173/" title="LinkedIn"><img src="../images/linkedin.svg" class="footer__social-image" alt="LinkedIn"></a></li>
+        <li class="footer__social-link-item"><a href="https://github.com/olivia-griffie" title="GitHub"><img src="../images/github.svg" class="footer__social-image" alt="GitHub"></a></li>
+      </ul>
+      <p class="footer__credit">&copy; 2026 | Portfolio Designed &amp; Created by Olivia Griffie</p>
+    </div>
+  </footer>
+  <script src="../index.js"></script>
+</body>
+</html>

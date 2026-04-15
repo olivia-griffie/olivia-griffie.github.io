@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="../" />
+  <link rel="shortcut icon" type="image/png" href="./images/am-logowhitebackground.png" />
+  <title>Olivia Griffie | Architect Mini</title>
+  <meta name="description" content="Case study for Architect Mini, a web-to-print business card builder concept spanning UX planning, UI design, branding, and prototype implementation.">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCYMFHQY3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DCYMFHQY3Q');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital@0;1&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header class="header header--wireframe" id="top">
+    <div class="grid-bg"></div>
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items nav__items--left">
+          <li class="nav__item"><a href="./work/" class="nav__link"><span class="nav__link-text">Work</span></a></li>
+          <li class="nav__item"><a href="./illustration/" class="nav__link"><span class="nav__link-text">Illustration</span></a></li>
+          <li class="nav__item"><a href="./home/#clients" class="nav__link"><span class="nav__link-text">Clients</span></a></li>
+        </ul>
+        <a href="./home/" class="nav__logo-link" aria-label="Olivia Griffie home">
+          <video class="nav__logo-video" muted playsinline preload="metadata" aria-hidden="true">
+            <source src="./images/og-logo-hover.mp4" type="video/mp4">
+          </video>
+          <img src="./images/oliviagriffielogo.png" class="nav__logo" alt="Olivia Griffie" />
+        </a>
+        <ul class="nav__items nav__items--right">
+          <li class="nav__item"><a href="./about/" class="nav__link"><span class="nav__link-text">About</span></a></li>
+          <li class="nav__item"><a href="./images/Olivia_Griffie_Resume_Web.pdf" class="nav__link" download><span class="nav__link-text">Resume</span></a></li>
+          <li class="nav__item"><a href="./contact/" class="nav__link"><span class="nav__link-text">Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="homepage-main">
+    <section class="wire-section">
+      <div class="row case-study">
+        <div class="case-study__actions">
+          <a href="./work/" class="btn">Back to Work</a>
+        </div>
+        <div class="section-heading">
+          <span class="section-tag">Widget Builds</span>
+          <h2>Architect Mini: Web-to-Print Template Builder</h2>
+        </div>
+        <div class="case-study__intro">
+          <div class="case-study__intro-panel">
+            <div class="about-note">
+              <h3>Designing a lightweight builder.</h3>
+              <p>Architect Mini is a web-to-print business card builder concept designed to make branded customization feel simple, structured, and production-aware. The project combined product planning, interface design, visual identity work, and an interactive front-end prototype.</p>
+              <p><strong>My Role</strong><br>I handled UX and UI design, branding, front-end implementation, and prototype setup for the live demo version of the tool.</p>
+              <p class="case-study__note">The interactive prototype is still evolving, so the embedded preview reflects the latest in-progress state from the live deployment.</p>
+            </div>
+          </div>
+        </div>
+        <div class="case-study__stack">
+          <section class="case-study__step">
+            <div class="case-study__step-copy">
+              <h3>Starting with a rough workflow sketch</h3>
+              <p>The first Architect Mini pass began as a quick hand-drawn layout exploring the split between the live preview area and the editable controls. That sketch helped define the core structure before the interface was refined into the working prototype.</p>
+            </div>
+            <figure class="case-study__step-media">
+              <img src="./images/architect-mini-process-sketch.jpeg" class="case-study__image case-study__image--sketch-compact" alt="Hand-drawn Architect Mini process sketch" />
+              <p>This early concept sketch maps the basic editor layout, including the preview area, save controls, editable text fields, and upload actions.</p>
+            </figure>
+          </section>
+          <section class="case-study__step">
+            <div class="case-study__step-copy">
+              <h3>Putting the live prototype front and center</h3>
+              <p>The product needed to feel tangible, not just conceptual. Leading with the live prototype helped show the editor, saved-state flow, and sign-in experience in a way static mockups could not fully capture.</p>
+              <p>This live view keeps the product experience visible immediately and shows how the login and editor flow work together in the current prototype.</p>
+            </div>
+            <figure class="case-study__step-media">
+              <div class="case-study__live-widget">
+                <div class="case-study__live-widget-bar">
+                  <a href="https://olivia-griffie.github.io/architect-mini/" target="_blank" rel="noopener" class="case-study__live-pill case-study__live-pill--action">
+                    <span>Try the prototype</span>
+                    <span class="case-study__live-pill-arrow" aria-hidden="true">&rarr;</span>
+                  </a>
+                  <button
+                    type="button"
+                    class="btn btn--share case-study__share-button"
+                    data-share-button
+                    data-share-title="Architect Mini: Web-to-Print Template Builder"
+                  >
+                    Share this!
+                  </button>
+                </div>
+                <div class="case-study__live-frame-wrap">
+                  <iframe
+                    class="case-study__live-frame"
+                    src="https://olivia-griffie.github.io/architect-mini/"
+                    title="Architect Mini live widget preview"
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+            </figure>
+          </section>
+          <section class="case-study__step case-study__step--reverse">
+            <figure class="case-study__step-media">
+              <img src="./images/architect-mini-login.png" class="case-study__image" alt="Architect Mini login page implementation" />
+              <p>The login page introduced a softer, branded entry point so returning users could re-enter the tool without the experience feeling cold or overly technical.</p>
+            </figure>
+            <div class="case-study__step-copy">
+              <h3>Starting with a friendlier sign-in experience</h3>
+              <p>The entry point set the tone for the rest of the tool. A clearer login layout and softer visual language made the product feel approachable before users ever reached the editing workspace.</p>
+            </div>
+          </section>
+          <section class="case-study__step">
+            <div class="case-study__step-copy">
+              <h3>Building a clearer editing workflow</h3>
+              <p>The editor was designed as a guided split-screen builder with visible save states, structured naming prompts, and a live preview. That combination helped first-time users understand where they were in the process and what actions mattered next.</p>
+            </div>
+            <figure class="case-study__step-media">
+              <img src="./images/architect-mini-editor-detail.png" class="case-study__image" alt="Architect Mini editor showing naming prompt and drafting decisions" />
+              <p>Small interaction details like the project-name prompt and save-state placement made the builder feel more understandable and less intimidating for new users.</p>
+            </figure>
+          </section>
+          <section class="case-study__step case-study__step--reverse">
+            <figure class="case-study__step-media">
+              <img src="./images/architect-mini-editor-fields.png" class="case-study__image" alt="Architect Mini editor field implementation and live controls" />
+              <p>The field layout supports a detailed card-building flow with editable content, layer controls, uploads, and preview actions tied directly to the live composition area.</p>
+            </figure>
+            <div class="case-study__step-copy">
+              <h3>Connecting detailed controls back to the preview</h3>
+              <p>The form side of the interface had to stay powerful without becoming visually noisy. Grouping controls clearly and keeping them connected to the live layout helped the tool remain usable as complexity increased.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="prototype-modal" id="architect-mini-modal" aria-hidden="true">
+    <div class="prototype-modal__backdrop" data-prototype-close></div>
+    <div class="prototype-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="architect-mini-modal-title">
+      <div class="prototype-modal__header">
+        <div>
+          <p class="section-tag">Interactive Prototype</p>
+          <h2 id="architect-mini-modal-title">Architect Mini</h2>
+          <p>
+            This modal loads the live prototype from
+            <a href="https://olivia-griffie.github.io/architect-mini/" target="_blank" rel="noopener">the Architect Mini repo deployment</a>,
+            so portfolio updates follow new pushes there automatically.
+          </p>
+        </div>
+        <button type="button" class="prototype-modal__close" aria-label="Close prototype" data-prototype-close>&times;</button>
+      </div>
+      <div class="prototype-modal__frame-wrap">
+        <iframe
+          class="prototype-modal__frame"
+          src="https://olivia-griffie.github.io/architect-mini/"
+          title="Architect Mini prototype"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item"><a href="https://dribbble.com/olivia-griffie" title="Dribbble"><img src="./images/dribbble-logo.svg" class="footer__social-image" alt="Dribbble"></a></li>
+        <li class="footer__social-link-item"><a href="https://www.linkedin.com/in/olivia-griffie-032860173/" title="LinkedIn"><img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn"></a></li>
+        <li class="footer__social-link-item"><a href="https://github.com/olivia-griffie" title="GitHub"><img src="./images/github.svg" class="footer__social-image" alt="GitHub"></a></li>
+      </ul>
+      <p class="footer__credit">&copy; 2026 | Portfolio Designed &amp; Created by Olivia Griffie</p>
+    </div>
+  </footer>
+  <script src="./index.js"></script>
+</body>
+</html>
