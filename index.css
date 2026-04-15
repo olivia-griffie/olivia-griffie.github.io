@@ -2033,10 +2033,10 @@ a[href*="github"] img {
 
 .bookbuddy-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(34rem, 0.98fr);
-  gap: 4.4rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2.4rem;
   align-items: center;
-  padding: 4rem 3rem 8rem;
+  padding: 4.8rem 3rem 8rem;
   position: relative;
   z-index: 1;
 }
@@ -2044,6 +2044,12 @@ a[href*="github"] img {
 .bookbuddy-hero__copy {
   display: grid;
   gap: 2rem;
+  grid-column: 1 / span 7;
+  padding: 3rem;
+  border-radius: 3rem;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(160, 120, 80, 0.18);
+  box-shadow: 0 1.2rem 3rem rgba(104, 80, 54, 0.08);
 }
 
 .bookbuddy-hero__eyebrow {
@@ -2116,6 +2122,7 @@ a[href*="github"] img {
   background: rgba(255, 255, 255, 0.74);
   border: 1px solid rgba(160, 120, 80, 0.2);
   box-shadow: 0 1rem 2.4rem rgba(104, 80, 54, 0.06);
+  grid-column: 8 / -1;
 }
 
 .bookbuddy-hero__promo {
@@ -2128,15 +2135,208 @@ a[href*="github"] img {
   gap: 3.6rem;
 }
 
-.case-study__intro-panel--bookbuddy {
-  background: rgba(255, 255, 255, 0.78);
-  border-color: rgba(160, 120, 80, 0.2);
+.bookbuddy-layout {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2.4rem;
+}
+
+.bookbuddy-section-heading {
+  grid-column: 1 / span 8;
+  margin-bottom: 1rem;
+}
+
+.bookbuddy-intro-copy {
+  grid-column: 1 / span 7;
+}
+
+.bookbuddy-intro-copy .about-note,
+.bookbuddy-overview-card,
+.bookbuddy-feature-copy,
+.bookbuddy-feature-media,
+.bookbuddy-visual-card,
+.bookbuddy-diagram-card {
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(160, 120, 80, 0.2);
+  border-radius: 2.8rem;
+  box-shadow: 0 1rem 2.4rem rgba(104, 80, 54, 0.06);
+}
+
+.bookbuddy-intro-copy .about-note {
+  margin: 0;
+  padding: 3rem;
+}
+
+.bookbuddy-intro-visual {
+  grid-column: 8 / -1;
+}
+
+.bookbuddy-visual-card {
+  padding: 2.8rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.bookbuddy-visual-card__logo {
+  max-width: 26rem;
+}
+
+.bookbuddy-visual-card__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.bookbuddy-visual-card__stat {
+  padding: 1.4rem 1.2rem;
+  border-radius: 1.8rem;
+  background: rgba(245, 240, 232, 0.9);
+  border: 1px solid rgba(160, 120, 80, 0.16);
+}
+
+.bookbuddy-visual-card__stat span {
+  display: block;
+  font-family: var(--font-stamp);
+  font-size: 1.1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--kraft-dark);
+  margin-bottom: 0.7rem;
+}
+
+.bookbuddy-visual-card__stat strong {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--ink);
 }
 
 .bookbuddy-pill-grid {
+  grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
+}
+
+.bookbuddy-overview-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2.4rem;
+}
+
+.bookbuddy-overview-card {
+  grid-column: span 6;
+  padding: 2.8rem;
+}
+
+.bookbuddy-overview-card h3,
+.bookbuddy-feature-copy h3,
+.bookbuddy-diagram-card h3 {
+  font-style: normal;
+  margin: 0 0 1.2rem;
+}
+
+.bookbuddy-overview-card p,
+.bookbuddy-feature-copy p,
+.bookbuddy-diagram-card p,
+.bookbuddy-visual-card--compact p {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.72;
+}
+
+.bookbuddy-feature-stack {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 3.2rem;
+}
+
+.bookbuddy-feature-row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2.4rem;
+  align-items: stretch;
+}
+
+.bookbuddy-feature-row--reverse .bookbuddy-feature-media {
+  grid-column: 1 / span 6;
+}
+
+.bookbuddy-feature-row--reverse .bookbuddy-feature-copy {
+  grid-column: 7 / -1;
+}
+
+.bookbuddy-feature-media {
+  grid-column: 7 / -1;
+  margin: 0;
+  padding: 2.4rem;
+  min-height: 100%;
+}
+
+.bookbuddy-feature-copy {
+  grid-column: 1 / span 6;
+  padding: 2.8rem;
+}
+
+.bookbuddy-feature-media__image {
+  width: 100%;
+  display: block;
+  border-radius: 1.8rem;
+}
+
+.bookbuddy-diagram-card {
+  padding: 2.2rem;
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  gap: 1.8rem;
+  min-height: 100%;
+}
+
+.bookbuddy-diagram-card__rail,
+.bookbuddy-checklist {
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+}
+
+.bookbuddy-diagram-card__rail span,
+.bookbuddy-checklist span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 4rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  background: var(--cream-dark);
+  border: 1px solid rgba(160, 120, 80, 0.18);
+  font-family: var(--font-stamp);
+  font-size: 1.15rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.bookbuddy-diagram-card__panel {
+  padding: 1rem 0.4rem;
+}
+
+.bookbuddy-diagram-card--checks {
+  grid-template-columns: 1fr;
+}
+
+.bookbuddy-wordmark {
+  max-height: 24rem;
+  width: auto;
+  margin-inline: auto;
+}
+
+.bookbuddy-visual-card--compact {
+  min-height: 100%;
+  align-content: center;
+}
+
+.bookbuddy-visual-card--compact p {
+  max-width: 40rem;
 }
 
 .bookbuddy-pill {
@@ -2151,24 +2351,6 @@ a[href*="github"] img {
   font-size: 1.05rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-}
-
-.case-study__step-copy--bookbuddy,
-.case-study__step-media--bookbuddy {
-  background: rgba(255, 255, 255, 0.74);
-  border-color: rgba(160, 120, 80, 0.2);
-}
-
-.bookbuddy-icon-showcase {
-  max-height: 28rem;
-  width: auto;
-  margin-inline: auto;
-}
-
-.bookbuddy-wordmark {
-  max-height: 24rem;
-  width: auto;
-  margin-inline: auto;
 }
 
 .reveal-section {
@@ -2389,8 +2571,32 @@ a[href*="github"] img {
     transform: rotate(-90deg);
   }
 
+  .bookbuddy-layout,
+  .bookbuddy-feature-row,
+  .bookbuddy-overview-grid,
   .bookbuddy-hero {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .bookbuddy-section-heading,
+  .bookbuddy-intro-copy,
+  .bookbuddy-intro-visual,
+  .bookbuddy-pill-grid,
+  .bookbuddy-feature-stack {
+    grid-column: 1 / -1;
+  }
+
+  .bookbuddy-overview-card,
+  .bookbuddy-feature-copy,
+  .bookbuddy-feature-media,
+  .bookbuddy-hero__copy,
+  .bookbuddy-hero__media,
+  .bookbuddy-feature-row--reverse .bookbuddy-feature-copy,
+  .bookbuddy-feature-row--reverse .bookbuddy-feature-media {
+    grid-column: span 4;
+  }
+
+  .bookbuddy-hero {
     padding-top: 3rem;
   }
 
@@ -2398,10 +2604,24 @@ a[href*="github"] img {
     max-width: 10ch;
   }
 
-  .bookbuddy-hero__media {
-    max-width: 72rem;
-    width: 100%;
-    justify-self: center;
+  .bookbuddy-hero__copy {
+    padding: 2.6rem;
+  }
+
+  .bookbuddy-intro-copy .about-note,
+  .bookbuddy-overview-card,
+  .bookbuddy-feature-copy,
+  .bookbuddy-feature-media,
+  .bookbuddy-visual-card {
+    padding: 2.5rem;
+  }
+
+  .bookbuddy-visual-card__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .bookbuddy-diagram-card {
+    grid-template-columns: 1fr;
   }
 
   .case-study__live-frame-wrap {
@@ -2494,8 +2714,30 @@ a[href*="github"] img {
     transform: scale(0.38);
   }
 
+  .bookbuddy-layout,
+  .bookbuddy-feature-row,
+  .bookbuddy-overview-grid,
+  .bookbuddy-hero {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.6rem;
+  }
+
   .bookbuddy-hero {
     padding-inline: 1.2rem;
+  }
+
+  .bookbuddy-section-heading,
+  .bookbuddy-intro-copy,
+  .bookbuddy-intro-visual,
+  .bookbuddy-pill-grid,
+  .bookbuddy-overview-card,
+  .bookbuddy-feature-copy,
+  .bookbuddy-feature-media,
+  .bookbuddy-hero__copy,
+  .bookbuddy-hero__media,
+  .bookbuddy-feature-row--reverse .bookbuddy-feature-copy,
+  .bookbuddy-feature-row--reverse .bookbuddy-feature-media {
+    grid-column: 1 / -1;
   }
 
   .bookbuddy-hero__title {
@@ -2517,6 +2759,16 @@ a[href*="github"] img {
 
   .bookbuddy-hero__highlights li {
     font-size: 1.45rem;
+  }
+
+  .bookbuddy-hero__copy,
+  .bookbuddy-intro-copy .about-note,
+  .bookbuddy-overview-card,
+  .bookbuddy-feature-copy,
+  .bookbuddy-feature-media,
+  .bookbuddy-visual-card,
+  .bookbuddy-diagram-card {
+    padding: 2rem;
   }
 }
  

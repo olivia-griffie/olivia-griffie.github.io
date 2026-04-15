@@ -65,72 +65,133 @@
   <main class="homepage-main">
     <section class="wire-section">
       <div class="row case-study case-study--bookbuddy" id="details">
-        <div class="section-heading">
-          <span class="section-tag section-tag--bookbuddy">Book Buddy</span>
-          <h2>Designing a writing workspace that supports momentum.</h2>
-        </div>
-        <div class="case-study__intro">
-          <div class="case-study__intro-panel case-study__intro-panel--bookbuddy">
+        <div class="bookbuddy-layout">
+          <div class="section-heading bookbuddy-section-heading">
+            <span class="section-tag">Book Buddy</span>
+            <h2>Designing a writing workspace that supports momentum.</h2>
+          </div>
+
+          <div class="bookbuddy-intro-copy">
             <div class="about-note">
               <h3>Guided structure without boxing the writer in.</h3>
               <p><strong>Desktop Writing App &middot; Electron Beta</strong></p>
-              <p>Book Buddy helps writers create a project, define the genre and premise, build world details, shape characters, outline scenes, and move those decisions directly into chapter drafts. The system is designed to reduce cognitive load by keeping each stage visible but focused, so writers always know where they are in the process.</p>
-              <p><strong>My Focus</strong><br>I designed the UX and UI, mapped the workflow architecture, and built the app experience in Electron with modular front-end code and Electron-compatible storage patterns that support drafting, autosave, and structured story data.</p>
-              <p><strong>Current State</strong><br>Book Buddy is currently in beta with one active project slot while multi-project functionality is being tested and expanded.</p>
+              <p>Book Buddy helps writers create a project, define genre and premise, build world details, shape characters, outline scenes, and move those decisions directly into chapter drafts. The experience is designed to reduce cognitive load by keeping each stage visible but focused, so writers always know where they are in the process.</p>
             </div>
           </div>
-        </div>
-        <div class="bookbuddy-pill-grid" aria-label="Book Buddy skills">
-          <span class="bookbuddy-pill">CSS</span>
-          <span class="bookbuddy-pill">HTML5</span>
-          <span class="bookbuddy-pill">JSON</span>
-          <span class="bookbuddy-pill">JavaScript</span>
-          <span class="bookbuddy-pill">SQLite</span>
-          <span class="bookbuddy-pill">GitHub</span>
-          <span class="bookbuddy-pill">Modular code</span>
-          <span class="bookbuddy-pill">Electron-compatible storage</span>
-        </div>
-        <div class="case-study__stack">
-          <section class="case-study__step">
-            <div class="case-study__step-copy case-study__step-copy--bookbuddy">
-              <h3>Beginning with a workflow authors can actually follow</h3>
-              <p>The app opens with project setup so the writer can define genre, premise, and story direction before getting lost in details. From there, the interface branches into plot, character, scene, and drafting spaces that feel connected instead of siloed.</p>
-            </div>
-          </section>
-          <section class="case-study__step case-study__step--reverse">
-            <figure class="case-study__step-media case-study__step-media--bookbuddy">
-              <div class="case-study__text-card">
-                <h3>Sidebar Workflow</h3>
-                <p>A clear left-hand workflow gives writers orientation at every stage, making it easy to jump between planning and drafting without losing continuity.</p>
+
+          <aside class="bookbuddy-intro-visual" aria-label="Book Buddy visual summary">
+            <div class="bookbuddy-visual-card">
+              <img src="../images/bookbuddylogo.png" class="bookbuddy-visual-card__logo" alt="Book Buddy logo" />
+              <div class="bookbuddy-visual-card__stats">
+                <div class="bookbuddy-visual-card__stat">
+                  <span>Workflow</span>
+                  <strong>Plot to draft</strong>
+                </div>
+                <div class="bookbuddy-visual-card__stat">
+                  <span>Focus</span>
+                  <strong>Clear progression</strong>
+                </div>
+                <div class="bookbuddy-visual-card__stat">
+                  <span>Format</span>
+                  <strong>Desktop beta</strong>
+                </div>
               </div>
-            </figure>
-            <div class="case-study__step-copy case-study__step-copy--bookbuddy">
-              <h3>Using progressive disclosure to keep the interface calm</h3>
-              <p>I focused on modular sections and contextual continuity so writers only see the information needed for the step they are in. That keeps the workspace distraction-free while still making the larger manuscript structure feel close at hand.</p>
             </div>
-          </section>
-          <section class="case-study__step">
-            <div class="case-study__step-copy case-study__step-copy--bookbuddy">
-              <h3>Keeping story planning tied to draft execution</h3>
-              <p>Characters, scenes, and world-building notes are not isolated reference pages. They are designed to feed the drafting flow directly, helping authors turn planning work into chapter progress and daily writing momentum.</p>
-            </div>
-            <figure class="case-study__step-media case-study__step-media--bookbuddy">
-              <div class="case-study__text-card">
-                <h3>Core Product Goals</h3>
-                <p>Support plot development, chapter drafting, word-count goals, contextual references, autosave confidence, and export readiness without overwhelming the writer.</p>
+          </aside>
+
+          <div class="bookbuddy-pill-grid" aria-label="Book Buddy skills">
+            <span class="bookbuddy-pill">CSS</span>
+            <span class="bookbuddy-pill">HTML5</span>
+            <span class="bookbuddy-pill">JSON</span>
+            <span class="bookbuddy-pill">JavaScript</span>
+            <span class="bookbuddy-pill">SQLite</span>
+            <span class="bookbuddy-pill">GitHub</span>
+            <span class="bookbuddy-pill">Modular code</span>
+            <span class="bookbuddy-pill">Electron-compatible storage</span>
+          </div>
+
+          <div class="bookbuddy-overview-grid">
+            <article class="bookbuddy-overview-card">
+              <span class="section-tag">Key Design Idea</span>
+              <h3>Modular structure that keeps creative energy moving</h3>
+              <p>I focused on modular design and contextual continuity so writers can move through setup, planning, and drafting without the app feeling fragmented or overwhelming.</p>
+            </article>
+            <article class="bookbuddy-overview-card">
+              <span class="section-tag">Current Status</span>
+              <h3>Beta product with one active project slot</h3>
+              <p>Book Buddy is currently in beta while multi-project functionality is being tested and expanded, with autosave, export support, and structured story data already in place.</p>
+            </article>
+          </div>
+
+          <div class="bookbuddy-feature-stack">
+            <section class="bookbuddy-feature-row">
+              <figure class="bookbuddy-feature-media">
+                <img src="../images/bookbuddy-promo.png" class="bookbuddy-feature-media__image" alt="Book Buddy promotional graphic" />
+              </figure>
+              <div class="bookbuddy-feature-copy">
+                <span class="section-tag">Workflow Foundation</span>
+                <h3>Beginning with a workflow authors can actually follow</h3>
+                <p>The app opens with project setup so the writer can define genre, premise, and story direction before getting lost in details. From there, the interface branches into plot, character, scene, and drafting spaces that feel connected instead of siloed.</p>
               </div>
-            </figure>
-          </section>
-          <section class="case-study__step case-study__step--reverse">
-            <figure class="case-study__step-media case-study__step-media--bookbuddy">
-              <img src="../images/bookbuddylogo.png" class="case-study__image case-study__image--contain bookbuddy-wordmark" alt="Book Buddy wordmark logo" />
-              <p>The visual language leans warm, encouraging, and playful to feel like a creative tool, while layout structure keeps the product grounded and usable.</p>
-            </figure>
-            <div class="case-study__step-copy case-study__step-copy--bookbuddy">
-              <h3>Building trust through autosave, continuity, and export options</h3>
-              <p>Writers need to feel that their work is safe and moving somewhere. Autosave, contextual panels, and PDF or DOC export help the product feel reliable enough for real manuscript work instead of a temporary brainstorming tool.</p>
-            </div>
-          </section>
+            </section>
+
+            <section class="bookbuddy-feature-row bookbuddy-feature-row--reverse">
+              <figure class="bookbuddy-feature-media">
+                <div class="bookbuddy-diagram-card">
+                  <div class="bookbuddy-diagram-card__rail">
+                    <span>Project</span>
+                    <span>Plot</span>
+                    <span>Characters</span>
+                    <span>Scenes</span>
+                    <span>Drafts</span>
+                  </div>
+                  <div class="bookbuddy-diagram-card__panel">
+                    <h3>Sidebar Workflow</h3>
+                    <p>A clear left-hand workflow gives writers orientation at every stage, making it easy to jump between planning and drafting without losing continuity.</p>
+                  </div>
+                </div>
+              </figure>
+              <div class="bookbuddy-feature-copy">
+                <span class="section-tag">Progressive Disclosure</span>
+                <h3>Using progressive disclosure to keep the interface calm</h3>
+                <p>I focused on modular sections so writers only see the information needed for the step they are in. That keeps the workspace distraction-free while still making the larger manuscript structure feel close at hand.</p>
+              </div>
+            </section>
+
+            <section class="bookbuddy-feature-row">
+              <figure class="bookbuddy-feature-media">
+                <div class="bookbuddy-diagram-card bookbuddy-diagram-card--checks">
+                  <div class="bookbuddy-checklist">
+                    <span>Plot development</span>
+                    <span>Chapter drafting</span>
+                    <span>Word-count goals</span>
+                    <span>Contextual references</span>
+                    <span>Autosave confidence</span>
+                    <span>Export readiness</span>
+                  </div>
+                </div>
+              </figure>
+              <div class="bookbuddy-feature-copy">
+                <span class="section-tag">Draft Continuity</span>
+                <h3>Keeping story planning tied to draft execution</h3>
+                <p>Characters, scenes, and world-building notes are not isolated reference pages. They are designed to feed the drafting flow directly, helping authors turn planning work into chapter progress and daily writing momentum.</p>
+              </div>
+            </section>
+
+            <section class="bookbuddy-feature-row bookbuddy-feature-row--reverse">
+              <figure class="bookbuddy-feature-media">
+                <div class="bookbuddy-visual-card bookbuddy-visual-card--compact">
+                  <img src="../images/bookbuddylogo.png" class="bookbuddy-wordmark" alt="Book Buddy wordmark logo" />
+                  <p>The visual language stays warm and encouraging, while the structure keeps the product grounded and usable for real manuscript work.</p>
+                </div>
+              </figure>
+              <div class="bookbuddy-feature-copy">
+                <span class="section-tag">Reliability</span>
+                <h3>Building trust through autosave, continuity, and export options</h3>
+                <p>Writers need to feel that their work is safe and moving somewhere. Autosave, contextual panels, and PDF or DOC export help the product feel reliable enough for active manuscript work instead of a temporary brainstorming tool.</p>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </section>
