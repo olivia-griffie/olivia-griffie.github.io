@@ -1384,6 +1384,10 @@ a[href*="github"] img {
   padding: 3rem;
 }
 
+.testimonial-card--featured {
+  grid-column: 1 / -1;
+}
+
 .testimonial-card::before {
   content: '"';
   position: absolute;
