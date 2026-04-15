@@ -46,97 +46,93 @@
   </header>
   <main class="homepage-main">
     <section class="wire-section">
-      <div class="row case-study case-study--asu">
+      <div class="row case-study case-study--asu-editorial">
         <div class="case-study__actions">
           <a href="./home/#work" class="btn">Back to Work</a>
         </div>
-        <div class="section-heading">
+        <div class="section-heading asu-heading">
           <span class="section-tag">Mobile Optimization</span>
           <h2>ASU Print Site Navigation Fix</h2>
         </div>
-        <div class="case-study__intro">
-          <div class="case-study__intro-panel">
-            <div class="about-note">
-              <h3>Resolving a branded storefront header conflict.</h3>
-              <p>The ASU Print Online storefront had to remain faithful to Arizona State University's official visual standards while also functioning inside a web-to-print platform with its own header structure. The main issue came from ASU's global navigation being injected through external JavaScript, which then collided with the storefront header and broke the layout across multiple viewport widths.</p>
-              <p><strong>Constraints</strong><br>ASU maroon, gold, official wordmarks, and hierarchy rules all had to remain intact. The fix had to solve layout failures without making the storefront feel off-brand.</p>
-            </div>
+
+        <section class="asu-hero-card">
+          <div class="asu-hero-card__copy">
+            <h3>Resolving a branded storefront header conflict.</h3>
+            <p>The ASU Print Online storefront had to remain faithful to Arizona State University's official visual standards while also functioning inside a web-to-print platform with its own header structure. The main issue came from ASU's global navigation being injected through external JavaScript, which then collided with the storefront header and broke the layout across multiple viewport widths.</p>
+            <p><strong>Constraints.</strong><br>ASU maroon, gold, official wordmarks, and hierarchy rules all had to remain intact. The fix had to solve layout failures without making the storefront feel off-brand.</p>
           </div>
-        </div>
-        <div class="case-study__stack asu-case-study__stack">
-          <section class="case-study__step asu-case-study__step">
-            <div class="case-study__step-copy">
-              <h3>Reviewing the repaired experience in context</h3>
-              <p>The mobile preview shows where the work needed to land: a cleaner category presentation, a more stable branded header, and a storefront that felt easier to use without drifting away from the official ASU system.</p>
+          <figure class="asu-hero-card__media">
+            <div class="asu-image-frame asu-image-frame--portrait">
+              <img src="./images/asu-preview-top.png" class="case-study__image asu-image" alt="ASU mobile storefront preview after navigation cleanup" />
             </div>
-            <figure class="case-study__step-media asu-case-study__media asu-case-study__media--portrait">
-              <div class="asu-case-study__frame asu-case-study__frame--portrait">
-                <img src="./images/asu-preview-top.png" class="case-study__image asu-case-study__image" alt="ASU mobile storefront preview" />
-              </div>
-              <p>This top-level view captures the more stable category layout and cleaner responsive behavior after the navigation cleanup.</p>
-            </figure>
-          </section>
-          <section class="case-study__step case-study__step--reverse asu-case-study__step asu-case-study__step--band">
-            <figure class="case-study__step-media asu-case-study__media asu-case-study__media--landscape">
-              <div class="asu-case-study__frame asu-case-study__frame--banner">
-                <img src="./images/asu-print-wide-stable.png" class="case-study__image asu-case-study__image" alt="ASU Print Online wide desktop viewport with stable navigation layout" />
-              </div>
-              <p>At the widest desktop sizes, the intended structure was already visible: full navigation, aligned branding, and a header system that could work if the conflicting behaviors were contained.</p>
-            </figure>
-            <div class="case-study__step-copy">
-              <h3>Auditing the stable desktop state first</h3>
-              <p>Before fixing breakpoints, I needed to understand what the correct branded structure should look like. The wide desktop state became the baseline for preserving hierarchy, spacing, and ASU's official treatment.</p>
+          </figure>
+        </section>
+
+        <section class="asu-support-grid">
+          <article class="asu-note-card">
+            <h3>Stable desktop baseline</h3>
+            <p>The widest desktop state showed the intended hierarchy clearly: aligned branding, full navigation, and a workable storefront header structure that could guide the breakpoint decisions.</p>
+          </article>
+          <article class="asu-note-card">
+            <h3>Key failure point</h3>
+            <p>The real collision appeared at mid-width, where the injected utility navigation and storefront header started competing for the same space and breaking the brand presentation.</p>
+          </article>
+        </section>
+
+        <section class="asu-feature-row">
+          <div class="asu-feature-row__copy">
+            <h3>Auditing the stable desktop state first</h3>
+            <p>Before fixing breakpoints, I needed to understand what the correct branded structure should look like. The wide desktop state became the baseline for preserving hierarchy, spacing, and ASU's official treatment.</p>
+          </div>
+          <figure class="asu-feature-row__media">
+            <div class="asu-image-frame asu-image-frame--landscape">
+              <img src="./images/asu-print-wide-stable.png" class="case-study__image asu-image" alt="ASU Print Online wide desktop viewport with stable navigation layout" />
             </div>
-          </section>
-          <section class="case-study__step asu-case-study__step">
-            <div class="case-study__step-copy">
-              <h3>Identifying the collision point at mid-width</h3>
-              <p>The real failure happened when the injected utility nav began competing with the storefront's own header. That is where logo overlap, clipped controls, and spacing breakdowns became obvious and actionable.</p>
+          </figure>
+        </section>
+
+        <section class="asu-feature-row asu-feature-row--band">
+          <div class="asu-feature-row__copy">
+            <h3>Identifying the collision point at mid-width</h3>
+            <p>The real failure happened when the injected utility nav began competing with the storefront's own header. That is where logo overlap, clipped controls, and spacing breakdowns became obvious and actionable.</p>
+          </div>
+          <figure class="asu-feature-row__media">
+            <div class="asu-image-frame asu-image-frame--landscape">
+              <img src="./images/asu-print-mid-stable.png" class="case-study__image asu-image" alt="ASU Print Online mid-width desktop navigation layout" />
             </div>
-            <figure class="case-study__step-media asu-case-study__media asu-case-study__media--landscape">
-              <div class="asu-case-study__frame asu-case-study__frame--banner">
-                <img src="./images/asu-print-mid-stable.png" class="case-study__image asu-case-study__image" alt="ASU Print Online mid-width desktop navigation layout" />
+          </figure>
+        </section>
+
+        <section class="asu-feature-row">
+          <div class="asu-feature-row__copy">
+            <h3>Documenting the mobile issues before changing anything</h3>
+            <p>On smaller screens, the storefront needed better collapse behavior and a more reliable category layout. Capturing the broken state first helped define exactly what needed to improve without losing brand fidelity.</p>
+          </div>
+          <div class="asu-dual-media">
+            <figure class="asu-dual-media__item">
+              <div class="asu-image-frame asu-image-frame--portrait">
+                <img src="./images/asu-print-mobile-broken.png" class="case-study__image asu-image" alt="ASU Print Online mobile layout before category grid adjustments" />
               </div>
-              <p>This mid-width audit helped isolate the key breakpoint where the global nav and storefront header started fighting for the same space.</p>
             </figure>
-          </section>
-          <section class="case-study__step case-study__step--reverse asu-case-study__step asu-case-study__step--band">
-            <figure class="case-study__step-media asu-case-study__media asu-case-study__media--portrait">
-              <div class="asu-case-study__frame asu-case-study__frame--portrait">
-                <img src="./images/asu-print-mobile-broken.png" class="case-study__image asu-case-study__image" alt="ASU Print Online mobile layout before category grid adjustments" />
+            <figure class="asu-dual-media__item">
+              <div class="asu-image-frame asu-image-frame--portrait">
+                <img src="./images/asu-print-mobile-fixed.png" class="case-study__image asu-image" alt="ASU Print Online mobile layout after responsive category grid fix" />
               </div>
-              <p>The broken mobile state showed the storefront under pressure: cramped category cards, unstable placement for Search and Cart, and a header pattern that no longer held together reliably.</p>
             </figure>
-            <div class="case-study__step-copy">
-              <h3>Documenting the mobile issues before changing anything</h3>
-              <p>On smaller screens, the storefront needed better collapse behavior and a more reliable category layout. Capturing the broken state first helped define exactly what needed to improve without losing brand fidelity.</p>
+          </div>
+        </section>
+
+        <section class="asu-feature-row asu-feature-row--band">
+          <div class="asu-feature-row__copy">
+            <h3>Confirming the fix across the full page system</h3>
+            <p>The final pass was making sure the solution held together in context, not just in isolated screenshots. The result was a storefront with stable branding, stable navigation, and more usable category browsing across tested breakpoints.</p>
+          </div>
+          <figure class="asu-feature-row__media">
+            <div class="asu-image-frame asu-image-frame--wide">
+              <img src="./images/asu-print-footer-layout.png" class="case-study__image asu-image" alt="ASU Print Online page showing desktop header and footer system together" />
             </div>
-          </section>
-          <section class="case-study__step asu-case-study__step">
-            <div class="case-study__step-copy">
-              <h3>Fixing the responsive category flow</h3>
-              <p>Once the header behavior was stabilized, the product categories could be reorganized into a cleaner mobile presentation. The goal was a two-column layout that felt intentional and readable rather than squeezed in as a fallback.</p>
-            </div>
-            <figure class="case-study__step-media asu-case-study__media asu-case-study__media--portrait">
-              <div class="asu-case-study__frame asu-case-study__frame--portrait">
-                <img src="./images/asu-print-mobile-fixed.png" class="case-study__image asu-case-study__image" alt="ASU Print Online mobile layout after responsive category grid fix" />
-              </div>
-              <p>After the fix, the storefront holds a cleaner two-column category structure while preserving the ASU maroon, gold, and white system.</p>
-            </figure>
-          </section>
-          <section class="case-study__step case-study__step--reverse asu-case-study__step asu-case-study__step--band">
-            <figure class="case-study__step-media asu-case-study__media asu-case-study__media--landscape">
-              <div class="asu-case-study__frame asu-case-study__frame--wide">
-                <img src="./images/asu-print-footer-layout.png" class="case-study__image asu-case-study__image" alt="ASU Print Online page showing desktop header and footer system together" />
-              </div>
-              <p>This wider page view confirms that the repaired header now sits more comfortably within the full ASU-branded storefront framework.</p>
-            </figure>
-            <div class="case-study__step-copy">
-              <h3>Confirming the fix across the full page system</h3>
-              <p>The final pass was making sure the solution held together in context, not just in isolated screenshots. The result was a storefront with stable branding, stable navigation, and more usable category browsing across tested breakpoints.</p>
-            </div>
-          </section>
-        </div>
+          </figure>
+        </section>
       </div>
     </section>
   </main>
