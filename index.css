@@ -2035,6 +2035,270 @@ a[href*="github"] img {
   margin-inline: auto;
 }
 
+.case-study--asu {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 4rem;
+}
+
+.case-study--asu .case-study__actions,
+.case-study--asu .section-heading,
+.case-study--asu .case-study__intro,
+.case-study--asu .asu-case-study__stack {
+  grid-column: 1 / -1;
+}
+
+.case-study--asu .case-study__intro-panel .about-note {
+  max-width: 80rem;
+}
+
+.asu-case-study__stack {
+  display: grid;
+  gap: 0;
+}
+
+.asu-case-study__step {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 3.2rem;
+  align-items: start;
+  padding: 8rem 0;
+  border-top: 1px solid rgba(160, 120, 80, 0.24);
+}
+
+.asu-case-study__step .case-study__step-copy {
+  grid-column: 1 / span 8;
+  padding: 2.6rem;
+}
+
+.asu-case-study__step .asu-case-study__media {
+  grid-column: 9 / -1;
+}
+
+.asu-case-study__step.case-study__step--reverse .asu-case-study__media {
+  grid-column: 1 / span 4;
+}
+
+.asu-case-study__step.case-study__step--reverse .case-study__step-copy {
+  grid-column: 5 / -1;
+}
+
+.asu-case-study__step--band {
+  position: relative;
+}
+
+.asu-case-study__step--band::before {
+  content: "";
+  position: absolute;
+  inset: 1.6rem -2.4rem;
+  border-radius: 3.2rem;
+  background: rgba(255, 255, 255, 0.34);
+  z-index: 0;
+}
+
+.asu-case-study__step--band > * {
+  position: relative;
+  z-index: 1;
+}
+
+.asu-case-study__media {
+  display: grid;
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.asu-case-study__frame {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1.8rem;
+  background: linear-gradient(180deg, rgba(234, 239, 247, 0.96), rgba(242, 244, 249, 0.96));
+  border: 1px solid rgba(160, 120, 80, 0.12);
+}
+
+.asu-case-study__frame--portrait {
+  aspect-ratio: 5 / 7;
+}
+
+.asu-case-study__frame--banner {
+  aspect-ratio: 16 / 7;
+}
+
+.asu-case-study__frame--wide {
+  aspect-ratio: 16 / 9;
+}
+
+.asu-case-study__image {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0;
+}
+
+.asu-case-study__step .case-study__step-copy h3,
+.asu-case-study__step .case-study__step-copy p,
+.asu-case-study__step .case-study__step-media p {
+  max-width: 78rem;
+}
+
+.asu-case-study__step .case-study__step-copy p,
+.asu-case-study__step .case-study__step-media p {
+  line-height: 1.56;
+}
+
+.asu-case-study__step .case-study__step-copy p + p {
+  margin-top: 1.4rem;
+}
+
+.case-study--shenandoah {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 3.6rem;
+}
+
+.case-study--shenandoah .case-study__actions,
+.case-study--shenandoah .shenandoah-heading,
+.case-study--shenandoah .shenandoah-hero-card,
+.case-study--shenandoah .shenandoah-support-grid,
+.case-study--shenandoah .shenandoah-feature-row {
+  grid-column: 1 / -1;
+}
+
+.shenandoah-heading {
+  margin-bottom: 1rem;
+}
+
+.shenandoah-heading .section-tag {
+  color: rgba(133, 106, 76, 0.88);
+}
+
+.shenandoah-hero-card,
+.shenandoah-feature-row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2.4rem;
+  padding: 2rem;
+  border-radius: 3rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(160, 120, 80, 0.16);
+  box-shadow: 0 1.2rem 3.2rem rgba(104, 80, 54, 0.07);
+}
+
+.shenandoah-hero-card__copy,
+.shenandoah-feature-row__copy {
+  grid-column: 1 / span 6;
+  padding: 2rem 1.4rem 2rem 1.8rem;
+  align-self: center;
+}
+
+.shenandoah-hero-card__media,
+.shenandoah-feature-row__media,
+.shenandoah-dual-media {
+  grid-column: 7 / -1;
+  margin: 0;
+}
+
+.shenandoah-hero-card__copy h3,
+.shenandoah-feature-row__copy h3,
+.shenandoah-note-card h3 {
+  margin: 0 0 1.2rem;
+  font-size: clamp(2.4rem, 2rem + 0.8vw, 3.2rem);
+  font-style: normal;
+}
+
+.shenandoah-hero-card__copy p,
+.shenandoah-feature-row__copy p,
+.shenandoah-note-card p {
+  margin: 0;
+  max-width: 62rem;
+  font-size: 1.55rem;
+  line-height: 1.62;
+}
+
+.shenandoah-hero-card__copy p + p,
+.shenandoah-feature-row__copy p + p {
+  margin-top: 1.4rem;
+}
+
+.shenandoah-support-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2.4rem;
+}
+
+.shenandoah-note-card {
+  grid-column: span 6;
+  padding: 2.4rem 2.8rem;
+  border-radius: 2.4rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(160, 120, 80, 0.16);
+  box-shadow: 0 1rem 2.6rem rgba(104, 80, 54, 0.06);
+}
+
+.shenandoah-feature-row--band {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(248, 243, 236, 0.94));
+}
+
+.shenandoah-image-frame {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2.2rem;
+  background: linear-gradient(180deg, rgba(255, 251, 247, 0.96), rgba(247, 241, 233, 0.96));
+  border: 1px solid rgba(160, 120, 80, 0.12);
+}
+
+.shenandoah-image-frame--hero {
+  aspect-ratio: 1 / 1;
+}
+
+.shenandoah-image-frame--landscape {
+  aspect-ratio: 1.8 / 1;
+}
+
+.shenandoah-image-frame--square {
+  aspect-ratio: 1 / 1;
+}
+
+.shenandoah-image {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.shenandoah-image--focus-botanical {
+  object-position: 82% 30%;
+}
+
+.shenandoah-image--focus-lockup {
+  object-position: 58% 48%;
+}
+
+.shenandoah-image--focus-monogram {
+  object-position: 52% 42%;
+}
+
+.shenandoah-image--focus-exploration {
+  object-position: 16% 48%;
+}
+
+.shenandoah-image--focus-mark {
+  object-position: 78% 46%;
+}
+
+.shenandoah-dual-media {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem;
+  align-self: stretch;
+}
+
+.shenandoah-dual-media__item {
+  margin: 0;
+}
+
 .bookbuddy-hero {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -2793,6 +3057,40 @@ a[href*="github"] img {
     transform: rotate(-90deg);
   }
 
+  .asu-case-study__step,
+  .asu-case-study__step.case-study__step--reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 5.2rem 0;
+  }
+
+  .asu-case-study__step .case-study__step-copy,
+  .asu-case-study__step .asu-case-study__media,
+  .asu-case-study__step.case-study__step--reverse .case-study__step-copy,
+  .asu-case-study__step.case-study__step--reverse .asu-case-study__media {
+    grid-column: 1 / -1;
+  }
+
+  .asu-case-study__step--band::before {
+    inset: 1rem -1.2rem;
+  }
+
+  .shenandoah-hero-card,
+  .shenandoah-feature-row,
+  .shenandoah-support-grid,
+  .shenandoah-dual-media {
+    grid-template-columns: 1fr;
+  }
+
+  .shenandoah-hero-card__copy,
+  .shenandoah-hero-card__media,
+  .shenandoah-feature-row__copy,
+  .shenandoah-feature-row__media,
+  .shenandoah-dual-media,
+  .shenandoah-note-card {
+    grid-column: 1 / -1;
+  }
+
   .bookbuddy-layout,
   .bookbuddy-feature-row,
   .bookbuddy-overview-grid,
@@ -2961,6 +3259,30 @@ a[href*="github"] img {
     width: 556%;
     height: 556%;
     transform: scale(0.18);
+  }
+
+  .asu-case-study__frame--portrait {
+    aspect-ratio: 4 / 5;
+  }
+
+  .asu-case-study__frame--banner,
+  .asu-case-study__frame--wide {
+    aspect-ratio: 16 / 10;
+  }
+
+  .shenandoah-hero-card,
+  .shenandoah-feature-row {
+    padding: 1.6rem;
+  }
+
+  .shenandoah-hero-card__copy,
+  .shenandoah-feature-row__copy,
+  .shenandoah-note-card {
+    padding-inline: 1.8rem;
+  }
+
+  .shenandoah-image-frame--landscape {
+    aspect-ratio: 16 / 11;
   }
 
   .prototype-modal__frame-wrap {
