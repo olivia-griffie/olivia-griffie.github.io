@@ -875,8 +875,24 @@ a {
   filter: grayscale(1) brightness(0);
 }
 
-.client__logos-group .client__logo:nth-child(4) {
+.client__logo--tall {
   height: 7.6rem;
+}
+
+.client__logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.client__logo-role {
+  font-family: var(--font-stamp);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+  text-align: center;
+  max-width: 14rem;
 }
  
 @media (max-width: 700px) {
@@ -1213,6 +1229,30 @@ a[href*="github"] img {
 
 .home-hero__summary {
   margin: 0 0 2.8rem;
+}
+
+.hero-available {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-stamp);
+  font-size: 1.35rem;
+  letter-spacing: 0.07em;
+  color: var(--ink);
+  margin: 0.6rem 0 1.6rem;
+  padding: 0.45rem 1.1rem;
+  border: 1px solid var(--kraft-dark);
+  border-radius: 2rem;
+}
+
+.hero-available::before {
+  content: '';
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background-color: #5a8a5a;
+  flex-shrink: 0;
 }
 
 .hero-cert {
