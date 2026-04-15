@@ -2626,6 +2626,10 @@ a[href*="github"] img {
   gap: 1.2rem;
 }
 
+.bookbuddy-feature-row--copy-only {
+  align-items: start;
+}
+
 .bookbuddy-feature-row--copy-only .bookbuddy-feature-copy {
   grid-column: 1 / -1;
 }
