@@ -2082,35 +2082,6 @@ a[href*="github"] img {
   gap: 1.2rem;
 }
 
-.btn--bookbuddy {
-  border: 0;
-  color: #5b446f;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 237, 246, 0.98));
-  box-shadow:
-    0 0 0 1px rgba(222, 121, 176, 0.2),
-    0 1.2rem 3rem rgba(169, 88, 143, 0.14);
-}
-
-.btn--bookbuddy:hover,
-.btn--bookbuddy:focus-visible {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(255, 230, 242, 1));
-  color: #4d375f;
-  border-color: transparent;
-}
-
-.btn--bookbuddy-secondary {
-  border-color: rgba(122, 80, 135, 0.3);
-  color: #6d4d84;
-  background: rgba(255, 255, 255, 0.55);
-}
-
-.btn--bookbuddy-secondary:hover,
-.btn--bookbuddy-secondary:focus-visible {
-  border-color: rgba(122, 80, 135, 0.42);
-  color: #5b446f;
-  background: rgba(255, 255, 255, 0.72);
-}
-
 .bookbuddy-hero__highlights {
   list-style: none;
   display: grid;
@@ -2201,10 +2172,6 @@ a[href*="github"] img {
   max-height: 24rem;
   width: auto;
   margin-inline: auto;
-}
-
-.footer--bookbuddy {
-  background: linear-gradient(180deg, #ffe8f3 0%, #f8dfeb 100%);
 }
 
 .reveal-section {
