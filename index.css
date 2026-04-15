@@ -2036,15 +2036,15 @@ a[href*="github"] img {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 2.4rem;
   align-items: center;
-  padding: 4.8rem 3rem 8rem;
+  padding: 4.8rem 3rem 6.4rem;
   position: relative;
   z-index: 1;
 }
 
 .bookbuddy-hero__copy {
   display: grid;
-  gap: 2rem;
-  grid-column: 1 / span 7;
+  gap: 1.6rem;
+  grid-column: 1 / span 8;
   padding: 3rem;
   border-radius: 3rem;
   background: rgba(255, 255, 255, 0.62);
@@ -2077,9 +2077,9 @@ a[href*="github"] img {
 
 .bookbuddy-hero__summary {
   margin: 0;
-  max-width: 64rem;
+  max-width: 78rem;
   font-size: 1.9rem;
-  line-height: 1.85;
+  line-height: 1.5;
   color: var(--ink-muted);
 }
 
@@ -2101,13 +2101,13 @@ a[href*="github"] img {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  padding: 1.3rem 1.5rem;
+  padding: 1.2rem 1.4rem;
   border-radius: 1.8rem;
   background: rgba(255, 255, 255, 0.74);
   border: 1px solid rgba(160, 120, 80, 0.2);
   color: var(--ink-muted);
-  font-size: 1.55rem;
-  line-height: 1.6;
+  font-size: 1.45rem;
+  line-height: 1.5;
   box-shadow: 0 1rem 2.4rem rgba(104, 80, 54, 0.06);
 }
 
@@ -2122,7 +2122,7 @@ a[href*="github"] img {
   background: rgba(255, 255, 255, 0.74);
   border: 1px solid rgba(160, 120, 80, 0.2);
   box-shadow: 0 1rem 2.4rem rgba(104, 80, 54, 0.06);
-  grid-column: 8 / -1;
+  grid-column: 9 / -1;
 }
 
 .bookbuddy-hero__promo {
@@ -2132,22 +2132,22 @@ a[href*="github"] img {
 }
 
 .case-study--bookbuddy {
-  gap: 3.6rem;
+  gap: 0;
 }
 
 .bookbuddy-layout {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 2.4rem;
+  gap: 3.2rem;
 }
 
 .bookbuddy-section-heading {
   grid-column: 1 / span 8;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .bookbuddy-intro-copy {
-  grid-column: 1 / span 7;
+  grid-column: 1 / span 8;
 }
 
 .bookbuddy-intro-copy .about-note,
@@ -2168,7 +2168,7 @@ a[href*="github"] img {
 }
 
 .bookbuddy-intro-visual {
-  grid-column: 8 / -1;
+  grid-column: 9 / -1;
 }
 
 .bookbuddy-visual-card {
@@ -2212,7 +2212,6 @@ a[href*="github"] img {
 }
 
 .bookbuddy-pill-grid {
-  grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
@@ -2226,15 +2225,19 @@ a[href*="github"] img {
 }
 
 .bookbuddy-overview-card {
-  grid-column: span 6;
-  padding: 2.8rem;
+  grid-column: span 4;
+  padding: 3.2rem;
+  display: grid;
+  align-content: start;
+  gap: 1.2rem;
+  min-height: 100%;
 }
 
 .bookbuddy-overview-card h3,
 .bookbuddy-feature-copy h3,
 .bookbuddy-diagram-card h3 {
   font-style: normal;
-  margin: 0 0 1.2rem;
+  margin: 0;
 }
 
 .bookbuddy-overview-card p,
@@ -2243,13 +2246,13 @@ a[href*="github"] img {
 .bookbuddy-visual-card--compact p {
   margin: 0;
   font-size: 1.55rem;
-  line-height: 1.72;
+  line-height: 1.5;
 }
 
 .bookbuddy-feature-stack {
   grid-column: 1 / -1;
   display: grid;
-  gap: 3.2rem;
+  gap: 2.4rem;
 }
 
 .bookbuddy-feature-row {
@@ -2257,26 +2260,36 @@ a[href*="github"] img {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 2.4rem;
   align-items: stretch;
+  padding: 0;
 }
 
 .bookbuddy-feature-row--reverse .bookbuddy-feature-media {
-  grid-column: 1 / span 6;
+  grid-column: 1 / span 4;
 }
 
 .bookbuddy-feature-row--reverse .bookbuddy-feature-copy {
-  grid-column: 7 / -1;
+  grid-column: 5 / -1;
+}
+
+.bookbuddy-feature-row--band {
+  padding: 3.2rem;
+  background: rgba(243, 233, 210, 0.42);
+  border-radius: 3.2rem;
 }
 
 .bookbuddy-feature-media {
-  grid-column: 7 / -1;
+  grid-column: 9 / -1;
   margin: 0;
   padding: 2.4rem;
   min-height: 100%;
 }
 
 .bookbuddy-feature-copy {
-  grid-column: 1 / span 6;
-  padding: 2.8rem;
+  grid-column: 1 / span 8;
+  padding: 3.2rem;
+  display: grid;
+  align-content: start;
+  gap: 1.2rem;
 }
 
 .bookbuddy-feature-media__image {
@@ -2288,7 +2301,7 @@ a[href*="github"] img {
 .bookbuddy-diagram-card {
   padding: 2.2rem;
   display: grid;
-  grid-template-columns: 16rem 1fr;
+  grid-template-columns: 13rem 1fr;
   gap: 1.8rem;
   min-height: 100%;
 }
@@ -2318,6 +2331,23 @@ a[href*="github"] img {
 
 .bookbuddy-diagram-card__panel {
   padding: 1rem 0.4rem;
+}
+
+.bookbuddy-feature-copy p,
+.bookbuddy-intro-copy .about-note p,
+.bookbuddy-overview-card p,
+.bookbuddy-diagram-card p,
+.bookbuddy-visual-card--compact p {
+  max-width: 80rem;
+}
+
+.bookbuddy-intro-copy .about-note p {
+  margin: 0 0 1.4rem;
+  line-height: 1.5;
+}
+
+.bookbuddy-intro-copy .about-note p:last-child {
+  margin-bottom: 0;
 }
 
 .bookbuddy-diagram-card--checks {
@@ -2354,7 +2384,14 @@ a[href*="github"] img {
 }
 
 .burgermeister-case-study {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 4rem;
+}
+
+.burgermeister-case-study .case-study__actions,
+.burgermeister-grid {
+  grid-column: 1 / -1;
 }
 
 .burgermeister-hero {
@@ -2765,7 +2802,6 @@ a[href*="github"] img {
   .bookbuddy-section-heading,
   .bookbuddy-intro-copy,
   .bookbuddy-intro-visual,
-  .bookbuddy-pill-grid,
   .bookbuddy-feature-stack {
     grid-column: 1 / -1;
   }
@@ -2782,6 +2818,10 @@ a[href*="github"] img {
   .burgermeister-split--reverse .burgermeister-copy-card,
   .burgermeister-split--reverse .burgermeister-media-card {
     grid-column: span 4;
+  }
+
+  .bookbuddy-overview-card {
+    grid-column: span 8;
   }
 
   .burgermeister-hero,
@@ -2825,6 +2865,10 @@ a[href*="github"] img {
   .bookbuddy-feature-media,
   .bookbuddy-visual-card {
     padding: 2.5rem;
+  }
+
+  .bookbuddy-feature-row--band {
+    padding: 2.4rem;
   }
 
   .bookbuddy-visual-card__stats {
@@ -2943,7 +2987,6 @@ a[href*="github"] img {
   .bookbuddy-section-heading,
   .bookbuddy-intro-copy,
   .bookbuddy-intro-visual,
-  .bookbuddy-pill-grid,
   .bookbuddy-overview-card,
   .bookbuddy-feature-copy,
   .bookbuddy-feature-media,
@@ -3018,6 +3061,10 @@ a[href*="github"] img {
   .bookbuddy-visual-card,
   .bookbuddy-diagram-card {
     padding: 2rem;
+  }
+
+  .bookbuddy-feature-row--band {
+    padding: 1.6rem;
   }
 }
  
