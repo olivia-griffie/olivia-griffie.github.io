@@ -2796,7 +2796,7 @@ a[href*="github"] img {
   .burgermeister-grid,
   .burgermeister-split,
   .burgermeister-detail-cards {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .bookbuddy-section-heading,
@@ -2817,11 +2817,11 @@ a[href*="github"] img {
   .burgermeister-media-card,
   .burgermeister-split--reverse .burgermeister-copy-card,
   .burgermeister-split--reverse .burgermeister-media-card {
-    grid-column: span 4;
+    grid-column: 1 / -1;
   }
 
   .bookbuddy-overview-card {
-    grid-column: span 8;
+    grid-column: 1 / -1;
   }
 
   .burgermeister-hero,
@@ -2976,7 +2976,7 @@ a[href*="github"] img {
   .burgermeister-grid,
   .burgermeister-split,
   .burgermeister-detail-cards {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 1.6rem;
   }
 
