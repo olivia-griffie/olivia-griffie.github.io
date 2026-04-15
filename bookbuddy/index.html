@@ -282,6 +282,36 @@
               </figure>
             </div>
 
+            <!-- Beta application form -->
+            <section class="bookbuddy-feature-row bookbuddy-feature-row--copy-only bookbuddy-feature-row--band" id="beta">
+              <div class="bookbuddy-feature-copy bookbuddy-beta-section">
+                <span class="section-tag">Join the Beta</span>
+                <h3>Book Buddy is looking for early readers.</h3>
+                <p>Beta access is limited. If you're working on a manuscript and want a writing tool built around your actual process, apply below.</p>
+                <p class="form-success" style="display:none;" aria-live="polite">Thanks for applying — I'll be in touch soon.</p>
+                <form class="beta-form" action="https://formspree.io/f/xnjljzrp" method="POST">
+                  <input type="hidden" name="_subject" value="Book Buddy beta application" />
+                  <div class="beta-form__field">
+                    <label for="beta-name">Your name</label>
+                    <input id="beta-name" name="name" type="text" placeholder="First and last name" required />
+                  </div>
+                  <div class="beta-form__field">
+                    <label for="beta-email">Email address</label>
+                    <input id="beta-email" name="email" type="email" placeholder="you@email.com" required />
+                  </div>
+                  <div class="beta-form__field">
+                    <label for="beta-genre">What are you writing?</label>
+                    <input id="beta-genre" name="genre" type="text" placeholder="e.g. Romance fantasy novel, memoir, short stories" />
+                  </div>
+                  <div class="beta-form__field">
+                    <label for="beta-why">Why do you want early access?</label>
+                    <textarea id="beta-why" name="why" rows="4" placeholder="Tell me about where you are in your writing process..."></textarea>
+                  </div>
+                  <button type="submit" class="btn btn--dark">Apply for Beta Access</button>
+                </form>
+              </div>
+            </section>
+
           </div>
         </div>
       </div>
@@ -298,6 +328,18 @@
       <p class="footer__credit">&copy; 2026 | Portfolio Designed &amp; Created by Olivia Griffie</p>
     </div>
   </footer>
+  <script>
+    const betaForm = document.querySelector('.beta-form');
+    const betaSuccess = document.querySelector('.form-success');
+    if (betaForm && betaSuccess) {
+      betaForm.addEventListener('submit', () => {
+        setTimeout(() => {
+          betaSuccess.style.display = 'block';
+          betaForm.style.display = 'none';
+        }, 400);
+      });
+    }
+  </script>
   <script src="../index.js"></script>
 </body>
 </html>
