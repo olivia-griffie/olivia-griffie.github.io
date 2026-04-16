@@ -27,6 +27,26 @@
     <span class="focus-mode-btn__icon" aria-hidden="true">◎</span>
     Focus Mode
   </button>
+
+  <aside class="focus-chat" id="focus-chat" aria-label="Portfolio assistant" hidden>
+    <div class="focus-chat__header">
+      <div class="focus-chat__header-info">
+        <span class="focus-chat__avatar" aria-hidden="true">OG</span>
+        <div>
+          <strong class="focus-chat__title">Portfolio Assistant</strong>
+          <span class="focus-chat__subtitle">Ask me about Olivia</span>
+        </div>
+      </div>
+      <button class="focus-chat__close" id="focus-chat-close" aria-label="Close portfolio assistant">&times;</button>
+    </div>
+    <div class="focus-chat__messages" id="focus-chat-messages" aria-live="polite" aria-relevant="additions"></div>
+    <div class="focus-chat__replies" id="focus-chat-replies">
+      <button class="focus-chat__reply" data-reply="overview">Overview</button>
+      <button class="focus-chat__reply" data-reply="tools">Tools &amp; stack</button>
+      <button class="focus-chat__reply" data-reply="work">What has she built?</button>
+      <button class="focus-chat__reply" data-reply="available">Is she available?</button>
+    </div>
+  </aside>
   <header class="header header--wireframe" role="banner" id="top">
     <div class="grid-bg"></div>
     <img src="./images/flower2.png" class="page-flower page-flower--hero-left" alt="" aria-hidden="true" />

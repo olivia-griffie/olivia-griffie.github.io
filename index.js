@@ -356,9 +356,110 @@ window.addEventListener("keydown", (event) => {
 });
 
 const focusModeBtn = document.getElementById("focus-mode-toggle");
+const focusChat = document.getElementById("focus-chat");
+const focusChatMessages = document.getElementById("focus-chat-messages");
+const focusChatReplies = document.getElementById("focus-chat-replies");
+const focusChatClose = document.getElementById("focus-chat-close");
+
+const chatResponses = {
+  intro: "Hi! I'm a quick summary of Olivia's portfolio. Tap a question below to learn more.",
+  overview: {
+    q: "Overview",
+    a: "Olivia is a UX/UI designer with 10+ years across print and web. She designs interfaces, builds brand identities, and writes the front-end code behind them. She's currently open to full-time remote roles."
+  },
+  tools: {
+    q: "Tools & stack",
+    a: "Figma is her primary design tool. On the dev side she works in HTML, CSS, JavaScript, and GitHub. For print she uses InDesign, Illustrator, and Photoshop."
+  },
+  work: {
+    q: "What has she built?",
+    a: "Recent work includes Book Buddy (an Electron writing app she designed and built end-to-end), Architect Mini (a web-to-print card builder widget), and Burgermeister (a branded eCommerce demo storefront for Devia Software). She's also done brand identity work for clients like Shenandoah Sovereign."
+  },
+  available: {
+    q: "Is she available?",
+    a: "Yes — Olivia is actively looking for full-time remote roles. She's also open to freelance and contract work. You can reach her through the contact form on this page or directly at griffiedesign@gmail.com."
+  }
+};
+
+let chatReady = false;
+
+const addChatMessage = (text, type, withTyping) => {
+  if (!focusChatMessages) return;
+
+  if (type === "assistant" && withTyping) {
+    const typing = document.createElement("div");
+    typing.className = "focus-chat__message focus-chat__message--assistant focus-chat__message--typing";
+    typing.innerHTML = "<span></span>";
+    focusChatMessages.appendChild(typing);
+    focusChatMessages.scrollTop = focusChatMessages.scrollHeight;
+
+    window.setTimeout(() => {
+      typing.remove();
+      const msg = document.createElement("div");
+      msg.className = "focus-chat__message focus-chat__message--assistant";
+      msg.textContent = text;
+      focusChatMessages.appendChild(msg);
+      focusChatMessages.scrollTop = focusChatMessages.scrollHeight;
+    }, 900);
+  } else {
+    const msg = document.createElement("div");
+    msg.className = `focus-chat__message focus-chat__message--${type}`;
+    msg.textContent = text;
+    focusChatMessages.appendChild(msg);
+    focusChatMessages.scrollTop = focusChatMessages.scrollHeight;
+  }
+};
+
+const openChat = () => {
+  if (!focusChat) return;
+  focusChat.removeAttribute("hidden");
+  if (!chatReady) {
+    chatReady = true;
+    window.setTimeout(() => addChatMessage(chatResponses.intro, "assistant", true), 300);
+  }
+};
+
+const closeChat = () => {
+  if (!focusChat) return;
+  focusChat.setAttribute("hidden", "");
+};
+
+const resetChat = () => {
+  chatReady = false;
+  if (focusChatMessages) focusChatMessages.innerHTML = "";
+  if (focusChatReplies) {
+    focusChatReplies.querySelectorAll(".focus-chat__reply").forEach((btn) => {
+      btn.disabled = false;
+    });
+  }
+};
+
+if (focusChatClose) {
+  focusChatClose.addEventListener("click", closeChat);
+}
+
+if (focusChatReplies) {
+  focusChatReplies.addEventListener("click", (e) => {
+    const btn = e.target.closest(".focus-chat__reply");
+    if (!btn || btn.disabled) return;
+    const key = btn.dataset.reply;
+    const data = chatResponses[key];
+    if (!data) return;
+    btn.disabled = true;
+    addChatMessage(data.q, "user", false);
+    window.setTimeout(() => addChatMessage(data.a, "assistant", true), 200);
+  });
+}
+
 if (focusModeBtn) {
   focusModeBtn.addEventListener("click", () => {
     const isActive = document.body.classList.toggle("focus-mode");
     focusModeBtn.setAttribute("aria-pressed", String(isActive));
+    if (isActive) {
+      openChat();
+    } else {
+      closeChat();
+      resetChat();
+    }
   });
 }
