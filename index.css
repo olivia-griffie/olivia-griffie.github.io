@@ -3866,10 +3866,14 @@ a[href*="github"] img {
 /* When focus mode is active, hide all purely decorative elements */
 body.focus-mode .page-flower,
 body.focus-mode .tape-img,
-body.focus-mode .grid-bg,
-body.focus-mode .contact-note__bg,
-body.focus-mode .about__polaroid-image--art {
+body.focus-mode .grid-bg {
   display: none;
+}
+
+/* contact-note__bg must use visibility:hidden (not display:none) so the
+   absolutely-positioned form content keeps its layout dimensions */
+body.focus-mode .contact-note__bg {
+  visibility: hidden;
 }
 
 body.focus-mode .focus-mode-btn {
