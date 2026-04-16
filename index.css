@@ -42,15 +42,9 @@
   --font-family-serif: 'Playfair Display', Georgia, serif;
   --font-family-body: 'Libre Baskerville', Georgia, serif;
   --font-family-stamp: 'Roboto Condensed', system-ui, sans-serif;
+  /* Font size scale */
   --font-size-xs: 1.2rem;
   --font-size-sm: 1.4rem;
-  --font-size-md: 1.6rem;
-  --font-size-lg: 2rem;
-  --font-size-xl: 2.6rem;
-  --font-size-2xl: 3.2rem;
-  --font-size-3xl: 4.2rem;
-
-  /* Existing site scales */
   --font-size-small: 1.6rem;
   --font-size-normal: 1.9rem;
   --font-size-medium: 2.6rem;
@@ -272,7 +266,6 @@ h2 {
 h3 {
   font-size: 2.6rem;
   margin-bottom: var(--gutter-small);
-  font-style: italic;
 }
  
 p {
@@ -1033,15 +1026,16 @@ a {
 .contact-note__field input,
 .contact-note__field textarea {
   width: 92%;
-  border: 1px solid rgba(74, 69, 64, 0.16);
-  border-radius: 1.4rem;
-  background: rgba(255, 252, 247, 0.72);
+  border: 1px solid rgba(160, 120, 80, 0.35);
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.8);
   padding: 1.1rem 1.4rem;
   font-family: var(--font-body);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--ink);
   resize: none;
   box-shadow: none;
+  transition: border-color 0.2s;
 }
 
 .contact-note__field input::placeholder,
@@ -1052,8 +1046,8 @@ a {
 .contact-note__field input:focus,
 .contact-note__field textarea:focus {
   outline: none;
-  border-color: rgba(184, 76, 43, 0.55);
-  background: rgba(255, 252, 247, 0.88);
+  border-color: var(--kraft-dark);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .contact-note__field--message {
@@ -2101,7 +2095,12 @@ a[href*="github"] img {
   margin-inline: auto;
 }
 
-.case-study--asu-editorial {
+/* ----------------------------------------------- */
+/* ----- Shared Case Study Layout (ASU + Shenandoah) ----- */
+/* ----------------------------------------------- */
+
+.case-study--asu-editorial,
+.case-study--shenandoah {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 3.6rem;
@@ -2111,132 +2110,7 @@ a[href*="github"] img {
 .case-study--asu-editorial .asu-heading,
 .case-study--asu-editorial .asu-hero-card,
 .case-study--asu-editorial .asu-support-grid,
-.case-study--asu-editorial .asu-feature-row {
-  grid-column: 1 / -1;
-}
-
-.asu-heading {
-  margin-bottom: 1rem;
-}
-
-.asu-heading .section-tag {
-  color: rgba(133, 106, 76, 0.88);
-}
-
-.asu-hero-card,
-.asu-feature-row {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 2.4rem;
-  padding: 2rem;
-  border-radius: 3rem;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(160, 120, 80, 0.16);
-  box-shadow: 0 1.2rem 3.2rem rgba(104, 80, 54, 0.07);
-}
-
-.asu-hero-card__copy,
-.asu-feature-row__copy {
-  grid-column: 1 / span 6;
-  padding: 2rem 1.4rem 2rem 1.8rem;
-  align-self: center;
-}
-
-.asu-hero-card__media,
-.asu-feature-row__media,
-.asu-dual-media {
-  grid-column: 7 / -1;
-  margin: 0;
-}
-
-.asu-hero-card__copy h3,
-.asu-feature-row__copy h3,
-.asu-note-card h3 {
-  margin: 0 0 1.2rem;
-  font-size: clamp(2.4rem, 2rem + 0.8vw, 3.2rem);
-  font-style: normal;
-}
-
-.asu-hero-card__copy p,
-.asu-feature-row__copy p,
-.asu-note-card p {
-  margin: 0;
-  max-width: 62rem;
-  font-size: 1.55rem;
-  line-height: 1.62;
-}
-
-.asu-hero-card__copy p + p,
-.asu-feature-row__copy p + p {
-  margin-top: 1.4rem;
-}
-
-.asu-support-grid {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 2.4rem;
-}
-
-.asu-note-card {
-  grid-column: span 6;
-  padding: 2.4rem 2.8rem;
-  border-radius: 2.4rem;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(160, 120, 80, 0.16);
-  box-shadow: 0 1rem 2.6rem rgba(104, 80, 54, 0.06);
-}
-
-.asu-feature-row--band {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(248, 243, 236, 0.94));
-}
-
-.asu-image-frame {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 2.2rem;
-  background: linear-gradient(180deg, rgba(245, 247, 252, 0.96), rgba(235, 240, 247, 0.96));
-  border: 1px solid rgba(160, 120, 80, 0.12);
-  padding: 1.8rem;
-}
-
-.asu-image-frame--portrait {
-  aspect-ratio: 5 / 7;
-}
-
-.asu-image-frame--landscape {
-  aspect-ratio: 1.72 / 1;
-}
-
-.asu-image-frame--wide {
-  aspect-ratio: 16 / 10;
-}
-
-.asu-image {
-  width: 100%;
-  height: 100%;
-  margin-bottom: 0;
-  object-fit: contain;
-  object-position: center center;
-  border-radius: 1.4rem;
-}
-
-.asu-dual-media {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.8rem;
-  align-self: stretch;
-}
-
-.asu-dual-media__item {
-  margin: 0;
-}
-
-.case-study--shenandoah {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 3.6rem;
-}
-
+.case-study--asu-editorial .asu-feature-row,
 .case-study--shenandoah .case-study__actions,
 .case-study--shenandoah .shenandoah-heading,
 .case-study--shenandoah .shenandoah-hero-card,
@@ -2245,14 +2119,18 @@ a[href*="github"] img {
   grid-column: 1 / -1;
 }
 
+.asu-heading,
 .shenandoah-heading {
   margin-bottom: 1rem;
 }
 
+.asu-heading .section-tag,
 .shenandoah-heading .section-tag {
   color: rgba(133, 106, 76, 0.88);
 }
 
+.asu-hero-card,
+.asu-feature-row,
 .shenandoah-hero-card,
 .shenandoah-feature-row {
   display: grid;
@@ -2265,6 +2143,8 @@ a[href*="github"] img {
   box-shadow: 0 1.2rem 3.2rem rgba(104, 80, 54, 0.07);
 }
 
+.asu-hero-card__copy,
+.asu-feature-row__copy,
 .shenandoah-hero-card__copy,
 .shenandoah-feature-row__copy {
   grid-column: 1 / span 6;
@@ -2272,6 +2152,9 @@ a[href*="github"] img {
   align-self: center;
 }
 
+.asu-hero-card__media,
+.asu-feature-row__media,
+.asu-dual-media,
 .shenandoah-hero-card__media,
 .shenandoah-feature-row__media,
 .shenandoah-dual-media {
@@ -2279,14 +2162,19 @@ a[href*="github"] img {
   margin: 0;
 }
 
+.asu-hero-card__copy h3,
+.asu-feature-row__copy h3,
+.asu-note-card h3,
 .shenandoah-hero-card__copy h3,
 .shenandoah-feature-row__copy h3,
 .shenandoah-note-card h3 {
   margin: 0 0 1.2rem;
   font-size: clamp(2.4rem, 2rem + 0.8vw, 3.2rem);
-  font-style: normal;
 }
 
+.asu-hero-card__copy p,
+.asu-feature-row__copy p,
+.asu-note-card p,
 .shenandoah-hero-card__copy p,
 .shenandoah-feature-row__copy p,
 .shenandoah-note-card p {
@@ -2296,17 +2184,21 @@ a[href*="github"] img {
   line-height: 1.62;
 }
 
+.asu-hero-card__copy p + p,
+.asu-feature-row__copy p + p,
 .shenandoah-hero-card__copy p + p,
 .shenandoah-feature-row__copy p + p {
   margin-top: 1.4rem;
 }
 
+.asu-support-grid,
 .shenandoah-support-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 2.4rem;
 }
 
+.asu-note-card,
 .shenandoah-note-card {
   grid-column: span 6;
   padding: 2.4rem 2.8rem;
@@ -2316,8 +2208,46 @@ a[href*="github"] img {
   box-shadow: 0 1rem 2.6rem rgba(104, 80, 54, 0.06);
 }
 
+.asu-feature-row--band,
 .shenandoah-feature-row--band {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(248, 243, 236, 0.94));
+}
+
+/* Image frames differ slightly per case study (background tint) */
+.asu-image-frame {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2.2rem;
+  background: linear-gradient(180deg, rgba(245, 247, 252, 0.96), rgba(235, 240, 247, 0.96));
+  border: 1px solid rgba(160, 120, 80, 0.12);
+  padding: 1.8rem;
+}
+
+.asu-image-frame--portrait { aspect-ratio: 5 / 7; }
+.asu-image-frame--landscape { aspect-ratio: 1.72 / 1; }
+.asu-image-frame--wide { aspect-ratio: 16 / 10; }
+
+.asu-image,
+.shenandoah-image {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  object-fit: contain;
+  object-position: center center;
+  border-radius: 1.4rem;
+}
+
+.asu-dual-media,
+.shenandoah-dual-media {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem;
+  align-self: stretch;
+}
+
+.asu-dual-media__item,
+.shenandoah-dual-media__item {
+  margin: 0;
 }
 
 .shenandoah-image-frame {
@@ -2329,37 +2259,9 @@ a[href*="github"] img {
   padding: 1.8rem;
 }
 
-.shenandoah-image-frame--hero {
-  aspect-ratio: 1 / 1.02;
-}
-
-.shenandoah-image-frame--landscape {
-  aspect-ratio: 1.72 / 1;
-}
-
-.shenandoah-image-frame--square {
-  aspect-ratio: 1 / 1;
-}
-
-.shenandoah-image {
-  width: 100%;
-  height: 100%;
-  margin-bottom: 0;
-  object-fit: contain;
-  object-position: center center;
-  border-radius: 1.4rem;
-}
-
-.shenandoah-dual-media {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.8rem;
-  align-self: stretch;
-}
-
-.shenandoah-dual-media__item {
-  margin: 0;
-}
+.shenandoah-image-frame--hero { aspect-ratio: 1 / 1.02; }
+.shenandoah-image-frame--landscape { aspect-ratio: 1.72 / 1; }
+.shenandoah-image-frame--square { aspect-ratio: 1 / 1; }
 
 .bookbuddy-hero {
   display: grid;
@@ -2773,7 +2675,7 @@ a[href*="github"] img {
 
 .bookbuddy-problem-header h3 {
   font-family: var(--font-serif);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-medium);
   margin: 0.8rem 0;
 }
 
