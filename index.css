@@ -1376,7 +1376,26 @@ a[href*="github"] img {
 .faq-sidecard h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  font-style: normal;
+}
+
+.feature-card--featured {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(184, 76, 43, 0.22);
+  box-shadow: 0 4px 18px rgba(184, 76, 43, 0.07);
+  position: relative;
+}
+
+.feature-card__badge {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+.feature-card--featured h3 {
+  color: var(--color-accent-strong);
 }
 
 .client__logos--centered {
@@ -3777,6 +3796,107 @@ a[href*="github"] img {
 
   .bookbuddy-feature-row--band {
     padding: 1.6rem;
+  }
+}
+
+/* --------------------------------------- */
+/* ----- Accessibility: Reduced Motion ----- */
+/* --------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Pause the nav logo video entirely */
+  .nav__logo-video {
+    display: none;
+  }
+
+  /* Keep the skip link usable — it moves on focus */
+  .skip-link {
+    transition: none;
+  }
+}
+
+/* --------------------------------------- */
+/* ----- Accessibility: Focus Mode ----- */
+/* --------------------------------------- */
+
+.focus-mode-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.9rem 1.6rem;
+  background: var(--color-ink);
+  color: var(--color-bg);
+  border: none;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-family-stamp);
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.72;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.focus-mode-btn:hover,
+.focus-mode-btn:focus-visible {
+  opacity: 1;
+  transform: translateY(-2px);
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.focus-mode-btn__icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* When focus mode is active, hide all purely decorative elements */
+body.focus-mode .page-flower,
+body.focus-mode .tape-img,
+body.focus-mode .grid-bg,
+body.focus-mode .contact-note__bg,
+body.focus-mode .about__polaroid-image--art {
+  display: none;
+}
+
+body.focus-mode .focus-mode-btn {
+  opacity: 1;
+  background: var(--color-accent);
+}
+
+/* --------------------------------------- */
+/* ----- Accessibility: High Contrast ----- */
+/* --------------------------------------- */
+
+@media (forced-colors: active) {
+  .btn,
+  .feature-card,
+  .project-card,
+  .testimonial-card {
+    border: 2px solid ButtonText;
+  }
+
+  .section-tag {
+    color: ButtonText;
+  }
+
+  .skip-link {
+    background: ButtonFace;
+    color: ButtonText;
+    border: 2px solid ButtonText;
   }
 }
  

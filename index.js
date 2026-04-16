@@ -354,3 +354,11 @@ window.addEventListener("keydown", (event) => {
     setPrototypeModal(activePrototypeModal, false);
   }
 });
+
+const focusModeBtn = document.getElementById("focus-mode-toggle");
+if (focusModeBtn) {
+  focusModeBtn.addEventListener("click", () => {
+    const isActive = document.body.classList.toggle("focus-mode");
+    focusModeBtn.setAttribute("aria-pressed", String(isActive));
+  });
+}

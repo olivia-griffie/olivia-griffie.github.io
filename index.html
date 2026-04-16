@@ -23,12 +23,16 @@
 
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
+  <button class="focus-mode-btn" id="focus-mode-toggle" aria-pressed="false" aria-label="Toggle focus mode — hide decorative elements">
+    <span class="focus-mode-btn__icon" aria-hidden="true">◎</span>
+    Focus Mode
+  </button>
   <header class="header header--wireframe" role="banner" id="top">
     <div class="grid-bg"></div>
     <img src="./images/flower2.png" class="page-flower page-flower--hero-left" alt="" aria-hidden="true" />
     <img src="./images/driedflower.png" class="page-flower page-flower--header" alt="" aria-hidden="true" />
     <div class="row">
-      <nav class="nav" role="navigation">
+      <nav class="nav" role="navigation" aria-label="Main navigation">
         <ul class="nav__items nav__items--left">
           <li class="nav__item"><a href="/work/" class="nav__link"><span class="nav__link-text">Work</span></a></li>
           <li class="nav__item"><a href="/contact/" class="nav__link"><span class="nav__link-text">Contact</span></a></li>
@@ -48,11 +52,11 @@
 
     <div class="row home-hero">
       <div class="home-hero__media">
-        <img src="./images/mepolaroid.png" class="home-hero__polaroid" alt="Image of me" />
+        <img src="./images/mepolaroid.png" class="home-hero__polaroid" alt="Olivia Griffie, UX/UI designer" />
       </div>
       <div class="home-hero__content">
         <img src="./images/tape2.png" class="tape-img tape-img--top" alt="" aria-hidden="true" />
-        <p class="header__eyebrow">designer</p>
+        <p class="header__eyebrow" aria-hidden="true">designer</p>
         <h1 class="home-hero__title">Hi, I'm Liv.</h1>
         <p class="home-hero__summary">UX &amp; UI designer with roots in print - I design interfaces, brands, and the front-end code behind them.</p>
         <p class="hero-available">Available for full-time remote roles</p>
@@ -190,13 +194,20 @@
           <h2>What I Do</h2>
         </div>
         <div class="feature-grid feature-grid--three">
-          <article class="feature-card">
-            <h3>Brand Identity</h3>
-            <p>Logo systems, collateral, and visual consistency across print and digital spaces.</p>
+          <article class="feature-card feature-card--featured">
+            <span class="feature-card__badge">Primary</span>
+            <h3>Figma</h3>
+            <p>Wireframing, interface systems, component thinking, and polished design exploration for both product and brand work.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card feature-card--featured">
+            <span class="feature-card__badge">Primary</span>
             <h3>UX / UI Design</h3>
-            <p>Wireframes and polished interfaces built to feel thoughtful, warm, and usable.</p>
+            <p>Wireframes and polished interfaces built to feel thoughtful, warm, and genuinely usable from first tap to final screen.</p>
+          </article>
+          <article class="feature-card feature-card--featured">
+            <span class="feature-card__badge">Primary</span>
+            <h3>Brand Identity</h3>
+            <p>Logo systems, collateral, and visual consistency built to hold up across print and digital — and feel like they belong together.</p>
           </article>
           <article class="feature-card">
             <h3>Web Support</h3>
@@ -209,10 +220,6 @@
           <article class="feature-card">
             <h3>Marketing Design</h3>
             <p>Email visuals, campaign support, and supporting assets that strengthen a brand story.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Figma</h3>
-            <p>Wireframing, interface systems, component thinking, and polished design exploration for product and brand work.</p>
           </article>
         </div>
       </div>
@@ -264,7 +271,7 @@
         </div>
         <div class="about-split__media">
           <div class="about-polaroid-stack">
-            <img loading="lazy" class="about__polaroid-image about__polaroid-image--main" src="./images/kidmepolaroid.png" alt="Retro photo of me" />
+            <img loading="lazy" class="about__polaroid-image about__polaroid-image--main" src="./images/kidmepolaroid.png" alt="Polaroid snapshot of Olivia as a child" />
             <img loading="lazy" class="about__polaroid-image about__polaroid-image--art" src="./images/about-polaroid-1.png" alt="Polaroid-style self portrait artwork" />
           </div>
         </div>
@@ -334,23 +341,23 @@
               <div class="contact-note__content">
                 <input type="hidden" name="_subject" value="Portfolio contact form submission" />
                 <div class="contact-note__field">
-                  <label for="contact-name">Contact Name</label>
-                  <input id="contact-name" name="name" type="text" placeholder="Your name" required />
+                  <label for="contact-name">Your name</label>
+                  <input id="contact-name" name="name" type="text" placeholder="First and last name" required autocomplete="name" />
                 </div>
                 <div class="contact-note__field">
-                  <label for="contact-email">Email Address</label>
-                  <input id="contact-email" name="email" type="email" placeholder="your@email.com" required />
+                  <label for="contact-email">Your email</label>
+                  <input id="contact-email" name="email" type="email" placeholder="you@email.com" required autocomplete="email" />
                 </div>
                 <div class="contact-note__field">
-                  <label for="contact-subject">Subject Line</label>
-                  <input id="contact-subject" name="subject" type="text" placeholder="What is this about?" required />
+                  <label for="contact-subject">Subject</label>
+                  <input id="contact-subject" name="subject" type="text" placeholder="What's this about?" required />
                 </div>
                 <div class="contact-note__field contact-note__field--message">
                   <label for="contact-message">Message</label>
-                  <textarea id="contact-message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+                  <textarea id="contact-message" name="message" rows="6" placeholder="Tell me what you're working on, what you're looking for, or just say hello." required></textarea>
                 </div>
                 <div class="contact-note__actions">
-                  <button type="submit" class="btn btn--dark">Send</button>
+                  <button type="submit" class="btn btn--dark" aria-label="Send message">Send</button>
                 </div>
               </div>
             </form>
@@ -388,20 +395,20 @@
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <ul class="footer__social-links">
+      <ul class="footer__social-links" aria-label="Social profiles">
         <li class="footer__social-link-item">
-          <a href="https://dribbble.com/olivia-griffie" title="Dribbble">
-            <img src="./images/dribbble-logo.svg" class="footer__social-image" alt="Dribbble">
+          <a href="https://dribbble.com/olivia-griffie" aria-label="Olivia Griffie on Dribbble" rel="noopener">
+            <img src="./images/dribbble-logo.svg" class="footer__social-image" alt="" aria-hidden="true">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/olivia-griffie-032860173/" title="LinkedIn">
-            <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn">
+          <a href="https://www.linkedin.com/in/olivia-griffie-032860173/" aria-label="Olivia Griffie on LinkedIn" rel="noopener">
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="" aria-hidden="true">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://github.com/olivia-griffie" title="GitHub">
-            <img src="./images/github.svg" class="footer__social-image" alt="GitHub">
+          <a href="https://github.com/olivia-griffie" aria-label="Olivia Griffie on GitHub" rel="noopener">
+            <img src="./images/github.svg" class="footer__social-image" alt="" aria-hidden="true">
           </a>
         </li>
       </ul>
@@ -409,8 +416,8 @@
     </div>
   </footer>
 
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img loading="lazy" src="./images/arrow.png" alt="Back to Top" class="back-to-top__image"/>
+  <a href="#top" class="back-to-top" aria-label="Back to top of page">
+    <img loading="lazy" src="./images/arrow.png" alt="" aria-hidden="true" class="back-to-top__image"/>
   </a>
 
   <script src="./index.js"></script>
