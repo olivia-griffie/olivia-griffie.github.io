@@ -126,7 +126,6 @@ body {
  
 section {
   padding: var(--gutter-huge) 0;
-  border-bottom: var(--border-kraft);
 }
  
 img {
@@ -2973,6 +2972,7 @@ a[href*="github"] img {
 /* --- Beta form --- */
 .bookbuddy-beta-section {
   max-width: 64rem;
+  margin-inline: auto;
 }
 
 .beta-form {
