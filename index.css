@@ -431,7 +431,7 @@ a {
 }
  
 @media (max-width: 500px) {
-  .back-to-top { right: 1.5rem; bottom: 2rem; }
+  .back-to-top { right: 1.6rem; bottom: 1.6rem; }
 }
  
 /* --------------------------------------- */
@@ -3830,8 +3830,8 @@ a[href*="github"] img {
 
 .focus-mode-btn {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 2.4rem;
+  right: 2.4rem;
   z-index: 900;
   display: flex;
   align-items: center;
