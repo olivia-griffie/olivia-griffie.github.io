@@ -138,22 +138,28 @@ copyButtons.forEach((button) => {
   button.addEventListener("click", async () => {
     const originalLabel = button.getAttribute("aria-label") || "Copy";
     const copyValue = button.dataset.copy || "";
+    const statusEl = button.parentElement
+      ? button.parentElement.querySelector(".copy-status")
+      : null;
 
     try {
       await navigator.clipboard.writeText(copyValue);
       button.dataset.status = "Copied";
       button.setAttribute("aria-label", "Copied");
       button.setAttribute("title", "Copied");
+      if (statusEl) statusEl.textContent = "Copied!";
     } catch (error) {
       button.dataset.status = "Failed";
-      button.setAttribute("aria-label", "Failed");
-      button.setAttribute("title", "Failed");
+      button.setAttribute("aria-label", "Failed to copy");
+      button.setAttribute("title", "Failed to copy");
+      if (statusEl) statusEl.textContent = "Failed to copy";
     }
 
     window.setTimeout(() => {
       button.dataset.status = "";
       button.setAttribute("aria-label", originalLabel);
       button.setAttribute("title", originalLabel);
+      if (statusEl) statusEl.textContent = "";
     }, 1400);
   });
 });

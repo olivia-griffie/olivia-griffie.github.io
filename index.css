@@ -26,7 +26,7 @@
   --color-surface: #ffffff;
   --color-border: rgba(160, 120, 80, 0.3);
   --color-ink: #383838;
-  --color-ink-muted: #4a4540;
+  --color-ink-muted: #3d3935;
   --color-accent: #b84c2b;
   --color-accent-soft: rgba(184, 76, 43, 0.08);
   --color-accent-strong: #8f351d;
@@ -203,8 +203,8 @@ img {
  
 .section-tag {
   font-family: var(--font-family-stamp);
-  font-size: var(--font-size-xs);
-  letter-spacing: 0.2em;
+  font-size: 1.3rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-brand-kraft-strong);
   display: block;
@@ -290,7 +290,29 @@ p {
 /* --------------------------------------- */
 /* ----- Focus / Accessibility ----- */
 /* --------------------------------------- */
- 
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1.6rem;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: var(--color-ink);
+  color: var(--color-bg);
+  font-family: var(--font-family-stamp);
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: top 0.15s;
+}
+.skip-link:focus {
+  top: 1.6rem;
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 button:focus, a:focus {
   outline: 2px solid var(--rust);
   outline-offset: 2px;
@@ -298,6 +320,16 @@ button:focus, a:focus {
 body:not(.user-is-tabbing) button:focus,
 body:not(.user-is-tabbing) a:focus {
   outline: none;
+}
+
+/* CSS-only fallback: always show focus for keyboard nav via :focus-visible */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
  
 /* --------------------------------------- */
@@ -1799,6 +1831,18 @@ a[href*="github"] img {
   outline-offset: 2px;
 }
 
+.copy-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .case-study {
   display: grid;
   gap: 3.2rem;
@@ -1821,10 +1865,10 @@ a[href*="github"] img {
   margin: 0;
 }
 
+.case-study__intro-panel h2,
 .case-study__intro-panel h3 {
   font-size: clamp(2.6rem, 2.2rem + 1vw, 3.6rem);
   margin: 0 0 1.6rem;
-  font-style: normal;
 }
 
 .case-study__intro-panel p {
@@ -1862,10 +1906,10 @@ a[href*="github"] img {
   display: block;
 }
 
+.case-study__step-copy h2,
 .case-study__step-copy h3 {
   font-size: 2.4rem;
   margin: 0 0 1.1rem;
-  font-style: normal;
 }
 
 .case-study__step-copy p {
@@ -2060,6 +2104,13 @@ a[href*="github"] img {
   background: #f4f3f8;
   transform: scale(0.3);
   transform-origin: top left;
+}
+
+.case-study__iframe-fallback {
+  font-size: 1.4rem;
+  color: var(--ink-muted);
+  margin: 0.8rem 0 0;
+  text-align: center;
 }
 
 .case-study__text-card h3 {
@@ -2673,10 +2724,27 @@ a[href*="github"] img {
   max-width: 64rem;
 }
 
-.bookbuddy-problem-header h3 {
+.bookbuddy-problem-header h2 {
   font-family: var(--font-serif);
   font-size: var(--font-size-medium);
   margin: 0.8rem 0;
+}
+
+/* Process section h2 landmark — visually screened to section-tag level */
+.bookbuddy-process-heading {
+  font-family: var(--font-family-stamp);
+  font-size: 1.3rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-brand-kraft-strong);
+  font-weight: 400;
+  margin: 0 0 0.4rem;
+}
+
+/* Feature-copy h2s (Final Design, Join the Beta) sized to match h3 */
+.bookbuddy-feature-copy h2 {
+  font-size: var(--font-size-medium);
+  margin-bottom: var(--gutter-small);
 }
 
 .bookbuddy-problem-header p {

@@ -21,14 +21,14 @@
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="header header--wireframe" id="top">
     <div class="grid-bg"></div>
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items nav__items--left">
           <li class="nav__item"><a href="./work/" class="nav__link"><span class="nav__link-text">Work</span></a></li>
-          <li class="nav__item"><a href="./illustration/" class="nav__link"><span class="nav__link-text">Illustration</span></a></li>
-          <li class="nav__item"><a href="/#clients" class="nav__link"><span class="nav__link-text">Clients</span></a></li>
+          <li class="nav__item"><a href="./contact/" class="nav__link"><span class="nav__link-text">Contact</span></a></li>
         </ul>
         <a href="/" class="nav__logo-link" aria-label="Olivia Griffie home">
           <video class="nav__logo-video" muted playsinline preload="metadata" aria-hidden="true">
@@ -38,13 +38,12 @@
         </a>
         <ul class="nav__items nav__items--right">
           <li class="nav__item"><a href="./about/" class="nav__link"><span class="nav__link-text">About</span></a></li>
-          <li class="nav__item"><a href="./images/Olivia_Griffie_Resume_Web.pdf" class="nav__link" download><span class="nav__link-text">Resume</span></a></li>
-          <li class="nav__item"><a href="./contact/" class="nav__link"><span class="nav__link-text">Contact</span></a></li>
+          <li class="nav__item"><a href="./images/Olivia_Griffie_Resume_Web.pdf" class="nav__link" download aria-label="Download resume (PDF)"><span class="nav__link-text">Resume</span></a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <main class="homepage-main">
+  <main class="homepage-main" id="main-content">
     <section class="wire-section">
       <div class="row case-study">
         <div class="case-study__actions">
@@ -52,12 +51,12 @@
         </div>
         <div class="section-heading">
           <span class="section-tag">Widget Builds</span>
-          <h2>Architect Mini: Web-to-Print Template Builder</h2>
+          <h1>Architect Mini: Web-to-Print Template Builder</h1>
         </div>
         <div class="case-study__intro">
           <div class="case-study__intro-panel">
             <div class="about-note">
-              <h3>Designing a lightweight builder.</h3>
+              <h2>Designing a lightweight builder.</h2>
               <p>Architect Mini is a web-to-print business card builder concept designed to make branded customization feel simple, structured, and production-aware. The project combined product planning, interface design, visual identity work, and an interactive front-end prototype.</p>
               <p><strong>My Role</strong><br>I handled UX and UI design, branding, front-end implementation, and prototype setup for the live demo version of the tool.</p>
               <p class="case-study__note">The interactive prototype is still evolving, so the embedded preview reflects the latest in-progress state from the live deployment.</p>
@@ -67,7 +66,7 @@
         <div class="case-study__stack">
           <section class="case-study__step">
             <div class="case-study__step-copy">
-              <h3>Starting with a rough workflow sketch</h3>
+              <h2>Starting with a rough workflow sketch</h2>
               <p>The first Architect Mini pass began as a quick hand-drawn layout exploring the split between the live preview area and the editable controls. That sketch helped define the core structure before the interface was refined into the working prototype.</p>
             </div>
             <figure class="case-study__step-media">
@@ -77,7 +76,7 @@
           </section>
           <section class="case-study__step">
             <div class="case-study__step-copy">
-              <h3>Putting the live prototype front and center</h3>
+              <h2>Putting the live prototype front and center</h2>
               <p>The product needed to feel tangible, not just conceptual. Leading with the live prototype helped show the editor, saved-state flow, and sign-in experience in a way static mockups could not fully capture.</p>
               <p>This live view keeps the product experience visible immediately and shows how the login and editor flow work together in the current prototype.</p>
             </div>
@@ -104,6 +103,7 @@
                     title="Architect Mini live widget preview"
                     loading="lazy"
                   ></iframe>
+                  <p class="case-study__iframe-fallback">If the prototype doesn't load, <a href="https://olivia-griffie.github.io/architect-mini/" target="_blank" rel="noopener">open it directly here</a>.</p>
                 </div>
               </div>
             </figure>
@@ -114,13 +114,13 @@
               <p>The login page introduced a softer, branded entry point so returning users could re-enter the tool without the experience feeling cold or overly technical.</p>
             </figure>
             <div class="case-study__step-copy">
-              <h3>Starting with a friendlier sign-in experience</h3>
+              <h2>Starting with a friendlier sign-in experience</h2>
               <p>The entry point set the tone for the rest of the tool. A clearer login layout and softer visual language made the product feel approachable before users ever reached the editing workspace.</p>
             </div>
           </section>
           <section class="case-study__step">
             <div class="case-study__step-copy">
-              <h3>Building a clearer editing workflow</h3>
+              <h2>Building a clearer editing workflow</h2>
               <p>The editor was designed as a guided split-screen builder with visible save states, structured naming prompts, and a live preview. That combination helped first-time users understand where they were in the process and what actions mattered next.</p>
             </div>
             <figure class="case-study__step-media">
@@ -134,7 +134,7 @@
               <p>The field layout supports a detailed card-building flow with editable content, layer controls, uploads, and preview actions tied directly to the live composition area.</p>
             </figure>
             <div class="case-study__step-copy">
-              <h3>Connecting detailed controls back to the preview</h3>
+              <h2>Connecting detailed controls back to the preview</h2>
               <p>The form side of the interface had to stay powerful without becoming visually noisy. Grouping controls clearly and keeping them connected to the live layout helped the tool remain usable as complexity increased.</p>
             </div>
           </section>

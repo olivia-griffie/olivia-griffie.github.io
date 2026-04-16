@@ -19,13 +19,14 @@
   <link rel="stylesheet" href="../index.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="header header--wireframe" id="top">
     <div class="grid-bg"></div>
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items nav__items--left">
           <li class="nav__item"><a href="/work/" class="nav__link"><span class="nav__link-text">Work</span></a></li>
-          <li class="nav__item"><a href="/illustration/" class="nav__link"><span class="nav__link-text">Illustration</span></a></li>
+          <li class="nav__item"><a href="/contact/" class="nav__link"><span class="nav__link-text">Contact</span></a></li>
         </ul>
         <a href="/" class="nav__logo-link" aria-label="Olivia Griffie home">
           <video class="nav__logo-video" muted playsinline preload="metadata" aria-hidden="true">
@@ -35,8 +36,7 @@
         </a>
         <ul class="nav__items nav__items--right">
           <li class="nav__item"><a href="/about/" class="nav__link"><span class="nav__link-text">About</span></a></li>
-          <li class="nav__item"><a href="/images/Olivia_Griffie_Resume_Web.pdf" class="nav__link" download><span class="nav__link-text">Resume</span></a></li>
-          <li class="nav__item"><a href="/contact/" class="nav__link"><span class="nav__link-text">Contact</span></a></li>
+          <li class="nav__item"><a href="/images/Olivia_Griffie_Resume_Web.pdf" class="nav__link" download aria-label="Download resume (PDF)"><span class="nav__link-text">Resume</span></a></li>
         </ul>
       </nav>
     </div>
@@ -61,7 +61,7 @@
     </div>
   </header>
 
-  <main class="homepage-main">
+  <main class="homepage-main" id="main-content">
     <section class="wire-section">
       <div class="row case-study case-study--bookbuddy" id="details">
         <div class="bookbuddy-layout">
@@ -106,7 +106,7 @@
           <!-- The Problem -->
           <div class="bookbuddy-problem-header">
             <span class="section-tag">The Problem</span>
-            <h3>Most writing tools fall into two extremes.</h3>
+            <h2>Most writing tools fall into two extremes.</h2>
             <p>Writers told me they wanted something in the middle — organized, warm, and creative. Not clinical or chaotic.</p>
           </div>
 
@@ -130,6 +130,7 @@
 
           <!-- Feature stack -->
           <div class="bookbuddy-feature-stack">
+          <h2 class="bookbuddy-process-heading">Design Process</h2>
 
             <!-- Goals -->
             <section class="bookbuddy-feature-row bookbuddy-feature-row--copy-only bookbuddy-feature-row--band">
@@ -265,7 +266,7 @@
             <section class="bookbuddy-feature-row bookbuddy-feature-row--copy-only">
               <div class="bookbuddy-feature-copy">
                 <span class="section-tag">Final Design</span>
-                <h3>A workspace that feels warm, structured, and motivating</h3>
+                <h2>A workspace that feels warm, structured, and motivating</h2>
                 <p>The final experience spans a full dashboard, chapter workspace, writing challenges, character sheets, progress tracking, and a writing environment for focused drafting. Key screens below.</p>
               </div>
             </section>
@@ -274,7 +275,7 @@
             <section class="bookbuddy-feature-row bookbuddy-feature-row--copy-only bookbuddy-feature-row--band" id="beta">
               <div class="bookbuddy-feature-copy bookbuddy-beta-section">
                 <span class="section-tag">Join the Beta</span>
-                <h3>Book Buddy is looking for early readers.</h3>
+                <h2>Book Buddy is looking for early readers.</h2>
                 <p>Beta access is limited. If you're working on a manuscript and want a writing tool built around your actual process, apply below.</p>
                 <p class="form-success" style="display:none;" aria-live="polite">Thanks for applying — I'll be in touch soon.</p>
                 <form class="beta-form" action="https://formspree.io/f/xnjljzrp" method="POST">
@@ -288,7 +289,7 @@
                     <input id="beta-email" name="email" type="email" placeholder="you@email.com" required />
                   </div>
                   <div class="beta-form__field">
-                    <label for="beta-genre">What are you writing?</label>
+                    <label for="beta-genre">Genre or project type</label>
                     <input id="beta-genre" name="genre" type="text" placeholder="e.g. Romance fantasy novel, memoir, short stories" />
                   </div>
                   <div class="beta-form__field">
