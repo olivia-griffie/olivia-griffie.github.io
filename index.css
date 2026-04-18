@@ -1437,6 +1437,23 @@ a[href*="github"] img {
   height: 31.5rem;
 }
 
+.project-card__suite-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+  padding: 0.8rem;
+  background: var(--color-surface, #f5f0eb);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.project-card__suite-img {
+  width: 100%;
+  height: 16rem;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
 .project-card__image-placeholder {
   width: 100%;
   height: 24rem;
