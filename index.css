@@ -1446,12 +1446,38 @@ a[href*="github"] img {
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
+.project-card__suite-link {
+  display: block;
+  overflow: hidden;
+}
+
+.project-card__suite-link:hover .project-card__suite-img {
+  opacity: 0.85;
+}
+
 .project-card__suite-img {
   width: 100%;
   height: 16rem;
-  object-fit: contain;
+  object-fit: cover;
   background: #fff;
   border: 1px solid rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.project-card__img-link {
+  display: block;
+  overflow: hidden;
+}
+
+.project-card__img-link:hover .project-card__image {
+  opacity: 0.85;
+}
+
+.project-card__img-link .project-card__image {
+  object-fit: cover;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
 .project-card__image-placeholder {
