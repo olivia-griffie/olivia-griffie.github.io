@@ -4149,6 +4149,72 @@ body.focus-mode .focus-mode-btn {
   pointer-events: none;
 }
 
+.focus-chat__schedule-form {
+  width: 100%;
+  padding: 1.2rem !important;
+  box-sizing: border-box;
+}
+
+.schedule-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.schedule-form__field label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.schedule-form__field input,
+.schedule-form__field textarea {
+  font-size: 1.2rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid rgba(160, 120, 80, 0.35);
+  border-radius: 0.6rem;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  resize: none;
+}
+
+.schedule-form__field input:focus,
+.schedule-form__field textarea:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.schedule-form__submit {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  margin-top: 0.4rem;
+}
+
+.schedule-form__submit:hover {
+  opacity: 0.85;
+}
+
+.schedule-form__submit:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.schedule-form__status {
+  margin: 0.6rem 0 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+
 @media (max-width: 600px) {
   .focus-chat {
     left: 1rem;

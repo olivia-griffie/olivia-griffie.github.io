@@ -442,6 +442,70 @@ if (focusChatClose) {
   focusChatClose.addEventListener("click", closeChat);
 }
 
+const injectScheduleForm = () => {
+  if (!focusChatMessages) return;
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "focus-chat__message focus-chat__message--assistant focus-chat__schedule-form";
+  wrapper.innerHTML = `
+    <p style="margin:0 0 0.8rem;font-size:1.3rem;">Fill this out and I'll send Olivia the request!</p>
+    <form id="schedule-call-form" action="https://formspree.io/f/mnjobdyp" method="POST">
+      <input type="hidden" name="_subject" value="Call Request from Portfolio Assistant" />
+      <input type="hidden" name="source" value="Portfolio Assistant — Schedule a Call" />
+      <div class="schedule-form__field">
+        <label for="schedule-name">Your name</label>
+        <input id="schedule-name" name="name" type="text" placeholder="First and last name" required autocomplete="name" />
+      </div>
+      <div class="schedule-form__field">
+        <label for="schedule-email">Your email</label>
+        <input id="schedule-email" name="email" type="email" placeholder="you@email.com" required autocomplete="email" />
+      </div>
+      <div class="schedule-form__field">
+        <label for="schedule-time">Preferred time</label>
+        <input id="schedule-time" name="preferred_time" type="text" placeholder="e.g. Tues/Thurs afternoons ET" />
+      </div>
+      <div class="schedule-form__field">
+        <label for="schedule-note">Quick note (optional)</label>
+        <textarea id="schedule-note" name="message" rows="2" placeholder="What's on your mind?"></textarea>
+      </div>
+      <button type="submit" class="schedule-form__submit">Send Request</button>
+      <p class="schedule-form__status" aria-live="polite"></p>
+    </form>
+  `;
+  focusChatMessages.appendChild(wrapper);
+  focusChatMessages.scrollTop = focusChatMessages.scrollHeight;
+
+  const form = wrapper.querySelector("#schedule-call-form");
+  const status = wrapper.querySelector(".schedule-form__status");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const submitBtn = form.querySelector(".schedule-form__submit");
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending…";
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      });
+      if (res.ok) {
+        form.innerHTML = "";
+        status.textContent = "Request sent! Olivia will be in touch soon.";
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send Request";
+        status.textContent = "Something went wrong — please try again.";
+      }
+    } catch {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send Request";
+      status.textContent = "Something went wrong — please try again.";
+    }
+    focusChatMessages.scrollTop = focusChatMessages.scrollHeight;
+  });
+};
+
 if (focusChatReplies) {
   focusChatReplies.addEventListener("click", (e) => {
     const btn = e.target.closest(".focus-chat__reply");
@@ -451,7 +515,11 @@ if (focusChatReplies) {
     if (!data) return;
     btn.disabled = true;
     addChatMessage(data.q, "user", false);
-    window.setTimeout(() => addChatMessage(data.a, "assistant", true), 200);
+    if (key === "schedule") {
+      window.setTimeout(() => injectScheduleForm(), 600);
+    } else {
+      window.setTimeout(() => addChatMessage(data.a, "assistant", true), 200);
+    }
   });
 }
 
