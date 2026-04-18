@@ -1429,6 +1429,7 @@ a[href*="github"] img {
 
 .project-card__image--contain {
   object-fit: contain;
+  object-position: center center;
   background: rgba(255, 255, 255, 0.62);
   padding: 1.2rem;
 }
@@ -1482,6 +1483,7 @@ a[href*="github"] img {
 
 .project-card__img-link .project-card__image--contain {
   object-fit: contain;
+  object-position: center center;
 }
 
 .project-card__image-placeholder {
@@ -3893,7 +3895,7 @@ a[href*="github"] img {
 .focus-mode-btn {
   position: fixed;
   bottom: 4rem;
-  right: 4rem;
+  left: 4rem;
   z-index: 900;
   display: flex;
   align-items: center;

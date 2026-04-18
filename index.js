@@ -378,6 +378,10 @@ const chatResponses = {
   available: {
     q: "Is she available?",
     a: "Yes — Olivia is actively looking for full-time remote roles. She's also open to freelance and contract work. You can reach her through the contact form on this page or directly at griffiedesign@gmail.com."
+  },
+  schedule: {
+    q: "Schedule a call",
+    a: null
   }
 };
 
