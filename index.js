@@ -373,7 +373,7 @@ const chatResponses = {
   },
   work: {
     q: "What has she built?",
-    a: "Recent work includes Book Buddy (an Electron writing app she designed and built end-to-end), Architect Mini (a web-to-print card builder widget), and Burgermeister (a branded eCommerce demo storefront for Devia Software). She's also done brand identity work for clients like Shenandoah Sovereign."
+    a: "Recent work includes Inkbug Beta (an Electron writing app she designed and built end-to-end), Architect Mini (a web-to-print card builder widget), and Burgermeister (a branded eCommerce demo storefront for Devia Software). She's also done brand identity work for clients like Shenandoah Sovereign."
   },
   available: {
     q: "Is she available?",
