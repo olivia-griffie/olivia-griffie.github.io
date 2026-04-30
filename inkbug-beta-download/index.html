@@ -54,6 +54,46 @@
         <div class="beta-download-note about-note">
           <p><strong>Need a fresh build?</strong><br>If your original link expires or the installer is missing, email Olivia directly and she can send you the current beta package.</p>
         </div>
+
+        <div class="beta-download-help">
+          <section class="beta-download-card beta-download-card--support">
+            <span class="section-tag">Help</span>
+            <h2>Report a Bug</h2>
+            <p>If you run into anything broken, confusing, or incomplete, send it here so it can be reviewed during beta.</p>
+            <form class="beta-form beta-download-form" action="https://formspree.io/f/mgodewod" method="POST" enctype="multipart/form-data">
+              <div class="beta-form__field">
+                <label for="bug-type">Bug Type</label>
+                <input id="bug-type" name="Bug type" type="text" placeholder="Example: visual bug, broken button, crash" required />
+              </div>
+              <div class="beta-form__field">
+                <label for="bug-description">Bug Description</label>
+                <textarea id="bug-description" name="Bug Description" rows="5" placeholder="Tell me what happened, what you expected, and anything that might help reproduce it." required></textarea>
+              </div>
+              <div class="beta-download-form__split">
+                <div class="beta-form__field">
+                  <label for="bug-page">Page</label>
+                  <input id="bug-page" name="Page" type="text" placeholder="Example: Challenges, Chapters, Project Dashboard" required />
+                </div>
+                <div class="beta-form__field">
+                  <label for="tester-name">Tester Name</label>
+                  <input id="tester-name" name="Tester Name" type="text" placeholder="Your name" required />
+                </div>
+              </div>
+              <div class="beta-form__field">
+                <label for="bug-screenshot">Screenshot Upload</label>
+                <input id="bug-screenshot" name="Screenshot upload" type="file" accept="image/*" />
+              </div>
+              <button class="btn" type="submit">Send Bug Report</button>
+            </form>
+          </section>
+
+          <aside class="beta-download-card beta-download-card--contact">
+            <span class="section-tag">Contact</span>
+            <h2>Comments or questions?</h2>
+            <p>For comments or questions, please contact Developer Olivia Griffie at <a href="mailto:oewheless@gmail.com">oewheless@gmail.com</a>.</p>
+            <p>Follow us on Instagram <a href="https://www.instagram.com/inkbugbeta/" target="_blank" rel="noreferrer noopener">@inkbugbeta</a>.</p>
+          </aside>
+        </div>
       </div>
     </section>
   </main>
