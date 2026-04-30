@@ -4224,6 +4224,119 @@ body.focus-mode .focus-mode-btn {
   }
 }
 
+.beta-download-page {
+  background:
+    radial-gradient(circle at 16% 18%, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0) 24%),
+    linear-gradient(180deg, rgba(245, 240, 232, 0.98), rgba(250, 247, 242, 0.98));
+}
+
+.beta-download-main {
+  min-height: 100vh;
+}
+
+.beta-download-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 0;
+}
+
+.beta-download-layout {
+  display: grid;
+  gap: 3.2rem;
+  max-width: 104rem;
+}
+
+.beta-download-hero {
+  display: grid;
+  gap: 1.4rem;
+  justify-items: start;
+}
+
+.beta-download-hero__logo {
+  max-width: 34rem;
+}
+
+.beta-download-hero h1 {
+  margin: 0;
+}
+
+.beta-download-hero p {
+  max-width: 68rem;
+  margin: 0;
+  font-size: 1.7rem;
+  line-height: 1.65;
+}
+
+.beta-download-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(28rem, 0.95fr);
+  gap: 2.4rem;
+  align-items: stretch;
+}
+
+.beta-download-card {
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(160, 120, 80, 0.2);
+  border-radius: 2.8rem;
+  padding: 3rem;
+  box-shadow: 0 1.2rem 3rem rgba(104, 80, 54, 0.08);
+}
+
+.beta-download-card h2 {
+  margin-bottom: 1.2rem;
+}
+
+.beta-download-card p {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.65;
+}
+
+.beta-download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 2.4rem;
+}
+
+.btn--disabled,
+.btn--disabled:hover,
+.btn--disabled:focus-visible {
+  cursor: not-allowed;
+  background: rgba(235, 229, 219, 0.72);
+  border-color: rgba(160, 120, 80, 0.22);
+  color: rgba(74, 69, 64, 0.72);
+  transform: none;
+}
+
+.beta-download-list {
+  display: grid;
+  gap: 1.2rem;
+  margin: 0;
+  padding-left: 1.8rem;
+}
+
+.beta-download-list li {
+  color: var(--ink-muted);
+  font-size: 1.5rem;
+  line-height: 1.62;
+}
+
+.beta-download-note {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .beta-download-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .beta-download-hero__logo {
+    max-width: 28rem;
+  }
+}
+
 /* --------------------------------------- */
 /* ----- Accessibility: High Contrast ----- */
 /* --------------------------------------- */
